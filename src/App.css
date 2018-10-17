@@ -47,6 +47,16 @@ h1 {
   height: 80vh;
   position: relative;
   overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.inside h1 {
+  opacity: 0.9;
+  text-align: center;
+  margin-top: 30vh;
+  font-size: 3vw;
+  background: #478e85;
+  padding: 8px 0 10px;
 }
 
 .navbar {
