@@ -1,9 +1,19 @@
 p {text-align: center;}
 
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   background-color: #66ffff;
+  margin: 10px;
+  height: 100vh;
+  flex-grow: 0;
 }
 
 .box-1 {
