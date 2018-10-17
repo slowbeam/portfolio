@@ -9,6 +9,15 @@ p {text-align: center;}
 
 .scroller {
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/fir-sm.jpg");
+  background-size: 400px 400px;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
   scroll-snap-type: mandatory;
 
   scroll-snap-destination: 0% 100%;
@@ -17,6 +26,11 @@ p {text-align: center;}
 
 .page {
   scroll-snap-align: start;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  font-size: initial;
 }
 
 .navbar {
