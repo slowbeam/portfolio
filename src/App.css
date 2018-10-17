@@ -8,7 +8,15 @@ p {text-align: center;}
 }
 
 .scroller {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/fir-sm.jpg");
   scroll-snap-type: mandatory;
+
+  scroll-snap-destination: 0% 100%;
+  scroll-snap-points-x: repeat(100%);
+}
+
+.page {
+  scroll-snap-align: start;
 }
 
 .navbar {
