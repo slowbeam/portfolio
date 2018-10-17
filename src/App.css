@@ -52,12 +52,18 @@ h1 {
 
 .inside h1 {
   opacity: 0.9;
-  text-align: center;
+  text-align: left;
+  margin-left: 20vw;
   margin-top: 30vh;
   font-size: 3vw;
   background: #478e85;
   padding: 8px 0 10px;
 }
+
+.inside.one {
+  background-color: white;
+}
+
 
 .navbar {
   display: flex;
