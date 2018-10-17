@@ -51,9 +51,10 @@ h1 {
 }
 
 .inside h1 {
+  margin-left: auto;
+  margin-right: auto;
   opacity: 0.9;
   text-align: left;
-  margin-left: 20vw;
   margin-top: 30vh;
   font-size: 3vw;
   background: #478e85;
