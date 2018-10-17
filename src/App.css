@@ -1,4 +1,10 @@
-p {text-align: center;}
+p {
+  text-align: center;
+}
+
+h1 {
+  color: white;
+}
 
 .flex {
   display: flex;
@@ -31,6 +37,16 @@ p {text-align: center;}
   display: inline-block;
   vertical-align: top;
   font-size: initial;
+}
+
+.inside {
+  border: 5px solid #f4ccbf;
+  opacity: .95;
+  width: 90vw;
+  margin: 8vh 0 0 5vw;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
 }
 
 .navbar {

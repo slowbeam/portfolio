@@ -5,16 +5,24 @@ class Scroller extends React.Component {
     return (
       <div className='scroller'>
         <div className='page one'>
-          <h1>sandy edwards</h1>
+          <div className="inside">
+            <h1>sandy edwards</h1>
+          </div>
         </div>
         <div className='page two'>
-          <h1>hamburger</h1>
+          <div className="inside">
+            <h1>is getting</h1>
+          </div>
         </div>
         <div className='page three'>
-          <h1>other</h1>
+          <div className="inside">
+            <h1>kinda good</h1>
+          </div>
         </div>
         <div className='page four'>
-          <h1>wowww</h1>
+          <div className="inside">
+            <h1>at css</h1>
+          </div>
         </div>
       </div>
     )
