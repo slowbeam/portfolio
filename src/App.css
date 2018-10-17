@@ -7,6 +7,10 @@ p {text-align: center;}
   align-items: center;
 }
 
+.scroller {
+  scroll-snap-type: mandatory;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
