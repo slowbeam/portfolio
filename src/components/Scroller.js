@@ -15,17 +15,17 @@ class Scroller extends React.Component {
         </div>
         <div className='page two'>
           <div className="inside two">
-            <h1>is getting</h1>
+            <h1>here are my projects</h1>
           </div>
         </div>
         <div className='page three'>
           <div className="inside three">
-            <h1>kinda good</h1>
+            <h1>here are my blog posts</h1>
           </div>
         </div>
         <div className='page four'>
           <div className="inside four">
-            <h1>at css</h1>
+            <h1>contact me here</h1>
           </div>
         </div>
       </div>
