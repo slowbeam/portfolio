@@ -3,7 +3,7 @@ p {text-align: center;}
 .navbar {
   display: flex;
   justify-content: space-between;
-  background-color: teal;
+  background-color: #66ffff;
 }
 
 .box-1 {
@@ -14,4 +14,17 @@ p {text-align: center;}
 .box-2 {
   align-self: center;
   margin-right: 5px;
+}
+
+.app-card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.app-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ff5050;
 }
