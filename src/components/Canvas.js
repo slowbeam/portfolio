@@ -9,6 +9,7 @@ class Canvas extends React.Component {
 
     img.onload = () => {
       ctx.beginPath();
+      ctx.fill
       ctx.arc(100, 100, 100, 0, 2 * Math.PI)
       ctx.stroke();
     }
@@ -16,9 +17,8 @@ class Canvas extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="canvas-container">
         <canvas ref="canvas" width={640} height={425} />
-        <img ref="image" src="https://i.pinimg.com/originals/e5/61/2a/e5612a5751c7f80799d05c15319af664.jpg" className="hidden" />
       </div>
     )
   }
