@@ -65,6 +65,9 @@ h1 {
   background-color: white;
 }
 
+.hidden {
+  display: none;
+}
 
 .navbar {
   display: flex;
