@@ -48,6 +48,9 @@ h1 {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .inside h1 {
@@ -65,9 +68,20 @@ h1 {
   background-color: white;
 }
 
-.hidden {
-  display: none;
+.canvas-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+canvas {
+  border: 1px solid white;
+  height: 79vh;
+  width: 89vw;
+}
+
+
+
 
 .navbar {
   display: flex;
