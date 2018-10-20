@@ -65,7 +65,7 @@ class Canvas extends React.Component {
     // this.drawRandomRectangles();
     // Arc / Circle
 
-    this.runAnimation();
+    // this.runAnimation();
 
 
   }
