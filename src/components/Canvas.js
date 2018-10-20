@@ -1,5 +1,7 @@
 import React from 'react';
 
+const x = 200;
+
 class Canvas extends React.Component {
 
   drawRandomCircles () {
@@ -38,18 +40,37 @@ class Canvas extends React.Component {
     }
   }
 
+  runAnimation = () => {
+    const canvas = this.refs.canvas;
+    const c = canvas.getContext("2d");
+
+    let x = 200;
+
+    const animate = () => {
+      requestAnimationFrame(animate);
+      c.beginPath();
+      c.arc(x, 200, 30, 0, Math.PI * 2);
+      c.strokeStyle = 'blue';
+      c.stroke();
+      x += 1;
+    }
+    animate()
+    }
+
+
   componentDidMount() {
 
 
-    this.drawRandomCircles();
-    this.drawRandomRectangles();
+    // this.drawRandomCircles();
+    // this.drawRandomRectangles();
     // Arc / Circle
-    // c.beginPath();
-    // c.arc(300, 300, 30, 0, Math.PI * 2);
-    // c.strokeStyle = 'blue';
-    // c.stroke();
+
+    this.runAnimation();
+
 
   }
+
+
 
 
 
