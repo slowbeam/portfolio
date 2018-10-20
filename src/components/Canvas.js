@@ -6,13 +6,16 @@ class Canvas extends React.Component {
     const canvas = this.refs.canvas;
     const c = canvas.getContext("2d");
 
-    for (let i = 0; i < 3; i++) {
-      let x = Math.random() * (window.innerWidth * .8);
-      let y = Math.random() * (window.innerHeight * .7);
+    const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+
+    for (let i = 0; i < 400; i++) {
+      let x = Math.random() * (window.innerWidth * .89);
+      let y = Math.random() * (window.innerHeight * .79);
+      let colorNum = Math.floor(Math.random() * 8);
 
       c.beginPath();
       c.arc(x, y, 30, 0, Math.PI * 2);
-      c.strokeStyle = 'blue';
+      c.strokeStyle = colors[colorNum];
       c.stroke();
     }
   }
