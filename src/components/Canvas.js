@@ -47,6 +47,7 @@ class Canvas extends React.Component {
     let x = 200;
 
     const animate = () => {
+      c.clearRect(0, 0, window.innerWidth, window.innerHeight);
       requestAnimationFrame(animate);
       c.beginPath();
       c.arc(x, 200, 30, 0, Math.PI * 2);
@@ -54,7 +55,7 @@ class Canvas extends React.Component {
       c.stroke();
       x += 1;
     }
-    animate()
+    animate();
     }
 
 
@@ -65,7 +66,7 @@ class Canvas extends React.Component {
     // this.drawRandomRectangles();
     // Arc / Circle
 
-    // this.runAnimation();
+    this.runAnimation();
 
 
   }
