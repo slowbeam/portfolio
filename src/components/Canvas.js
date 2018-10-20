@@ -20,11 +20,27 @@ class Canvas extends React.Component {
     }
   }
 
-  componentDidMount() {
+  drawRandomRectangles() {
+
+    const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+
     const canvas = this.refs.canvas;
     const c = canvas.getContext("2d");
+    let x = Math.random() * (window.innerWidth * .89);
+    let y = Math.random() * (window.innerHeight * .79);
+    let colorNum = Math.floor(Math.random() * 8);
+
+    for (let i = 0; i < 100; i++) {
+      c.fillStyle = colors[colorNum];
+      c.fillRect(x, y, 50, 50);
+    }
+  }
+
+  componentDidMount() {
+
 
     this.drawRandomCircles();
+    this.drawRandomRectangles();
     // Arc / Circle
     // c.beginPath();
     // c.arc(300, 300, 30, 0, Math.PI * 2);
