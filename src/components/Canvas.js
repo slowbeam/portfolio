@@ -44,41 +44,61 @@ class Canvas extends React.Component {
     const canvas = this.refs.canvas;
     const c = canvas.getContext("2d");
 
-    function Circle(x, y) {
+    // c.beginPath();
+    // c.arc(x, y, radius, 0, Math.PI * 2);
+    // c.strokeStyle = 'blue';
+    // c.stroke();
+
+    function Circle(x, y, dx, dy, radius) {
       this.x = x;
       this.y = y;
+      this.dx = dx;
+      this.dy = dy;
+      this.radius = radius;
 
       this.draw = function() {
-        console.log('im a circle')
+        c.beginPath();
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        c.strokeStyle = 'blue';
+        c.stroke();
+      }
+
+      this.update = function() {
+        if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
+          this.dx = -this.dx;
+        }
+
+        if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
+          this.dy = -this.dy;
+        }
+        this.x += this.dx;
+        this.y += this.dy;
+        this.draw()
       }
     }
 
-    const circle = new Circle(200, 200);
-    circle.draw();
 
-    let x = Math.random() * canvas.width;
-    let y = Math.random() * canvas.height;
-    let dx = (Math.random() - 0.5) * 8;
-    let dy = (Math.random() - 0.5) * 8;
-    let radius = 30;
+    let circleArray = [];
+
+    for (let i = 0; i < 100; i++) {
+      let x = Math.random() * canvas.width;
+      let y = Math.random() * canvas.height;
+      let dx = (Math.random() - 0.5) * 8;
+      let dy = (Math.random() - 0.5) * 8;
+      let radius = 30;
+      circleArray.push(new Circle())
+    }
+
+    const circle = new Circle(200, 200, 3, 3, 30);
+
+
+
 
     const animate = () => {
+
       c.clearRect(0, 0, canvas.width, canvas.height);
       requestAnimationFrame(animate);
-      c.beginPath();
-      c.arc(x, y, radius, 0, Math.PI * 2);
-      c.strokeStyle = 'blue';
-      c.stroke();
-
-      if (x + radius > canvas.width || x - radius < 0) {
-        dx = -dx;
-      }
-
-      if (y + radius > canvas.height || y - radius < 0) {
-        dy = -dy;
-      }
-      x += dx;
-      y += dy;
+      circle.update();
     }
     animate();
     }
