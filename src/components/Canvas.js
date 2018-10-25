@@ -44,10 +44,22 @@ class Canvas extends React.Component {
     const canvas = this.refs.canvas;
     const c = canvas.getContext("2d");
 
+    function Circle(x, y) {
+      this.x = x;
+      this.y = y;
+
+      this.draw = function() {
+        console.log('im a circle')
+      }
+    }
+
+    const circle = new Circle(200, 200);
+    circle.draw();
+
     let x = Math.random() * canvas.width;
     let y = Math.random() * canvas.height;
-    let dx = (Math.random() - 0.5) * 3;
-    let dy = (Math.random() - 0.5) * 3;
+    let dx = (Math.random() - 0.5) * 8;
+    let dy = (Math.random() - 0.5) * 8;
     let radius = 30;
 
     const animate = () => {
