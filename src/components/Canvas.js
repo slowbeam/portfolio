@@ -45,19 +45,19 @@ class Canvas extends React.Component {
     const c = canvas.getContext("2d");
 
     let x = 200;
+    let y = 200;
     let dx = 4;
-
-    console.log(canvas.width)
+    let radius = 30;
 
     const animate = () => {
       c.clearRect(0, 0, canvas.width, canvas.height);
       requestAnimationFrame(animate);
       c.beginPath();
-      c.arc(x, 200, 30, 0, Math.PI * 2);
+      c.arc(x, y, radius, 0, Math.PI * 2);
       c.strokeStyle = 'blue';
       c.stroke();
 
-      if (x > canvas.width) {
+      if (x + radius > canvas.width || x - radius < 0) {
         dx = -dx;
       }
       x += dx;
