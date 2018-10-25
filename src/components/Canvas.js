@@ -49,7 +49,7 @@ class Canvas extends React.Component {
     // c.strokeStyle = 'blue';
     // c.stroke();
 
-    function Circle(x, y, dx, dy, radius) {
+    function Circle(x, y, dx, dy, radius, color) {
       this.x = x;
       this.y = y;
       this.dx = dx;
@@ -61,7 +61,7 @@ class Canvas extends React.Component {
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         // c.strokeStyle = 'white';
         // c.stroke();
-        c.fillStyle = "rgba(50, 50, 100, .4)"
+        c.fillStyle = color;
         c.fill();
       }
 
@@ -79,18 +79,29 @@ class Canvas extends React.Component {
       }
     }
 
+    const createCircleArray = (color) => {
 
-    let circleArray = [];
+      let circleArray = [];
 
-    for (let i = 0; i < 100; i++) {
-      let radius = 30;
-      let x = Math.random() * (canvas.width - radius * 2) + radius;
-      let y = Math.random() * (canvas.height - radius * 2) + radius;
-      let dx = (Math.random() - 0.5) * 8;
-      let dy = (Math.random() - 0.5) * 8;
+      for (let i = 0; i < 100; i++) {
+        let radius = 30;
+        let x = Math.random() * (canvas.width - radius * 2) + radius;
+        let y = Math.random() * (canvas.height - radius * 2) + radius;
+        let dx = (Math.random() - 0.5) * 8;
+        let dy = (Math.random() - 0.5) * 8;
 
-      circleArray.push(new Circle(x, y, dx, dy, radius))
+        circleArray.push(new Circle(x, y, dx, dy, radius, color))
+      }
+      return circleArray;
     }
+
+
+
+    const circleArray = createCircleArray("rgba(50, 50, 100, .4)");
+
+
+
+
 
     const animate = () => {
 
