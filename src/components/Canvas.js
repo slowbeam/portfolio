@@ -45,6 +45,7 @@ class Canvas extends React.Component {
     const c = canvas.getContext("2d");
 
     let x = 200;
+    let dx = 1;
 
     const animate = () => {
       c.clearRect(0, 0, window.innerWidth, window.innerHeight);
@@ -53,7 +54,7 @@ class Canvas extends React.Component {
       c.arc(x, 200, 30, 0, Math.PI * 2);
       c.strokeStyle = 'blue';
       c.stroke();
-      x += 1;
+      x += dx;
     }
     animate();
     }
