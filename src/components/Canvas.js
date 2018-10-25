@@ -81,24 +81,23 @@ class Canvas extends React.Component {
     let circleArray = [];
 
     for (let i = 0; i < 100; i++) {
-      let x = Math.random() * canvas.width;
-      let y = Math.random() * canvas.height;
-      let dx = (Math.random() - 0.5) * 8;
-      let dy = (Math.random() - 0.5) * 8;
       let radius = 30;
-      circleArray.push(new Circle())
+      let x = Math.random() * (canvas.width - radius * 2) + radius;
+      let y = Math.random() * canvas.height;
+      let dx = (Math.random() - 0.5);
+      let dy = (Math.random() - 0.5);
+
+      circleArray.push(new Circle(x, y, dx, dy, radius))
     }
-
-    const circle = new Circle(200, 200, 3, 3, 30);
-
-
-
 
     const animate = () => {
 
       c.clearRect(0, 0, canvas.width, canvas.height);
       requestAnimationFrame(animate);
-      circle.update();
+
+      for (let i = 0; i < circleArray.length; i++) {
+        circleArray[i].update();
+      }
     }
     animate();
     }
