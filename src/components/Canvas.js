@@ -44,9 +44,10 @@ class Canvas extends React.Component {
     const canvas = this.refs.canvas;
     const c = canvas.getContext("2d");
 
-    let x = 200;
-    let y = 200;
-    let dx = 4;
+    let x = Math.random() * canvas.width;
+    let y = Math.random() * canvas.height;
+    let dx = (Math.random() - 0.5) * 3;
+    let dy = (Math.random() - 0.5) * 3;
     let radius = 30;
 
     const animate = () => {
@@ -60,7 +61,12 @@ class Canvas extends React.Component {
       if (x + radius > canvas.width || x - radius < 0) {
         dx = -dx;
       }
+
+      if (y + radius > canvas.height || y - radius < 0) {
+        dy = -dy;
+      }
       x += dx;
+      y += dy;
     }
     animate();
     }
