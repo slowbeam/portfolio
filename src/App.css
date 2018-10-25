@@ -65,7 +65,7 @@ h1 {
 }
 
 .inside.one {
-  
+
 }
 
 .canvas-container {
@@ -78,7 +78,7 @@ canvas {
   border: 1px solid white;
   height: 79vh;
   width: 89vw;
-  background: white;
+  background: black;
 }
 
 

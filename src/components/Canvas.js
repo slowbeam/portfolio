@@ -59,8 +59,9 @@ class Canvas extends React.Component {
       this.draw = function() {
         c.beginPath();
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        c.strokeStyle = 'blue';
+        c.strokeStyle = 'white';
         c.stroke();
+        c.fill();
       }
 
       this.update = function() {
@@ -83,8 +84,8 @@ class Canvas extends React.Component {
     for (let i = 0; i < 100; i++) {
       let radius = 30;
       let x = Math.random() * (canvas.width - radius * 2) + radius;
-      let y = Math.random() * canvas.height;
-      let dx = (Math.random() - 0.5);
+      let y = Math.random() * (canvas.height - radius * 2) + radius;
+      let dx = (Math.random() - 0.5)* 8;
       let dy = (Math.random() - 0.5);
 
       circleArray.push(new Circle(x, y, dx, dy, radius))
