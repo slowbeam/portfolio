@@ -66,7 +66,7 @@ class Canvas extends React.Component {
       }
 
       this.update = function() {
-        if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
+        if (this.x + this.radius >canvas.width || this.x - this.radius < 0) {
           this.dx = -this.dx;
         }
 
