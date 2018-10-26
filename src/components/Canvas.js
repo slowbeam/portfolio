@@ -116,9 +116,9 @@ class Canvas extends React.Component {
       c.clearRect(0, 0, canvas.width, canvas.height);
       requestAnimationFrame(animate);
 
-      // for (let i = 0; i < circleArrayOne.length; i++) {
-      //   circleArrayOne[i].update();
-      // }
+      for (let i = 0; i < circleArrayOne.length; i++) {
+        circleArrayOne[i].update();
+      }
       // for (let i = 0; i < circleArrayTwo.length; i++) {
       //   circleArrayTwo[i].update();
       // }
@@ -135,21 +135,21 @@ class Canvas extends React.Component {
     const canvas = this.refs.canvas;
     const c = canvas.getContext("2d");
 
-    function Guy(x, y, dx, dy, width, height, url) {
+    function Guy(x, y, height, width, dx, dy) {
       this.x = x;
       this.y = y;
       this.dx = dx;
       this.dy = dy;
       this.width = width;
       this.height = height;
-      this.url = url;
 
       this.draw = function() {
         let base_image = new Image();
-        base_image.src = this.url;
+        base_image.src = "https://66.media.tumblr.com/14fa0853be1a5ebc1b18317f7dac0582/tumblr_inline_npzmkfsewf1rwmtav_250.png";
         base_image.onload = function() {
-          c.drawImage(base_image, x, y, this.width, this.height)
+        c.drawImage(base_image, this.x, this.y, this.height, this.width)
         }
+
       }
 
       this.update = function() {
@@ -166,18 +166,63 @@ class Canvas extends React.Component {
       }
     }
 
+    const createImageArray = () => {
+
+      let imageArray = [];
+
+      for (let i = 0; i < 100; i++) {
+
+      let width = 100;
+      let height = 150;
+
+      let x = Math.random() * (canvas.width - width * 2) + width;
+      let y = Math.random() * (canvas.height - height * 2) + height;
+      let dx = (Math.random() - 0.5) * 2;
+      let dy = (Math.random() - 0.5) * 2;
+
+      imageArray.push(new Guy(x, y, height, width, dx, dy))
+      }
+
+      return imageArray;
+
+    }
+
+    const guyArrayOne = createImageArray();
 
 
-    let width = 30;
-    let height = 30;
-    let url = "https://banner2.kisspng.com/20180422/thq/kisspng-guy-fieri-food-network-tv-personality-chef-restaur-guy-5add3af0e59aa7.0049169215244479849405.jpg"
-    let x = Math.random() * (canvas.width - width * 2) + width;
-    let y = Math.random() * (canvas.height - height * 2) + height;
-    let dx = (Math.random() - 0.5) * 2;
-    let dy = (Math.random() - 0.5) * 2;
 
-    let image = new Guy(30, 50, dx, dy, 50, 80, url);
-    image.draw()
+    const animate = () => {
+
+      // c.clearRect(0, 0, canvas.width, canvas.height);
+      requestAnimationFrame(animate);
+
+      // for (let i = 0; i < circleArrayOne.length; i++) {
+      //   circleArrayOne[i].update();
+      // }
+      // for (let i = 0; i < circleArrayTwo.length; i++) {
+      //   circleArrayTwo[i].update();
+      // }
+      for (let i = 0; i < guyArrayOne.length; i++) {
+        guyArrayOne[i].update();
+      }
+
+
+    }
+
+    animate();
+
+
+
+    // let width = 30;
+    // let height = 30;
+    // let url = "https://banner2.kisspng.com/20180422/thq/kisspng-guy-fieri-food-network-tv-personality-chef-restaur-guy-5add3af0e59aa7.0049169215244479849405.jpg"
+    // let x = Math.random() * (canvas.width - width * 2) + width;
+    // let y = Math.random() * (canvas.height - height * 2) + height;
+    // let dx = (Math.random() - 0.5) * 2;
+    // let dy = (Math.random() - 0.5) * 2;
+    //
+    // let image = new Guy(0, 0, 150, 100);
+    // image.draw()
   }
 
   componentDidMount() {
@@ -185,15 +230,14 @@ class Canvas extends React.Component {
     const canvas = this.refs.canvas;
     const c = canvas.getContext("2d");
 
-    let width = 30;
-    let height = 30;
-    let url = "https://png.pngtree.com/element_pic/16/06/03/095750dcf5985d0.jpg"
 
-    let base_image = new Image();
-    base_image.src = "../img/guy.jpg";
-    base_image.onload = function() {
-    c.drawImage(base_image, 0, 0)
-    }
+    // let base_image = new Image();
+    // base_image.src = "https://66.media.tumblr.com/14fa0853be1a5ebc1b18317f7dac0582/tumblr_inline_npzmkfsewf1rwmtav_250.png";
+    // base_image.onload = function() {
+    // c.drawImage(base_image, 0, 0, 120, 100)
+
+    this.drawGuy();
+
 
     // this.drawRandomCircles();
     // this.drawRandomRectangles();
