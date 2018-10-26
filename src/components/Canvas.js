@@ -87,29 +87,26 @@ class Canvas extends React.Component {
         let radius = 30;
         let x = Math.random() * (canvas.width - radius * 2) + radius;
         let y = Math.random() * (canvas.height - radius * 2) + radius;
-        let dx = (Math.random() - 0.5) * 8;
-        let dy = (Math.random() - 0.5) * 8;
+        let dx = (Math.random() - 0.5) * 2;
+        let dy = (Math.random() - 0.5) * 2;
 
         circleArray.push(new Circle(x, y, dx, dy, radius, color))
       }
       return circleArray;
     }
 
-
-
-    const circleArray = createCircleArray("rgba(50, 50, 100, .4)");
-
-
-
-
-
+    const circleArrayOne = createCircleArray("rgba(50, 50, 100, .6)");
+    const circleArrayTwo = createCircleArray("rgba(50, 100, 100, .2)");
     const animate = () => {
 
       c.clearRect(0, 0, canvas.width, canvas.height);
       requestAnimationFrame(animate);
 
-      for (let i = 0; i < circleArray.length; i++) {
-        circleArray[i].update();
+      for (let i = 0; i < circleArrayOne.length; i++) {
+        circleArrayOne[i].update();
+      }
+      for (let i = 0; i < circleArrayTwo.length; i++) {
+        circleArrayTwo[i].update();
       }
     }
     animate();
