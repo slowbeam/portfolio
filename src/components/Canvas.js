@@ -27,8 +27,6 @@ class Canvas extends React.Component {
     const canvas = this.refs.canvas;
     const c = canvas.getContext("2d");
 
-
-
     for (let i = 0; i < 100; i++) {
       let x = Math.random() * (window.innerWidth * .89);
       let y = Math.random() * (window.innerHeight * .79);
@@ -119,11 +117,27 @@ class Canvas extends React.Component {
       this.width = width;
       this.height = height;
 
+
+
       this.draw = function() {
         let base_image = new Image();
         base_image.src = "https://66.media.tumblr.com/14fa0853be1a5ebc1b18317f7dac0582/tumblr_inline_npzmkfsewf1rwmtav_250.png";
         base_image.onload = function() {
-        c.drawImage(base_image, this.x, this.y, this.height, this.width)
+
+
+          let interval = setInterval(function() {
+            let x = 0;
+            let y = 0;
+            return function() {
+              c.clearRect(0, 0, c.canvas.width, c.canvas.height);
+              c.drawImage(base_image, x, y)
+              x++;
+              if (x > c.canvas.width) {
+                x = 0;
+              }
+            }
+          }(), 1000/40)
+        // c.drawImage(base_image, this.x, this.y, this.height, this.width)
         }
 
       }
@@ -165,8 +179,10 @@ class Canvas extends React.Component {
 
     const guyArrayOne = createImageArray();
 
-    const guy = new Guy(100, 100, 50, 50, 2, 2);
+    const guy = new Guy(300);
     guy.draw();
+
+    console.log(guy.x)
 
 
 
