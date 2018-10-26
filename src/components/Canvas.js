@@ -190,16 +190,17 @@ class Canvas extends React.Component {
     let url = "https://png.pngtree.com/element_pic/16/06/03/095750dcf5985d0.jpg"
 
     let base_image = new Image();
-    base_image.src = this.url;
+    base_image.src = "../img/guy.jpg";
     base_image.onload = function() {
-    c.drawImage(base_image, 50, 50)
+    c.drawImage(base_image, 0, 0)
     }
+
     // this.drawRandomCircles();
     // this.drawRandomRectangles();
     // Arc / Circle
 
     this.runAnimation();
-    this.drawGuy();
+    // this.drawGuy();
 
   }
 
