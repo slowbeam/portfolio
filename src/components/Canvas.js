@@ -1,7 +1,5 @@
 import React from 'react';
 
-const x = 200;
-
 class Canvas extends React.Component {
 
   drawRandomCircles () {
@@ -43,11 +41,6 @@ class Canvas extends React.Component {
   runAnimation = () => {
     const canvas = this.refs.canvas;
     const c = canvas.getContext("2d");
-
-    // c.beginPath();
-    // c.arc(x, y, radius, 0, Math.PI * 2);
-    // c.strokeStyle = 'blue';
-    // c.stroke();
 
     function Circle(x, y, dx, dy, radius, color) {
       this.x = x;
@@ -95,20 +88,6 @@ class Canvas extends React.Component {
       return circleArray;
     }
 
-    let imageArray = [];
-
-    for (let i = 0; i < 100; i++) {
-      let width = 30;
-      let height = 30;
-      let url = "https://banner2.kisspng.com/20180422/thq/kisspng-guy-fieri-food-network-tv-personality-chef-restaur-guy-5add3af0e59aa7.0049169215244479849405.jpg"
-      let x = Math.random() * (canvas.width - width * 2) + width;
-      let y = Math.random() * (canvas.height - height * 2) + height;
-      let dx = (Math.random() - 0.5) * 2;
-      let dy = (Math.random() - 0.5) * 2;
-
-      imageArray.push(new Image(x, y, dx, dy, width, height, url))
-    }
-
     const circleArrayOne = createCircleArray("rgba(50, 50, 100, .6)");
     const circleArrayTwo = createCircleArray("rgba(50, 100, 100, .2)");
     const animate = () => {
@@ -121,9 +100,6 @@ class Canvas extends React.Component {
       }
       // for (let i = 0; i < circleArrayTwo.length; i++) {
       //   circleArrayTwo[i].update();
-      // }
-      // for (let i = 0; i < imageArray.length; i++) {
-      //   imageArray[i].update();
       // }
 
     }
@@ -153,13 +129,13 @@ class Canvas extends React.Component {
       }
 
       this.update = function() {
-        if (this.x + this.width / 2 > canvas.width || this.x - this.height / 2 < 0) {
-          this.dx = -this.dx;
-        }
-
-        if (this.y + this.height / 2 > canvas.height || this.y - this.height / 2 < 0) {
-          this.dy = -this.dy;
-        }
+        // if (this.x + this.width / 2 > canvas.width || this.x - this.height / 2 < 0) {
+        //   this.dx = -this.dx;
+        // }
+        //
+        // if (this.y + this.height / 2 > canvas.height || this.y - this.height / 2 < 0) {
+        //   this.dy = -this.dy;
+        // }
         this.x += this.dx;
         this.y += this.dy;
         this.draw()
@@ -189,6 +165,9 @@ class Canvas extends React.Component {
 
     const guyArrayOne = createImageArray();
 
+    const guy = new Guy(100, 100, 50, 50, 2, 2);
+    guy.draw();
+
 
 
     const animate = () => {
@@ -196,54 +175,29 @@ class Canvas extends React.Component {
       // c.clearRect(0, 0, canvas.width, canvas.height);
       requestAnimationFrame(animate);
 
-      // for (let i = 0; i < circleArrayOne.length; i++) {
-      //   circleArrayOne[i].update();
-      // }
-      // for (let i = 0; i < circleArrayTwo.length; i++) {
-      //   circleArrayTwo[i].update();
-      // }
-      for (let i = 0; i < guyArrayOne.length; i++) {
-        guyArrayOne[i].update();
+
+      for (let i = 0; i < 1000; i++) {
+        guyArrayOne[0].update();
       }
 
 
     }
 
-    animate();
+    // animate();
 
 
-
-    // let width = 30;
-    // let height = 30;
-    // let url = "https://banner2.kisspng.com/20180422/thq/kisspng-guy-fieri-food-network-tv-personality-chef-restaur-guy-5add3af0e59aa7.0049169215244479849405.jpg"
-    // let x = Math.random() * (canvas.width - width * 2) + width;
-    // let y = Math.random() * (canvas.height - height * 2) + height;
-    // let dx = (Math.random() - 0.5) * 2;
-    // let dy = (Math.random() - 0.5) * 2;
-    //
-    // let image = new Guy(0, 0, 150, 100);
-    // image.draw()
   }
 
   componentDidMount() {
 
-    const canvas = this.refs.canvas;
-    const c = canvas.getContext("2d");
-
-
-    // let base_image = new Image();
-    // base_image.src = "https://66.media.tumblr.com/14fa0853be1a5ebc1b18317f7dac0582/tumblr_inline_npzmkfsewf1rwmtav_250.png";
-    // base_image.onload = function() {
-    // c.drawImage(base_image, 0, 0, 120, 100)
 
     this.drawGuy();
 
 
     // this.drawRandomCircles();
     // this.drawRandomRectangles();
-    // Arc / Circle
 
-    this.runAnimation();
+    // this.runAnimation();
     // this.drawGuy();
 
   }
