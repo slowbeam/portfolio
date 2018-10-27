@@ -132,8 +132,12 @@ class Canvas extends React.Component {
               c.clearRect(0, 0, c.canvas.width, c.canvas.height);
               c.drawImage(base_image, x, y)
               x++;
+              y++
               if (x > c.canvas.width) {
                 x = 0;
+              }
+              if (y > c.canvas.height - this.height) {
+                y = 0;
               }
             }
           }(), 1000/40)
@@ -182,7 +186,7 @@ class Canvas extends React.Component {
     const guy = new Guy(300);
     guy.draw();
 
-    console.log(guy.x)
+
 
 
 
