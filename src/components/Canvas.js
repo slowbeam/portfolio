@@ -183,6 +183,7 @@ class Canvas extends React.Component {
       // }
 
       guyArrayOne[0].update()
+      guyArrayOne[1].update()
 
     }
 
