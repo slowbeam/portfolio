@@ -109,22 +109,17 @@ class Canvas extends React.Component {
     const canvas = this.refs.canvas;
     const c = canvas.getContext("2d");
 
-    function Guy(startX, startY, startDx, startDy, width, height) {
-      this.startX = startX;
-      this.startY = startY;
-      this.width = width;
-      this.height = height;
-      this.startDx = startDx;
-      this.startDy = startDy;
+    function Guy(x, y, dx, dy, width, height) {
+      // this.x = x;
+      // this.y = y;
+      // this.width = width;
+      // this.height = height;
+      // this.dx = dx;
+      // this.dx = dy;
 
       this.draw = function() {
         let base_image = new Image();
         base_image.src = "https://66.media.tumblr.com/14fa0853be1a5ebc1b18317f7dac0582/tumblr_inline_npzmkfsewf1rwmtav_250.png";
-
-        let x = this.startX;
-        let y = this.startY;
-        let dx = 1;
-        let dy = 1;
 
 
         base_image.onload = function() {
@@ -133,11 +128,11 @@ class Canvas extends React.Component {
 
             return function() {
               c.clearRect(0, 0, c.canvas.width, c.canvas.height);
-              c.drawImage(base_image, x, y, 40, 40)
+              c.drawImage(base_image, x, y, height, width)
               if ((x + 40) > c.canvas.width || x < 0) {
                 dx = -dx;
               }
-              if ((y+ 40) > c.canvas.height || y < 0){
+              if ((y + 40) > c.canvas.height || y < 0){
                 dy = -dy;
               }
               x += dx;
@@ -147,7 +142,7 @@ class Canvas extends React.Component {
         // c.drawImage(base_image, this.x, this.y, this.height, this.width)
         }
 
-      }
+      }.bind(this)
     }
 
     const createImageArray = () => {
@@ -183,9 +178,9 @@ class Canvas extends React.Component {
     const animate = () => {
 
       // c.clearRect(0, 0, canvas.width, canvas.height);
-      requestAnimationFrame(animate);
+      // requestAnimationFrame(animate);
 
-      for (let i = 0; i < 1000; i++) {
+      for (let i = 0; i < guyArrayOne.length; i++) {
         if(guyArrayOne[i]) {
           guyArrayOne[i].draw();
         }
