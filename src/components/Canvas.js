@@ -111,32 +111,38 @@ class Canvas extends React.Component {
 
     function Guy(x, y, dx, dy, width, height) {
 
+      let base_image = new Image();
+      base_image.src = "https://66.media.tumblr.com/14fa0853be1a5ebc1b18317f7dac0582/tumblr_inline_npzmkfsewf1rwmtav_250.png";
+
+
       this.draw = function() {
-        let base_image = new Image();
-        base_image.src = "https://66.media.tumblr.com/14fa0853be1a5ebc1b18317f7dac0582/tumblr_inline_npzmkfsewf1rwmtav_250.png";
 
         base_image.onload = function() {
-
-          let interval = setInterval(function() {
-
-            return function() {
-              // c.clearRect(0, 0, c.canvas.width, c.canvas.height);
-              c.drawImage(base_image, x, y, height, width)
-              if ((x + width) > c.canvas.width || x < 0) {
-                dx = -dx;
-              }
-              if ((y + height) > c.canvas.height || y < 0){
-                dy = -dy;
-              }
-              x += dx;
-              y += dy;
-            }
-          }().bind(this), 1000)
-        // c.drawImage(base_image, this.x, this.y, this.height, this.width)
+              c.drawImage(base_image, x, y, height, width);
         }
 
       }.bind(this)
+
+      this.update = function() {
+        let interval = setInterval(function() {
+
+          return function() {
+            // c.clearRect(0, 0, c.canvas.width, c.canvas.height);
+            c.drawImage(base_image, x, y, height, width)
+            if ((x + width) > c.canvas.width || x < 0) {
+              dx = -dx;
+            }
+            if ((y + height) > c.canvas.height || y < 0){
+              dy = -dy;
+            }
+            x += dx;
+            y += dy;
+          }
+        }().bind(this), 1000)
+      }.bind(this)
     }
+
+
 
     const createImageArray = () => {
 
@@ -152,7 +158,7 @@ class Canvas extends React.Component {
       let dx = (Math.random() - 0.5);
       let dy = (Math.random() - 0.5);
 
-      imageArray.push(new Guy(x, y, 1, 1, height, width))
+      imageArray.push(new Guy(x, y, dx, dy, height, width))
       }
 
       return imageArray;
@@ -186,7 +192,7 @@ class Canvas extends React.Component {
   componentDidMount() {
 
 
-    // this.drawGuy();
+    this.drawGuy();
 
 
     // this.drawRandomCircles();
