@@ -109,38 +109,36 @@ class Canvas extends React.Component {
     const canvas = this.refs.canvas;
     const c = canvas.getContext("2d");
 
-    function Guy(x, y, height, width, dx, dy) {
+    function Guy(x, y, width, height) {
       this.x = x;
       this.y = y;
-      this.dx = dx;
-      this.dy = dy;
       this.width = width;
       this.height = height;
-
-
 
       this.draw = function() {
         let base_image = new Image();
         base_image.src = "https://66.media.tumblr.com/14fa0853be1a5ebc1b18317f7dac0582/tumblr_inline_npzmkfsewf1rwmtav_250.png";
         base_image.onload = function() {
 
-
           let interval = setInterval(function() {
             let x = 0;
             let y = 0;
+            let dx = 1;
+            let dy = 1;
+
             return function() {
               c.clearRect(0, 0, c.canvas.width, c.canvas.height);
-              c.drawImage(base_image, x, y)
-              x++;
-              y++
-              if (x > c.canvas.width) {
-                x = 0;
+              c.drawImage(base_image, x, y, 40, 40)
+              if ((x + 40) > c.canvas.width || x < 0) {
+                dx = -dx;
               }
-              if (y > c.canvas.height - this.height) {
-                y = 0;
+              if ((y + 40) > c.canvas.height || y < 0){
+                dy = -dy;
               }
+              x += dx;
+              y += dy;
             }
-          }(), 1000/40)
+          }(), 1000/100)
         // c.drawImage(base_image, this.x, this.y, this.height, this.width)
         }
 
@@ -183,7 +181,7 @@ class Canvas extends React.Component {
 
     const guyArrayOne = createImageArray();
 
-    const guy = new Guy(300);
+    const guy = new Guy(0, 0, 50, 50, 10, 10);
     guy.draw();
 
 
