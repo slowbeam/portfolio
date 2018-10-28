@@ -186,7 +186,7 @@ class Canvas extends React.Component {
   componentDidMount() {
 
 
-    this.drawGuy();
+    // this.drawGuy();
 
 
     // this.drawRandomCircles();
