@@ -109,20 +109,23 @@ class Canvas extends React.Component {
     const canvas = this.refs.canvas;
     const c = canvas.getContext("2d");
 
-    function Guy(x, y, width, height) {
-      this.x = x;
-      this.y = y;
+    function Guy(startX, startY, width, height) {
+      this.startX = startX;
+      this.startY = startY;
       this.width = width;
       this.height = height;
 
       this.draw = function() {
         let base_image = new Image();
         base_image.src = "https://66.media.tumblr.com/14fa0853be1a5ebc1b18317f7dac0582/tumblr_inline_npzmkfsewf1rwmtav_250.png";
+
+        let x = this.startX;
+        let y = this.startY;
+
         base_image.onload = function() {
 
           let interval = setInterval(function() {
-            let x = 0;
-            let y = 0;
+
             let dx = 1;
             let dy = 1;
 
@@ -132,13 +135,13 @@ class Canvas extends React.Component {
               if ((x + 40) > c.canvas.width || x < 0) {
                 dx = -dx;
               }
-              if ((y + 40) > c.canvas.height || y < 0){
+              if ((y+ 40) > c.canvas.height || y < 0){
                 dy = -dy;
               }
               x += dx;
               y += dy;
             }
-          }(), 1000/100)
+          }().bind(this), 1000/100)
         // c.drawImage(base_image, this.x, this.y, this.height, this.width)
         }
 
