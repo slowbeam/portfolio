@@ -109,11 +109,13 @@ class Canvas extends React.Component {
     const canvas = this.refs.canvas;
     const c = canvas.getContext("2d");
 
-    function Guy(startX, startY, width, height) {
+    function Guy(startX, startY, startDx, startDy, width, height) {
       this.startX = startX;
       this.startY = startY;
       this.width = width;
       this.height = height;
+      this.startDx = startDx;
+      this.startDy = startDy;
 
       this.draw = function() {
         let base_image = new Image();
@@ -121,13 +123,13 @@ class Canvas extends React.Component {
 
         let x = this.startX;
         let y = this.startY;
+        let dx = 1;
+        let dy = 1;
+
 
         base_image.onload = function() {
 
           let interval = setInterval(function() {
-
-            let dx = 1;
-            let dy = 1;
 
             return function() {
               c.clearRect(0, 0, c.canvas.width, c.canvas.height);
@@ -146,19 +148,6 @@ class Canvas extends React.Component {
         }
 
       }
-
-      this.update = function() {
-        // if (this.x + this.width / 2 > canvas.width || this.x - this.height / 2 < 0) {
-        //   this.dx = -this.dx;
-        // }
-        //
-        // if (this.y + this.height / 2 > canvas.height || this.y - this.height / 2 < 0) {
-        //   this.dy = -this.dy;
-        // }
-        this.x += this.dx;
-        this.y += this.dy;
-        this.draw()
-      }
     }
 
     const createImageArray = () => {
@@ -167,26 +156,26 @@ class Canvas extends React.Component {
 
       for (let i = 0; i < 100; i++) {
 
-      let width = 100;
-      let height = 150;
+      let width = 50;
+      let height = 50;
 
       let x = Math.random() * (canvas.width - width * 2) + width;
       let y = Math.random() * (canvas.height - height * 2) + height;
-      let dx = (Math.random() - 0.5) * 2;
-      let dy = (Math.random() - 0.5) * 2;
+      let dx = (Math.random() - 0.5);
+      let dy = (Math.random() - 0.5);
 
-      imageArray.push(new Guy(x, y, height, width, dx, dy))
+      imageArray.push(new Guy(x, y, 1, 1, height, width))
       }
 
       return imageArray;
 
     }
 
+
+
+    // const guy = new Guy(200, 30, 1, 1, 50, 50);
+    // guy.draw();
     const guyArrayOne = createImageArray();
-
-    const guy = new Guy(0, 0, 50, 50, 10, 10);
-    guy.draw();
-
 
 
 
@@ -196,15 +185,15 @@ class Canvas extends React.Component {
       // c.clearRect(0, 0, canvas.width, canvas.height);
       requestAnimationFrame(animate);
 
-
       for (let i = 0; i < 1000; i++) {
-        guyArrayOne[0].update();
+        if(guyArrayOne[i]) {
+          guyArrayOne[i].draw();
+        }
       }
-
 
     }
 
-    // animate();
+    animate();
 
 
   }
