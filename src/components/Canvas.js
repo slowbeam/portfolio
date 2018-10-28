@@ -110,35 +110,28 @@ class Canvas extends React.Component {
     const c = canvas.getContext("2d");
 
     function Guy(x, y, dx, dy, width, height) {
-      // this.x = x;
-      // this.y = y;
-      // this.width = width;
-      // this.height = height;
-      // this.dx = dx;
-      // this.dx = dy;
 
       this.draw = function() {
         let base_image = new Image();
         base_image.src = "https://66.media.tumblr.com/14fa0853be1a5ebc1b18317f7dac0582/tumblr_inline_npzmkfsewf1rwmtav_250.png";
-
 
         base_image.onload = function() {
 
           let interval = setInterval(function() {
 
             return function() {
-              c.clearRect(0, 0, c.canvas.width, c.canvas.height);
+              // c.clearRect(0, 0, c.canvas.width, c.canvas.height);
               c.drawImage(base_image, x, y, height, width)
-              if ((x + 40) > c.canvas.width || x < 0) {
+              if ((x + width) > c.canvas.width || x < 0) {
                 dx = -dx;
               }
-              if ((y + 40) > c.canvas.height || y < 0){
+              if ((y + height) > c.canvas.height || y < 0){
                 dy = -dy;
               }
               x += dx;
               y += dy;
             }
-          }().bind(this), 1000/100)
+          }().bind(this), 1000)
         // c.drawImage(base_image, this.x, this.y, this.height, this.width)
         }
 
@@ -172,13 +165,10 @@ class Canvas extends React.Component {
     // guy.draw();
     const guyArrayOne = createImageArray();
 
-
-
-
     const animate = () => {
 
       // c.clearRect(0, 0, canvas.width, canvas.height);
-      // requestAnimationFrame(animate);
+      requestAnimationFrame(animate);
 
       for (let i = 0; i < guyArrayOne.length; i++) {
         if(guyArrayOne[i]) {
