@@ -127,7 +127,7 @@ class Canvas extends React.Component {
         let interval = setInterval(function() {
 
           return function() {
-            // c.clearRect(0, 0, c.canvas.width, c.canvas.height);
+            c.clearRect(0, 0, c.canvas.width, c.canvas.height);
             c.drawImage(base_image, x, y, height, width)
             if ((x + width) > c.canvas.width || x < 0) {
               dx = -dx;
@@ -138,7 +138,7 @@ class Canvas extends React.Component {
             x += dx;
             y += dy;
           }
-        }().bind(this), 1000)
+        }().bind(this), 1000/40)
       }.bind(this)
     }
 
@@ -158,7 +158,7 @@ class Canvas extends React.Component {
       let dx = (Math.random() - 0.5);
       let dy = (Math.random() - 0.5);
 
-      imageArray.push(new Guy(x, y, dx, dy, height, width))
+      imageArray.push(new Guy(x, y, 3, 3, height, width))
       }
 
       return imageArray;
@@ -174,13 +174,15 @@ class Canvas extends React.Component {
     const animate = () => {
 
       // c.clearRect(0, 0, canvas.width, canvas.height);
-      requestAnimationFrame(animate);
+      // requestAnimationFrame(animate);
 
-      for (let i = 0; i < guyArrayOne.length; i++) {
-        if(guyArrayOne[i]) {
-          guyArrayOne[i].draw();
-        }
-      }
+      // for (let i = 0; i < guyArrayOne.length; i++) {
+      //   if(guyArrayOne[i]) {
+      //     guyArrayOne[i].update();
+      //   }
+      // }
+
+      guyArrayOne[0].update()
 
     }
 
