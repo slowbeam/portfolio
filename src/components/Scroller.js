@@ -8,6 +8,11 @@ class Scroller extends React.Component {
         <div className='page five'>
           <div className="inside five">
             <Canvas />
+            <div className='title-div'>
+              <h1>hello,</h1>
+              <h1>I'm Sandy Edwards</h1>
+            </div>
+
           </div>
         </div>
 
