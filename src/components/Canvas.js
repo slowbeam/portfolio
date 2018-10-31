@@ -131,7 +131,7 @@ class Canvas extends React.Component {
               x += dx;
               y += dy;
             }
-          }().bind(this), 1000)
+          }().bind(this), 1000/40)
         // c.drawImage(base_image, this.x, this.y, this.height, this.width)
         }
 
