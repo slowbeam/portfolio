@@ -118,27 +118,7 @@ class Canvas extends React.Component {
       this.draw = function() {
 
         base_image.onload = function() {
-<<<<<<< HEAD
-
-          let interval = setInterval(function() {
-
-            return function() {
-              // c.clearRect(0, 0, c.canvas.width, c.canvas.height);
-              c.drawImage(base_image, x, y, height, width)
-              if ((x + width) > c.canvas.width || x < 0) {
-                dx = -dx;
-              }
-              if ((y + height) > c.canvas.height || y < 0){
-                dy = -dy;
-              }
-              x += dx;
-              y += dy;
-            }
-          }().bind(this), 1000/40)
-        // c.drawImage(base_image, this.x, this.y, this.height, this.width)
-=======
               c.drawImage(base_image, x, y, height, width);
->>>>>>> f7cbb68457a1919aed4f42bdd37fb6e95e4a1131
         }
 
       }.bind(this)
@@ -203,7 +183,6 @@ class Canvas extends React.Component {
       // }
 
       guyArrayOne[0].update()
-      guyArrayOne[1].update()
 
     }
 
