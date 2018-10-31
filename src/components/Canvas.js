@@ -123,6 +123,18 @@ class Canvas extends React.Component {
 
       }.bind(this)
 
+      this.update2 = function() {
+        if ((x + width) > c.canvas.width || x < 0) {
+          dx = -dx;
+        }
+        if ((y + height) > c.canvas.height || y < 0){
+          dy = -dy;
+        }
+        x += dx;
+        y += dy;
+        c.drawImage(base_image, x, y, height, width)
+      }.bind(this);
+
       this.update = function() {
         let interval = setInterval(function() {
 
@@ -173,14 +185,14 @@ class Canvas extends React.Component {
 
     const animate = () => {
 
-      // c.clearRect(0, 0, canvas.width, canvas.height);
-      // requestAnimationFrame(animate);
+      c.clearRect(0, 0, canvas.width, canvas.height);
+      requestAnimationFrame(animate);
 
-      // for (let i = 0; i < guyArrayOne.length; i++) {
-      //   if(guyArrayOne[i]) {
-      //     guyArrayOne[i].update();
-      //   }
-      // }
+      for (let i = 0; i < guyArrayOne.length; i++) {
+        if(guyArrayOne[i]) {
+          guyArrayOne[i].update();
+        }
+      }
 
       guyArrayOne[0].update()
 
