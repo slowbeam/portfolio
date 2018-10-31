@@ -123,7 +123,7 @@ class Canvas extends React.Component {
 
       }.bind(this)
 
-      this.update2 = function() {
+      this.update = function() {
         if ((x + width) > c.canvas.width || x < 0) {
           dx = -dx;
         }
@@ -135,23 +135,6 @@ class Canvas extends React.Component {
         c.drawImage(base_image, x, y, height, width)
       }.bind(this);
 
-      this.update = function() {
-        let interval = setInterval(function() {
-
-          return function() {
-            c.clearRect(0, 0, c.canvas.width, c.canvas.height);
-            c.drawImage(base_image, x, y, height, width)
-            if ((x + width) > c.canvas.width || x < 0) {
-              dx = -dx;
-            }
-            if ((y + height) > c.canvas.height || y < 0){
-              dy = -dy;
-            }
-            x += dx;
-            y += dy;
-          }
-        }().bind(this), 1000/40)
-      }.bind(this)
     }
 
 
@@ -167,20 +150,16 @@ class Canvas extends React.Component {
 
       let x = Math.random() * (canvas.width - width * 2) + width;
       let y = Math.random() * (canvas.height - height * 2) + height;
-      let dx = (Math.random() - 0.5);
-      let dy = (Math.random() - 0.5);
+      let dx = (Math.random() - 0.5) * 3;
+      let dy = (Math.random() - 0.5) * 3;
 
-      imageArray.push(new Guy(x, y, 3, 3, height, width))
+      imageArray.push(new Guy(x, y, dx, dy, height, width))
       }
 
       return imageArray;
 
     }
 
-
-
-    // const guy = new Guy(200, 30, 1, 1, 50, 50);
-    // guy.draw();
     const guyArrayOne = createImageArray();
 
     const animate = () => {
@@ -193,8 +172,6 @@ class Canvas extends React.Component {
           guyArrayOne[i].update();
         }
       }
-
-      guyArrayOne[0].update()
 
     }
 
@@ -211,9 +188,7 @@ class Canvas extends React.Component {
 
     // this.drawRandomCircles();
     // this.drawRandomRectangles();
-
     // this.runAnimation();
-    // this.drawGuy();
 
   }
 
