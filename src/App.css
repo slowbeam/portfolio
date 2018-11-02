@@ -57,7 +57,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 .inside {
   opacity: .95;
   width: 100vw;
-  margin: 8vh 0 0 0vw;
+  /* margin: 8vh 0 0 0vw; */
   height: 100vh;
   position: relative;
   overflow: hidden;
