@@ -8,8 +8,6 @@ class Scroller extends React.Component {
         <div className='page five'>
           <div className="inside five">
             <Canvas />
-            
-
           </div>
         </div>
 
