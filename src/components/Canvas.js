@@ -51,7 +51,14 @@ class Canvas extends React.Component {
 
       this.draw = function() {
         c.fillStyle = this.color;
-        c.fillRect(x, y, )
+        c.fillRect(x, y, h, w);
+      }
+      this.update = function() {
+        if (this.y - this.h > canvas.height) {
+          this.y = 0;
+        }
+        this.y += this.dy;
+        this.draw();
       }
     }
   }
