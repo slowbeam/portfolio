@@ -51,16 +51,44 @@ class Canvas extends React.Component {
 
       this.draw = function() {
         c.fillStyle = this.color;
-        c.fillRect(x, y, h, w);
+        c.fillRect(this.x, this.y, this.h, this.w);
       }
       this.update = function() {
         if (this.y - this.h > canvas.height) {
           this.y = 0;
         }
         this.y += this.dy;
+
         this.draw();
       }
     }
+    const rect = new Rectangle(10, 0, 30, 30, 3, 3, 'red');
+
+    const createReactArr = () => {
+      const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+
+      let rectArr = [];
+
+      for (let i = 0; i < 100; i++) {
+        let x = Math.random() * (canvas.width);
+        let y = Math.random() * (canvas.width);
+        let colorNum = Math.floor(Math.random() * 8);
+        rectArr.push(new Rectangle(x, 0, 30, 30, 3,3, colors[colorNum]))
+      }
+      return rectArr;
+    }
+
+    const rectangleArray = createReactArr();
+
+    const animate = () => {
+      c.clearRect(0, 0, canvas.width, canvas.height);
+      requestAnimationFrame(animate);
+
+      for (let i = 0; i < rectangleArray.length; i++) {
+        setInterval(() => { rectangleArray[i].update()}, 1000);
+      }
+    }
+    animate();
   }
 
   runAnimation = () => {
@@ -215,8 +243,8 @@ class Canvas extends React.Component {
 
 
     // this.drawRandomCircles();
-    this.drawRandomRectangles();
-
+    // this.drawRandomRectangles();
+    this.rectangleWaterfall();
 
   }
 
