@@ -36,6 +36,26 @@ class Canvas extends React.Component {
     }
   }
 
+  rectangleWaterfall = () => {
+    const canvas = this.refs.canvas;
+    const c = canvas.getContext("2d");
+
+    function Rectangle(x, y, h, w, dx, dy, color) {
+      this.x = x;
+      this.y = y;
+      this.h = h;
+      this.w = w;
+      this.dx = dx;
+      this.dy = dy;
+      this.color = color;
+
+      this.draw = function() {
+        c.fillStyle = this.color;
+        c.fillRect(x, y, )
+      }
+    }
+  }
+
   runAnimation = () => {
     const canvas = this.refs.canvas;
     const c = canvas.getContext("2d");
@@ -182,11 +202,13 @@ class Canvas extends React.Component {
 
   componentDidMount() {
 
-    this.drawGuy();
+    // this.drawGuy();
+
+    // this.runAnimation();
 
 
-    this.drawRandomCircles();
-    // this.drawRandomRectangles();
+    // this.drawRandomCircles();
+    this.drawRandomRectangles();
 
 
   }
