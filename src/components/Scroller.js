@@ -7,7 +7,16 @@ class Scroller extends React.Component {
       <div className='scroller'>
         <div className='page five'>
           <div className="inside five">
-            <Canvas />
+            <div className='container'>
+              <Canvas />
+              <div className="overlay">
+                <h1>Hi, I'm Sandy Edwards.
+                <br />
+                I'm a full-stack developer.
+                </h1>
+              </div>
+            </div>
+
           </div>
         </div>
 

@@ -72,15 +72,6 @@ class Canvas extends React.Component {
 
     }
 
-    const spray = () => {
-
-    }
-
-    const rect = new Rectangle(10, 0, 30, 30, 3, 3, 'red', .5);
-
-    
-
-
     const createReactArr = () => {
       const colors = ["#69DDFF", "#96CDFF", "#D8E1FF", "#DBBADD", "#BE92A2"];
 

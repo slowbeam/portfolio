@@ -66,7 +66,7 @@ h1 {
   justify-content: center;
 }
 
-.inside h1 {
+/* .inside h1 {
   margin-left: auto;
   margin-right: auto;
   opacity: 0.9;
@@ -75,7 +75,7 @@ h1 {
   font-size: 3vw;
   background: #478e85;
   padding: 8px 10px 10px;
-}
+} */
 
 .inside.one {
 
@@ -93,6 +93,24 @@ canvas {
   width: 100vw;
   background-color: #9999ff;
   vertical-align: top;
+  position: absolute;
+}
+
+.overlay {
+  position: absolute;
+  background-color:  rgba(53, 55, 177, .4);
+  padding: 0 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+
+  animation: fadein 2s, pulse 2s infinite;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar {
@@ -125,4 +143,45 @@ canvas {
   justify-content: space-around;
   align-items: center;
   background-color: #ff5050;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+      box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadein {
+  from { opacity: 0}
+  to   { opacity: 1}
 }
