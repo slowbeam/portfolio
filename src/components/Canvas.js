@@ -55,7 +55,7 @@ class Canvas extends React.Component {
       }
       this.update = function() {
         if (this.y - this.h > canvas.height) {
-          this.y = 0;
+          this.y = -200;
         }
         this.y += this.dy;
 
@@ -65,15 +65,20 @@ class Canvas extends React.Component {
     const rect = new Rectangle(10, 0, 30, 30, 3, 3, 'red');
 
     const createReactArr = () => {
-      const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+      const colors = ["#69DDFF", "#96CDFF", "#D8E1FF", "#DBBADD", "#BE92A2"];
 
       let rectArr = [];
 
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i < 300; i++) {
         let x = Math.random() * (canvas.width);
-        let y = Math.random() * (canvas.width);
+        let y = Math.random() * (canvas.height);
+        let dx = (Math.random() - 0.5) * 5;
+        let dy = (Math.random() - 0.5) * 5;
+        let h = Math.random() * 50;
+
+
         let colorNum = Math.floor(Math.random() * 8);
-        rectArr.push(new Rectangle(x, 0, 30, 30, 3,3, colors[colorNum]))
+        rectArr.push(new Rectangle(x, y, 2, h, dx , dy, colors[colorNum]))
       }
       return rectArr;
     }
@@ -85,7 +90,7 @@ class Canvas extends React.Component {
       requestAnimationFrame(animate);
 
       for (let i = 0; i < rectangleArray.length; i++) {
-        setInterval(() => { rectangleArray[i].update()}, 1000);
+        rectangleArray[i].update();
       }
     }
     animate();
