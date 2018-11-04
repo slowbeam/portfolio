@@ -109,7 +109,6 @@ canvas {
   -webkit-animation-delay: 2s;
   animation: slide 1s forwards, fadein 2s, pulse 2s infinite;
   animation-delay: 1s;
-
 }
 
 .container {
