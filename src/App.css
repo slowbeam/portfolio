@@ -94,6 +94,7 @@ canvas {
   background-color: #9999ff;
   vertical-align: top;
   position: absolute;
+  animation: fadein ease-in 6s;
 }
 
 .overlay {
