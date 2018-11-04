@@ -89,27 +89,27 @@ h1 {
 }
 
 canvas {
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   background-color: #9999ff;
   vertical-align: top;
   position: absolute;
-  animation: fadein ease-in 6s;
+  animation: fadein 8s;
 }
 
 .overlay {
   position: absolute;
-  background-color:  rgba(53, 55, 177, .4);
+  background-color:  rgba(53, 55, 177, .9);
   padding: 0 15px;
   padding-right: 1500px;
   border-radius: 5px;
-  left: 1500px;
+  left: 100em;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
   -webkit-animation: slide 0.5s forwards;
   -webkit-animation-delay: 2s;
-  animation: slide 1s forwards;
-  animation-delay: 2s;
-  /* animation: fadein 2s, pulse 2s infinite; */
+  animation: slide 1s forwards, fadein 2s, pulse 2s infinite;
+  animation-delay: 1s;
+
 }
 
 .container {
@@ -193,9 +193,9 @@ canvas {
 }
 
 @-webkit-keyframes slide {
-    100% { left: 0; }
+    100% { left: -20em; }
 }
 
 @keyframes slide {
-    100% { left: 0; }
+    100% { left: -20em; }
 }

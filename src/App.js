@@ -6,6 +6,8 @@ import AppCardContainer from './containers/AppCardContainer';
 import Scroller from './components/Scroller'
 
 class App extends Component {
+
+
   render() {
     return (
       <div className="App">

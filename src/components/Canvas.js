@@ -2,6 +2,21 @@ import React from 'react';
 
 class Canvas extends React.Component {
 
+  fixCanvas() {
+    const canvas = document.getElementById('my-canvas');
+    const c = canvas.getContext('2d');
+    const dpi = window.devicePixelRatio;
+
+
+    let style_height = +getComputedStyle(canvas).getPropertyValue("height").slice(0, -2);
+
+    let style_width = +getComputedStyle(canvas).getPropertyValue("width").slice(0, -2);
+
+    canvas.setAttribute('height', style_height * dpi);
+    canvas.setAttribute('width', style_width * dpi);
+  }
+
+
   drawRandomCircles () {
     const canvas = this.refs.canvas;
     const c = canvas.getContext("2d");
@@ -249,6 +264,8 @@ class Canvas extends React.Component {
   }
 
   componentDidMount() {
+
+    this.fixCanvas();
     // this.drawGuy();
 
     // this.runAnimation();
@@ -267,7 +284,7 @@ class Canvas extends React.Component {
   render() {
     return(
       <div className="canvas-container">
-        <canvas ref="canvas" width={640} height={425} />
+        <canvas id="my-canvas" ref="canvas" width={640} height={425} />
       </div>
     )
   }
