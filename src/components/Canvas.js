@@ -40,7 +40,7 @@ class Canvas extends React.Component {
     const canvas = this.refs.canvas;
     const c = canvas.getContext("2d");
 
-    function Rectangle(x, y, h, w, dx, dy, color) {
+    function Rectangle(x, y, h, w, dx, dy, color, angle) {
       this.x = x;
       this.y = y;
       this.h = h;
@@ -48,6 +48,7 @@ class Canvas extends React.Component {
       this.dx = dx;
       this.dy = dy;
       this.color = color;
+      this.angle = angle;
 
       this.draw = function() {
         c.fillStyle = this.color;
@@ -61,8 +62,24 @@ class Canvas extends React.Component {
 
         this.draw();
       }
+
+      this.drawTilted = function() {
+        const c2 = canvas.getContext("2d");
+        c2.fillStyle = this.color;
+        c2.fillRect(this.x, this.y, this.h, this.w);
+        c2.rotate(this.angle);
+      }
+
     }
-    const rect = new Rectangle(10, 0, 30, 30, 3, 3, 'red');
+
+    const spray = () => {
+
+    }
+
+    const rect = new Rectangle(10, 0, 30, 30, 3, 3, 'red', .5);
+
+    
+
 
     const createReactArr = () => {
       const colors = ["#69DDFF", "#96CDFF", "#D8E1FF", "#DBBADD", "#BE92A2"];
@@ -241,7 +258,6 @@ class Canvas extends React.Component {
   }
 
   componentDidMount() {
-
     // this.drawGuy();
 
     // this.runAnimation();
