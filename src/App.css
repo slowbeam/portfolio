@@ -101,10 +101,15 @@ canvas {
   position: absolute;
   background-color:  rgba(53, 55, 177, .4);
   padding: 0 15px;
+  padding-right: 1500px;
   border-radius: 5px;
+  left: 1500px;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
-
-  animation: fadein 2s, pulse 2s infinite;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 1s forwards;
+  animation-delay: 2s;
+  /* animation: fadein 2s, pulse 2s infinite; */
 }
 
 .container {
@@ -185,4 +190,12 @@ canvas {
 @keyframes fadein {
   from { opacity: 0}
   to   { opacity: 1}
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
 }
