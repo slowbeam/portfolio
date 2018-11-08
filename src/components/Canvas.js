@@ -4,7 +4,6 @@ class Canvas extends React.Component {
 
   fixCanvas() {
     const canvas = document.getElementById('my-canvas');
-    const c = canvas.getContext('2d');
     const dpi = window.devicePixelRatio;
 
 
@@ -69,20 +68,16 @@ class Canvas extends React.Component {
         c.fillStyle = this.color;
         c.fillRect(this.x, this.y, this.h, this.w);
       }
-      this.update = function() {
-        if (this.y - this.h > canvas.height) {
+      this.updateDown = function() {
+        if (Math.sign(this.dy) === -1 && this.y < 0) {
+          this.y = canvas.height + 200;
+        }
+        if (Math.sign(this.dy) === 0 && this.y - this.h > canvas.height) {
           this.y = -200;
         }
         this.y += this.dy;
 
         this.draw();
-      }
-
-      this.drawTilted = function() {
-        const c2 = canvas.getContext("2d");
-        c2.fillStyle = this.color;
-        c2.fillRect(this.x, this.y, this.h, this.w);
-        c2.rotate(this.angle);
       }
 
     }
@@ -97,7 +92,7 @@ class Canvas extends React.Component {
         let y = Math.random() * (canvas.height);
         let dx = (Math.random() - 0.5) * 5;
         let dy = (Math.random() - 0.5) * 5;
-        let h = Math.random() * 50;
+        let h = Math.random() * 60;
 
 
         let colorNum = Math.floor(Math.random() * 8);
@@ -113,7 +108,7 @@ class Canvas extends React.Component {
       requestAnimationFrame(animate);
 
       for (let i = 0; i < rectangleArray.length; i++) {
-        rectangleArray[i].update();
+        rectangleArray[i].updateDown();
       }
     }
     animate();
@@ -170,7 +165,6 @@ class Canvas extends React.Component {
     }
 
     const circleArrayOne = createCircleArray("rgba(50, 50, 100, .6)");
-    const circleArrayTwo = createCircleArray("rgba(50, 100, 100, .2)");
     const animate = () => {
 
       c.clearRect(0, 0, canvas.width, canvas.height);
@@ -179,10 +173,6 @@ class Canvas extends React.Component {
       for (let i = 0; i < circleArrayOne.length; i++) {
         circleArrayOne[i].update();
       }
-      // for (let i = 0; i < circleArrayTwo.length; i++) {
-      //   circleArrayTwo[i].update();
-      // }
-
     }
     animate();
     }
@@ -204,7 +194,7 @@ class Canvas extends React.Component {
               c.drawImage(base_image, x, y, height, width);
         }
 
-      }.bind(this)
+      }
 
       this.update = function() {
         if ((x + width) > c.canvas.width || x < 0) {
@@ -216,7 +206,7 @@ class Canvas extends React.Component {
         x += dx;
         y += dy;
         c.drawImage(base_image, x, y, height, width)
-      }.bind(this);
+      }
 
     }
 
