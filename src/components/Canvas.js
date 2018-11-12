@@ -69,7 +69,7 @@ class Canvas extends React.Component {
         c.fillRect(this.x, this.y, this.h, this.w);
       }
       this.updateDown = function() {
-        if (Math.sign(this.dy) === -1 && this.y < 0) {
+        if (Math.sign(this.dy) === -1 && this.y < 0 + this.y) {
           this.y = canvas.height + 200;
         }
         if (Math.sign(this.dy) === 0 && this.y - this.h > canvas.height) {
