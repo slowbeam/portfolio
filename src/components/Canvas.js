@@ -69,14 +69,15 @@ class Canvas extends React.Component {
         c.fillRect(this.x, this.y, this.h, this.w);
       }
       this.updateDown = function() {
-        if (Math.sign(this.dy) === -1 && this.y < 0 + this.y) {
-          this.y = canvas.height + 200;
+        if (this.y < -10) {
+          this.x = Math.random() * canvas.width;
+          this.dy = -this.dy;
         }
-        if (Math.sign(this.dy) === 0 && this.y - this.h > canvas.height) {
-          this.y = -200;
+        if (this.y - (this.h * 10) > canvas.height) {
+          this.x = Math.random() * canvas.width;
+          this.dy = -this.dy;
         }
         this.y += this.dy;
-
         this.draw();
       }
 
@@ -91,7 +92,7 @@ class Canvas extends React.Component {
         let x = Math.random() * (canvas.width);
         let y = Math.random() * (canvas.height);
         let dx = (Math.random() - 0.5) * 5;
-        let dy = (Math.random() - 0.5) * 5;
+        let dy = (Math.random() - 0.5) * 20;
         let h = Math.random() * 50;
 
 
