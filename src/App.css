@@ -216,19 +216,17 @@ canvas {
 
 @media only screen and (max-width: 414px) {
   .overlay {
-    position: absolute;
     background-color: rgba(53, 55, 177, 0.9);
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-right: 200px;
     border-radius: 5px;
     left: 100em;
-    font-size: 8px;
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
-    -webkit-animation: slide 0.5s forwards;
-    -webkit-animation-delay: 2s;
-    animation: slide 1s forwards, fadein 2s, pulse 2s infinite;
-    animation-delay: 1s;
+  }
+
+  .intro-text-container {
+    width: 10em;
+    word-wrap: break-word;
+    height: 400px;
   }
 
   @-webkit-keyframes slide {
@@ -239,7 +237,7 @@ canvas {
 
   @keyframes slide {
     100% {
-      left: -12em;
+      left: -10em;
     }
   }
 }

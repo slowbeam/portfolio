@@ -10,10 +10,12 @@ class Scroller extends React.Component {
             <div className='container'>
               <Canvas />
               <div className="overlay">
-                <h1>Hi, I'm Sandy Edwards.
-                <br />
-                I'm a full-stack developer.
-                </h1>
+                <div className="intro-text-container" >
+                  <h1>Hi, I'm Sandy Edwards.
+                  <br />
+                  I'm a full-stack developer.
+                  </h1>
+                </div>  
               </div>
             </div>
 
