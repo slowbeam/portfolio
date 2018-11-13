@@ -92,7 +92,7 @@ class Canvas extends React.Component {
         let x = Math.random() * (canvas.width);
         let y = Math.random() * (canvas.height);
         let dx = (Math.random() - 0.5) * 5;
-        let dy = (Math.random() - 0.5) * 20;
+        let dy = (Math.random() - 0.5) * 5;
         let h = Math.random() * 50;
 
 
