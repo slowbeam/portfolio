@@ -192,13 +192,13 @@ canvas {
 
 @-webkit-keyframes slide {
   100% {
-    left: -20em;
+    left: 0em;
   }
 }
 
 @keyframes slide {
   100% {
-    left: -20em;
+    left: -10em;
   }
 }
 
