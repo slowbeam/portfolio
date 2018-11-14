@@ -69,7 +69,7 @@ class Canvas extends React.Component {
         c.fillRect(this.x, this.y, this.h, this.w);
       }
       this.updateDown = function() {
-        if (this.y < -10) {
+        if (this.y < -100) {
           this.x = Math.random() * canvas.width;
           this.dy = -this.dy;
         }

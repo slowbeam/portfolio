@@ -15,7 +15,7 @@ class Scroller extends React.Component {
                   <br />
                   I'm a full-stack developer.
                   </h1>
-                </div>  
+                </div>
               </div>
             </div>
 

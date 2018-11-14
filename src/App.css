@@ -14,6 +14,7 @@ h1 {
   font-family: 'Press Start 2P', cursive;
   font-size: 18px;
   line-height: 30px;
+  word-wrap: break-word;
 }
 
 .flex {
@@ -48,7 +49,6 @@ h1 {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: mandatory;
-
   scroll-snap-destination: 0% 100%;
   scroll-snap-points-x: repeat(100%);
 }
@@ -74,17 +74,6 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-
-/* .inside h1 {
-  margin-left: auto;
-  margin-right: auto;
-  opacity: 0.9;
-  text-align: left;
-  margin-top: 30vh;
-  font-size: 3vw;
-  background: #478e85;
-  padding: 8px 10px 10px;
-} */
 
 .inside.one {
 }
@@ -221,12 +210,6 @@ canvas {
     padding-bottom: 10px;
     border-radius: 5px;
     left: 100em;
-  }
-
-  .intro-text-container {
-    width: 10em;
-    word-wrap: break-word;
-    height: 400px;
   }
 
   @-webkit-keyframes slide {
