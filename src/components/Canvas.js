@@ -82,13 +82,6 @@ class Canvas extends React.Component {
   componentDidMount() {
 
     this.fixCanvas();
-    // this.drawGuy();
-
-    // this.runAnimation();
-
-
-    // this.drawRandomCircles();
-    // this.drawRandomRectangles();
     this.rectangleWaterfall();
 
   }
@@ -100,7 +93,7 @@ class Canvas extends React.Component {
   render() {
     return(
       <div className="canvas-container">
-        <canvas id="my-canvas" ref="canvas" width={640} height={425} />
+        <canvas id="my-canvas" ref="canvas" />
       </div>
     )
   }
