@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
 
 @font-face {
-  font-family: 'Minecraftia';
-  src: url('./fonts/Minecraftia-Regular.ttf');
+  font-family: "Minecraftia";
+  src: url("./fonts/Minecraftia-Regular.ttf");
 }
 
 p {
@@ -11,7 +11,7 @@ p {
 
 h1 {
   color: white;
-  font-family: 'Minecraftia', sans-serif;
+  font-family: "Minecraftia", sans-serif;
   font-size: 18px;
   line-height: 30px;
   word-wrap: break-word;
@@ -200,7 +200,7 @@ canvas {
 
 @-webkit-keyframes slide {
   100% {
-    left: 0em;
+    left: -10em;
   }
 }
 
