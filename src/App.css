@@ -92,15 +92,43 @@ canvas {
 
 .overlay {
   position: absolute;
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   background-color: rgba(53, 55, 177, 0.9);
-  padding: 15px 15px;
+  padding: 50px;
   border-radius: 2px;
-  left: 100em;
+  left: 50%;
+  vertical-align: middle;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
   -webkit-animation: slide 0.5s forwards;
   -webkit-animation-delay: 2s;
   animation: slide 1s forwards, fadein 2s, pulse 2s infinite;
   animation-delay: 1s;
+}
+
+.projects-button {
+  position: absolute;
+  background-color: rgba(0, 240, 240, 0.9);
+  padding: 15px;
+  border-radius: 2px;
+  top: -100em;
+  -webkit-animation: slide-top 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide-top 1s forwards, fadein 2s;
+  animation-delay: 2s;
+}
+
+@keyframes slide-top {
+  100% {
+    top: -9em;
+  }
 }
 
 .container {
