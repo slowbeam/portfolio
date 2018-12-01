@@ -5,6 +5,10 @@
   src: url("./fonts/Minecraftia-Regular.ttf");
 }
 
+body {
+  font-family: 'Minecraftia', monospace;
+}
+
 p {
   text-align: center;
 }
@@ -124,7 +128,7 @@ canvas {
     0% 25%
   );
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 50%, 0% 75%, 0% 25%);
-  padding: 20px 30px 70px 30px;
+  padding: 25px 30px 65px 30px;
   width: 160px;
   text-align: center;
   border-radius: 2px;
@@ -141,7 +145,7 @@ canvas {
   -webkit-clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
   clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
   top: 95px;
-  padding: 40px 30px 50px 30px;
+  padding: 45px 30px 45px 30px;
   width: 160px;
   text-align: center;
 }
