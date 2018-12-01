@@ -133,7 +133,7 @@ canvas {
   text-align: center;
   border-radius: 2px;
   top: -100em;
-  -webkit-animation: slide-top 0.5s forwards;
+  -webkit-animation: slide-top 1s forwards;
   -webkit-animation-delay: 2s;
   animation: slide-top 1s forwards, fadein 2s;
   animation-delay: 2s;
@@ -144,10 +144,14 @@ canvas {
   background-color: hsla(200, 100%, 70%, 1);
   -webkit-clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
   clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
-  top: 95px;
+  bottom: -100em;
   padding: 45px 30px 45px 30px;
   width: 160px;
   text-align: center;
+  -webkit-animation: slide-bottom 0.5s forwards;
+  -webkit-animation-delay: 3s;
+  animation: slide-bottom 1s forwards, fadein 2s;
+  animation-delay: 3s;
 }
 
 .projects-button:hover {
@@ -157,6 +161,24 @@ canvas {
 @keyframes slide-top {
   100% {
     top: -11em;
+  }
+}
+
+@-webkit-keyframes slide-top {
+  100% {
+    -webkit-top: -11em;
+  }
+}
+
+@keyframes slide-bottom {
+  100% {
+    bottom: -210px;
+  }
+}
+
+@-webkit-keyframes slide-top {
+  100% {
+    -webkit-bottom: -210px;
   }
 }
 
