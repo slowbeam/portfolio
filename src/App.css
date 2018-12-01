@@ -228,10 +228,15 @@ canvas {
   align-items: center;
   background-color: #ff5050;
   margin: 0 10px 10px 10px;
+  border-radius: 10px;
 }
 
 .app-card img {
-  max-width: 250px;
+  max-width: 220px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
 }
 
 .app-card h2 {
