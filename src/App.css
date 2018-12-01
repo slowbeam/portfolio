@@ -118,6 +118,7 @@ canvas {
 
 .projects-button {
   position: absolute;
+  color: white;
   background-color: rgba(0, 240, 240, 0.9);
   -webkit-clip-path: polygon(
     50% 0%,
@@ -129,7 +130,7 @@ canvas {
   );
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 50%, 0% 75%, 0% 25%);
   padding: 25px 30px 65px 30px;
-  width: 160px;
+  width: 195px;
   text-align: center;
   border-radius: 2px;
   top: -100em;
@@ -141,12 +142,13 @@ canvas {
 
 .about-button {
   position: absolute;
+  color: white;
   background-color: hsla(200, 100%, 70%, 1);
   -webkit-clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
   clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
   bottom: -100em;
   padding: 45px 30px 45px 30px;
-  width: 160px;
+  width: 195px;
   text-align: center;
   -webkit-animation: slide-bottom 0.5s forwards;
   -webkit-animation-delay: 3s;
@@ -155,11 +157,11 @@ canvas {
 }
 
 .projects-button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .about-button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 @keyframes slide-top {

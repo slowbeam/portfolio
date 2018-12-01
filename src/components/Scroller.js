@@ -1,5 +1,6 @@
 import React from "react";
 import Canvas from "./Canvas";
+import AppCardContainer from "../containers/AppCardContainer";
 
 class Scroller extends React.Component {
   render() {
@@ -27,6 +28,7 @@ class Scroller extends React.Component {
         <div className="page one">
           <div className="inside one">
             <h1>here are my projects</h1>
+            <AppCardContainer />
           </div>
         </div>
         <div className="page two">

@@ -9,7 +9,6 @@ class AppCardContainer extends React.Component {
         <AppCard />
         <AppCard />
         <AppCard />
-        <AppCard />
       </div>
     )
   }
