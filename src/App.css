@@ -135,6 +135,10 @@ canvas {
   animation-delay: 2s;
 }
 
+.projects-button:hover {
+  transform: scale(1.1);
+}
+
 @keyframes slide-top {
   100% {
     top: -11em;
