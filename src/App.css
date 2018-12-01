@@ -135,6 +135,17 @@ canvas {
   animation-delay: 2s;
 }
 
+.about-button {
+  position: absolute;
+  background-color: hsla(200, 50%, 50%, 1);
+  -webkit-clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
+  clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
+  top: 95px;
+  padding: 40px 30px 50px 30px;
+  width: 160px;
+  text-align: center;
+}
+
 .projects-button:hover {
   transform: scale(1.1);
 }
