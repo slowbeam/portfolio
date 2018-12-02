@@ -225,7 +225,7 @@ canvas {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  max-width: 250px;
+  width: calc(100vw /3.3);
   align-items: center;
   background-color: hsl(310, 60%, 50%);
   margin: 0 10px 10px 10px;
@@ -237,6 +237,7 @@ canvas {
 }
 
 .app-card img {
+  width: calc(100vw /3.6);
   max-width: 220px;
   margin-top: 20px;
   margin-left: 10px;
@@ -253,20 +254,25 @@ canvas {
 }
 
 .inside.one {
+  position: relative;
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
 }
 
 .inside.one h1 {
   color: black;
 }
 
-.triangle-topleft {
-  background-color: black;
-  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
-  clip-path: polygon(0 0, 0% 100%, 100% 0);
-  z-index: 10;
+.top-triangle {
+  top: calc(100vh * 1);
+  background-color: grey;
+  height: 280px;
+  -webkit-clip-path: polygon(0 0, 0 32%, 100% 0);
+  clip-path: polygon(0 0, 0 32%, 100% 0);
+}
+
+. {
+  color: black;
 }
 
 @-webkit-keyframes pulse {
