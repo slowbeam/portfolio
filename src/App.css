@@ -21,6 +21,28 @@ h1 {
   word-wrap: break-word;
 }
 
+.audio-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+  height: 10vh;
+  width: 10vh;
+  z-index: 30;
+  background-color: #7d7fcf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.audio-button:hover {
+  transform: scale(1.05);
+}
+
+.audio-button i {
+  color: white;
+}
+
 .scroller {
   background-color: #eff7ff;
   width: 100vw;
