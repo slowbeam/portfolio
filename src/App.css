@@ -225,7 +225,7 @@ canvas {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: calc(100vw /3.3);
+  width: calc(100vw / 2);
   align-items: center;
   background-color: hsl(310, 60%, 50%);
   margin: 0 10px 10px 10px;
@@ -237,7 +237,7 @@ canvas {
 }
 
 .app-card img {
-  width: calc(100vw /3.6);
+  width: calc(100vw / 2);
   max-width: 220px;
   margin-top: 20px;
   margin-left: 10px;
