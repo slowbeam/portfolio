@@ -19,26 +19,28 @@ class Scroller extends React.Component {
                   </h1>
                 </div>
               </div>
-              <div className="projects-button">projects</div>
+              <div className="projects-button"><a href="#projects-page">projects</a></div>
               <div className="about-button">about</div>
             </div>
           </div>
         </div>
 
-        <div className="page two">
+        <div id="projects-page" className="page two">
+          <div className="spacer">
+          hidden text</div>
           <div className="inside two">
-            <h1>projects</h1>
+            <h2>projects</h2>
             <AppCardContainer />
           </div>
         </div>
         <div className="page three">
           <div className="inside three">
-            <h1>here are my blog posts</h1>
+            <h2>here are my blog posts</h2>
           </div>
         </div>
         <div className="page four">
           <div className="inside four">
-            <h1>contact me here</h1>
+            <h2>contact me here</h2>
           </div>
         </div>
       </div>

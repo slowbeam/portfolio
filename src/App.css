@@ -21,26 +21,6 @@ h1 {
   word-wrap: break-word;
 }
 
-.flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.title-div {
-  position: absolute;
-  margin-top: -100px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.inside .one {
-  position: relative;
-}
-
 .scroller {
   background-color: #eff7ff;
   width: 100vw;
@@ -74,6 +54,26 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-div {
+  position: absolute;
+  margin-top: -100px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.inside .one {
+  position: relative;
 }
 
 .canvas-container {
@@ -212,6 +212,15 @@ canvas {
   margin-right: 5px;
 }
 
+.projects-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.spacer {
+  visibility: hidden;
+}
+
 .app-card-container {
   display: flex;
   flex-wrap: wrap;
@@ -222,24 +231,27 @@ canvas {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: calc(100vw / 2);
+  width: calc(100vw / 3);
+  max-width: 250px;
+  min-width: 250px;
   align-items: center;
-  background-color: hsl(310, 60%, 50%);
+  background-color: #B3DAFF;
   margin: 0 10px 10px 10px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .app-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 
 .app-card img {
-  width: calc(100vw / 2);
+  width: calc(100vw / 3.1);
   max-width: 220px;
+  min-width: 220px;
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .app-card h2 {
@@ -251,8 +263,7 @@ canvas {
 }
 
 .page .two {
-  height: 200vh;
-  border: 1px solid red;
+  height: 100vh;
 }
 
 .inside.two {
@@ -260,7 +271,7 @@ canvas {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 200vh;
+  height: 100vh;
 }
 
 .inside.two h1 {
