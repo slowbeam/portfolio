@@ -43,9 +43,7 @@ h1 {
 
 .scroller {
   background-color: #eff7ff;
-  background-size: 400px 400px;
   width: 100vw;
-  height: 100vh;
   margin: 0;
   padding: 0;
   white-space: nowrap;
