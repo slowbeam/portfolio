@@ -37,7 +37,7 @@ h1 {
   justify-content: space-around;
 }
 
-.inside .five {
+.inside .one {
   position: relative;
 }
 
@@ -69,7 +69,6 @@ h1 {
 .inside {
   opacity: 0.95;
   width: 100vw;
-  /* margin: 8vh 0 0 0vw; */
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -253,14 +252,25 @@ canvas {
   font-size: 8px;
 }
 
-.inside.one {
+.page .two {
+  height: 200vh;
+  border: 1px solid red;
+}
+
+.inside.two {
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  height: 200vh;
 }
 
-.inside.one h1 {
+.inside.two h1 {
   color: black;
+}
+
+.page .three {
+  position: relative;
 }
 
 .top-triangle {
