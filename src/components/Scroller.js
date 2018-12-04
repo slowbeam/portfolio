@@ -1,6 +1,7 @@
 import React from "react";
 import Canvas from "./Canvas";
 import AppCardContainer from "../containers/AppCardContainer";
+import Footer from './Footer';
 
 class Scroller extends React.Component {
   render() {
@@ -42,6 +43,7 @@ class Scroller extends React.Component {
           <div className="inside four">
             <h2>contact me here</h2>
           </div>
+          <Footer />
         </div>
       </div>
     );

@@ -91,6 +91,11 @@ canvas {
   animation: fadein 8s;
 }
 
+#footer canvas {
+  height: 100px;
+  width: 100vw;
+}
+
 .overlay {
   position: absolute;
   -webkit-clip-path: polygon(

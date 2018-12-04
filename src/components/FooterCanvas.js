@@ -1,22 +1,21 @@
 import React from 'react';
 
-class Canvas extends React.Component {
+class FooterCanvas extends React.Component {
 
   fixCanvas() {
-    const canvas = document.getElementById('my-canvas');
+    const canvas = document.getElementById('footer-canvas');
     const dpi = window.devicePixelRatio;
-
 
     let style_height = +getComputedStyle(canvas).getPropertyValue("height").slice(0, -2);
 
     let style_width = +getComputedStyle(canvas).getPropertyValue("width").slice(0, -2);
 
-    canvas.setAttribute('height', style_height * dpi);
-    canvas.setAttribute('width', style_width * dpi);
+    canvas.setAttribute('height', "100px");
+    canvas.setAttribute('width', style_width)
   }
 
   rectangleWaterfall = () => {
-    const canvas = this.refs.canvas;
+    const canvas = this.refs.footercanvas;
     const c = canvas.getContext("2d");
 
     function Rectangle(x, y, h, w, dx, dy, color, angle) {
@@ -80,20 +79,18 @@ class Canvas extends React.Component {
   }
 
   componentDidMount() {
-
-    this.fixCanvas();
-    window.addEventListener('resize', this.fixCanvas);
-    this.rectangleWaterfall();
-
+      this.fixCanvas();
+      window.addEventListener('resize', this.fixCanvas);
+      this.rectangleWaterfall();
   }
 
   render() {
     return(
-      <div className="canvas-container">
-        <canvas id="my-canvas" ref="canvas" />
+      <div className="footer-canvas-container">
+        <canvas id="footer-canvas" ref="footercanvas" />
       </div>
     )
   }
 }
 
-export default Canvas;
+export default FooterCanvas;
