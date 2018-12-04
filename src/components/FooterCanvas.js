@@ -6,12 +6,10 @@ class FooterCanvas extends React.Component {
     const canvas = document.getElementById('footer-canvas');
     const dpi = window.devicePixelRatio;
 
-    let style_height = +getComputedStyle(canvas).getPropertyValue("height").slice(0, -2);
-
     let style_width = +getComputedStyle(canvas).getPropertyValue("width").slice(0, -2);
 
     canvas.setAttribute('height', "100px");
-    canvas.setAttribute('width', style_width)
+    canvas.setAttribute('width', style_width * dpi)
   }
 
   rectangleWaterfall = () => {

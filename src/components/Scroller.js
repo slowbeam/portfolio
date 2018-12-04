@@ -43,8 +43,8 @@ class Scroller extends React.Component {
           <div className="inside four">
             <h2>contact me here</h2>
           </div>
-          <Footer />
         </div>
+        <Footer />
       </div>
     );
   }
