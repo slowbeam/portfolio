@@ -23,13 +23,13 @@ h1 {
 
 .audio-button {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 50px;
+  right: 50px;
   border-radius: 50%;
-  height: 10vh;
-  width: 10vh;
+  height: 7vh;
+  width: 7vh;
   z-index: 30;
-  background-color: #7d7fcf;
+  background-color: rgba(100, 100, 250, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,7 +107,7 @@ h1 {
 canvas {
   width: 100vw;
   height: 100vh;
-  background-color: #000000;
+  background-color: #100f23;
   vertical-align: top;
   position: absolute;
   animation: fadein 8s;
@@ -129,7 +129,7 @@ canvas {
     0% 25%
   );
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  background-color: rgba(40, 50, 50, 0.4);
+  background-color: #3e427a;
   padding: 50px;
   border-radius: 2px;
   left: 100em;
@@ -144,7 +144,7 @@ canvas {
 .projects-button {
   position: absolute;
   color: white;
-  background-color: rgba(0, 240, 240, 0.9);
+  background-color: #ce4156;
   -webkit-clip-path: polygon(
     50% 0%,
     100% 25%,
@@ -168,7 +168,7 @@ canvas {
 .about-button {
   position: absolute;
   color: white;
-  background-color: hsla(200, 100%, 70%, 1);
+  background-color: #913253;
   -webkit-clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
   clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
   bottom: -100em;
