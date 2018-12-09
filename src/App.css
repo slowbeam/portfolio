@@ -165,6 +165,14 @@ canvas {
   animation-delay: 2s;
 }
 
+#blog-button-shadow-container {
+  filter: drop-shadow(0 0px 20px rgba(150, 30, 30, 0.5));
+}
+
+#blog-button-shadow-container:hover {
+  animation: pulse 2s infinite;
+}
+
 .blog-button {
   position: absolute;
   color: white;
@@ -173,15 +181,8 @@ canvas {
   background-color: red;
   height: 150px;
   width: 140px;
-  -webkit-clip-path: polygon(
-    100% 100%,
-    0 80%,
-    0 31%,
-    31% 31%,
-    31% 61%,
-    100% 75%
-  );
-  clip-path: polygon(80% 100%, 0 80%, 0 40%, 31% 40%, 31% 62%, 80% 75%);
+  -webkit-clip-path: polygon(80% 100%, 0 80%, 0 42%, 31% 50%, 31% 62%, 80% 75%);
+  clip-path: polygon(80% 100%, 0 80%, 0 42%, 31% 50%, 31% 62%, 80% 75%);
 }
 
 .blog-button:hover {
@@ -190,8 +191,8 @@ canvas {
 
 #blog-button-text {
   position: absolute;
-  left: 20px;
-  top: 100px;
+  left: 10px;
+  top: 95px;
 }
 
 .about-button {
@@ -352,28 +353,25 @@ canvas {
 
 @-webkit-keyframes pulse {
   0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0px 0px rgba(150, 30, 30, 0.5));
   }
   70% {
-    -webkit-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    filter: drop-shadow(0 0px 20px rgba(150, 30, 30, 0));
   }
   100% {
-    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    filter: drop-shadow(0 0px 0px rgba(150, 30, 30, 0));
   }
 }
 
 @keyframes pulse {
   0% {
-    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(0 0px 0px rgba(255, 255, 255, 0.5));
   }
   70% {
-    -moz-box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
-    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+    filter: drop-shadow(0 0px 20px rgba(255, 255, 255, 0.1));
   }
   100% {
-    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    filter: drop-shadow(0 0px 0px rgba(255, 255, 255, 0.5));
   }
 }
 
