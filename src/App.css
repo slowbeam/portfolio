@@ -178,6 +178,11 @@ canvas {
   cursor: pointer;
 }
 
+.projects-button:hover {
+  background-color: rgba(206, 65, 86, 0.6);
+  transform: scale(1.05);
+}
+
 #blog-button-shadow-container {
   /* filter: drop-shadow(0 0px 20px rgba(150, 30, 30, 0.5)); */
 }
@@ -253,8 +258,12 @@ canvas {
   height: 150px;
   width: 140px;
   top: -31px;
-  left: 125px;
+  left: 100em;
   cursor: pointer;
+  -webkit-animation: content-slide-right 1s forwards;
+  -webkit-animation-delay: 5s;
+  animation: content-slide-right 1s forwards, fadein 2s;
+  animation-delay: 5s;
 }
 
 .contact-button:hover {
@@ -269,6 +278,18 @@ canvas {
   -ms-transform: rotate(-13deg) skewX(-13deg); /* IE 9 */
   -webkit-transform: rotate(-13deg) skewX(-13deg); /* Safari */
   transform: rotate(-13deg) skewX(-13deg);
+}
+
+@keyframes content-slide-right {
+  100% {
+    left: 125px;
+  }
+}
+
+@-webkit-keyframes content-slide-right {
+  100% {
+    left: 125px;
+  }
 }
 
 #about-button-shadow-container {
@@ -297,12 +318,9 @@ canvas {
   animation: pulse 2s infinite, slide-bottom 1s forwards, fadein 2s;
 }
 
-.projects-button:hover {
-  transform: scale(1.05);
-}
-
 .about-button:hover {
   transform: scale(1.05);
+  background-color: rgb(145, 50, 83, 0.6);
 }
 
 @keyframes slide-top {
