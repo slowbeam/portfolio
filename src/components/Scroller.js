@@ -45,10 +45,15 @@ class Scroller extends React.Component {
         </div>
 
         <div id="projects-page" className="page two">
-          <div className="spacer">hidden text</div>
           <div className="inside two">
-            <h2>projects</h2>
-            <AppCardContainer />
+            <div id="projects-top-triangle-right" />
+            <div id="projects-top-triangle-left" />
+            <div id="projects-top-triangle-middle" />
+            <div id="projects-title">
+              <div id="projects-title-text">
+                <h2>projects</h2>
+              </div>
+            </div>
           </div>
         </div>
         <div className="page three">
