@@ -145,8 +145,17 @@ canvas {
   text-align: center;
 }
 
-.projects-button {
+#projects-button-container {
   position: absolute;
+  top: -100em;
+  -webkit-animation: slide-top 1s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide-top 1s forwards, fadein 2s;
+  animation-delay: 2s;
+  filter: drop-shadow(0 0px 20px rgba(150, 30, 0, 0.5));
+}
+
+.projects-button {
   color: white;
   background-color: #ce4156;
   -webkit-clip-path: polygon(
@@ -161,13 +170,7 @@ canvas {
   padding: 25px 30px 65px 30px;
   width: 195px;
   text-align: center;
-  border-radius: 2px;
-  top: -100em;
   cursor: pointer;
-  -webkit-animation: slide-top 1s forwards;
-  -webkit-animation-delay: 2s;
-  animation: slide-top 1s forwards, fadein 2s;
-  animation-delay: 2s;
 }
 
 #blog-button-shadow-container {
