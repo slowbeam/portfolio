@@ -165,6 +165,19 @@ canvas {
   animation-delay: 2s;
 }
 
+.blog-button {
+  position: absolute;
+  color: white;
+  top: 185px;
+  background-color: red;
+  text-align: center;
+  padding-top: 30px;
+  height: 80px;
+  width: 130px;
+  -webkit-clip-path: polygon(50% 20%, 100% 0%, 66% 100%, 33% 100%, 0 0);
+  clip-path: polygon(50% 15%, 100% 0%, 66% 100%, 33% 100%, 0 0);
+}
+
 .about-button {
   position: absolute;
   color: white;

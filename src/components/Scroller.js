@@ -1,7 +1,7 @@
 import React from "react";
 import Canvas from "./Canvas";
 import AppCardContainer from "../containers/AppCardContainer";
-import Footer from './Footer';
+import Footer from "./Footer";
 
 class Scroller extends React.Component {
   render() {
@@ -20,15 +20,17 @@ class Scroller extends React.Component {
                   </h1>
                 </div>
               </div>
-              <div className="projects-button"><a href="#projects-page">projects</a></div>
+              <div className="projects-button">
+                <a href="#projects-page">projects</a>
+              </div>
               <div className="about-button">about</div>
+              <div className="blog-button">blog</div>
             </div>
           </div>
         </div>
 
         <div id="projects-page" className="page two">
-          <div className="spacer">
-          hidden text</div>
+          <div className="spacer">hidden text</div>
           <div className="inside two">
             <h2>projects</h2>
             <AppCardContainer />
