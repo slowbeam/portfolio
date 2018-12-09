@@ -162,7 +162,7 @@ canvas {
 
 .projects-button {
   color: white;
-  background-color: #ce4156;
+  background-color: rgba(206, 65, 86, 0.5);
   -webkit-clip-path: polygon(
     50% 0%,
     100% 25%,
@@ -189,7 +189,7 @@ canvas {
 .blog-button {
   position: absolute;
   color: white;
-  left: -265px;
+  left: -100em;
   top: -31px;
   background-color: rgba(235, 129, 65, 0.5);
   height: 150px;
@@ -197,6 +197,10 @@ canvas {
   cursor: pointer;
   -webkit-clip-path: polygon(80% 100%, 0 80%, 0 42%, 31% 50%, 31% 62%, 80% 75%);
   clip-path: polygon(80% 100%, 0 80%, 0 42%, 31% 50%, 31% 62%, 80% 75%);
+  -webkit-animation: blog-slide-left 1s forwards;
+  -webkit-animation-delay: 4s;
+  animation: blog-slide-left 1s forwards, fadein 2s;
+  animation-delay: 4s;
 }
 
 .blog-button:hover {
@@ -211,6 +215,18 @@ canvas {
   -ms-transform: rotate(13deg) skewX(13deg); /* IE 9 */
   -webkit-transform: rotate(13deg) skewX(13deg); /* Safari */
   transform: rotate(13deg) skewX(13deg);
+}
+
+@keyframes blog-slide-left {
+  100% {
+    left: -265px;
+  }
+}
+
+@-webkit-keyframes blog-slide-left {
+  100% {
+    left: -265px;
+  }
 }
 
 #contact-button-shadow-container {
@@ -267,7 +283,7 @@ canvas {
 
 .about-button {
   color: white;
-  background-color: #913253;
+  background-color: rgb(145, 50, 83, 0.5);
   -webkit-clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
   clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
   padding: 45px 30px 45px 30px;
@@ -423,25 +439,25 @@ canvas {
 
 @-webkit-keyframes pulse {
   0% {
-    filter: drop-shadow(0 0px 0px rgba(150, 30, 30, 0.5));
-  }
-  70% {
-    filter: drop-shadow(0 0px 20px rgba(150, 30, 30, 0));
-  }
-  100% {
     filter: drop-shadow(0 0px 0px rgba(150, 30, 30, 0));
-  }
-}
-
-@keyframes pulse {
-  0% {
-    filter: drop-shadow(0 0px 0px rgba(150, 30, 30, 1));
   }
   70% {
     filter: drop-shadow(0 0px 20px rgba(150, 30, 30, 0.5));
   }
   100% {
     filter: drop-shadow(0 0px 0px rgba(150, 30, 30, 1));
+  }
+}
+
+@keyframes pulse {
+  0% {
+    filter: drop-shadow(0 0px 0px rgba(150, 30, 30, 0));
+  }
+  70% {
+    filter: drop-shadow(0 0px 20px rgba(150, 30, 30, 0.5));
+  }
+  100% {
+    filter: drop-shadow(0 0px 0px rgba(150, 30, 30, 0));
   }
 }
 
