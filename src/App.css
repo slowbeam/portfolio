@@ -192,27 +192,39 @@ canvas {
 
 #blog-button-text {
   position: absolute;
-  left: 10px;
-  top: 95px;
-  opacity: 1;
+  left: 20px;
+  top: 98px;
+  -ms-transform: rotate(13deg) skewX(13deg); /* IE 9 */
+  -webkit-transform: rotate(13deg) skewX(13deg); /* Safari */
+  transform: rotate(13deg) skewX(13deg);
 }
 
 .contact-button {
   position: absolute;
+  color: white;
   -webkit-clip-path: polygon(
     20% 100%,
-    20% 80%,
-    80% 65%,
-    80% 51%,
-    100% 45%,
+    20% 75%,
+    68% 62%,
+    68% 50%,
+    100% 42%,
     100% 80%
   );
-  clip-path: polygon(20% 100%, 20% 80%, 80% 65%, 80% 51%, 100% 45%, 100% 80%);
+  clip-path: polygon(20% 100%, 20% 75%, 68% 62%, 68% 50%, 100% 42%, 100% 80%);
   background-color: rgba(255, 0, 0, 0.5);
   height: 150px;
   width: 140px;
   top: -31px;
-  left: 120px;
+  left: 125px;
+}
+
+#contact-button-text {
+  position: absolute;
+  left: 50px;
+  top: 100px;
+  -ms-transform: rotate(-13deg) skewX(-13deg); /* IE 9 */
+  -webkit-transform: rotate(-13deg) skewX(-13deg); /* Safari */
+  transform: rotate(-13deg) skewX(-13deg);
 }
 
 .about-button {
