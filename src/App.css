@@ -148,11 +148,16 @@ canvas {
 #projects-button-container {
   position: absolute;
   top: -100em;
+  /* filter: drop-shadow(0 0px 20px rgba(150, 30, 0, 0.5)); */
   -webkit-animation: slide-top 1s forwards;
   -webkit-animation-delay: 2s;
   animation: slide-top 1s forwards, fadein 2s;
   animation-delay: 2s;
-  filter: drop-shadow(0 0px 20px rgba(150, 30, 0, 0.5));
+}
+
+#projects-button-container:hover {
+  -webkit-animation: pulse 2s infinite, slide-top 1s forwards;
+  animation: pulse 2s infinite, slide-top 1s forwards, fadein 2s;
 }
 
 .projects-button {
@@ -174,7 +179,7 @@ canvas {
 }
 
 #blog-button-shadow-container {
-  filter: drop-shadow(0 0px 20px rgba(150, 30, 30, 0.5));
+  /* filter: drop-shadow(0 0px 20px rgba(150, 30, 30, 0.5)); */
 }
 
 #blog-button-shadow-container:hover {
@@ -208,6 +213,14 @@ canvas {
   transform: rotate(13deg) skewX(13deg);
 }
 
+#contact-button-shadow-container {
+  /* filter: drop-shadow(0 0px 20px rgba(150, 30, 30, 0.5)); */
+}
+
+#contact-button-shadow-container:hover {
+  animation: pulse 2s infinite;
+}
+
 .contact-button {
   position: absolute;
   color: white;
@@ -233,14 +246,6 @@ canvas {
   background-color: rgba(235, 129, 65, 0.6);
 }
 
-#contact-button-shadow-container {
-  filter: drop-shadow(0 0px 20px rgba(150, 30, 30, 0.5));
-}
-
-#contact-button-shadow-container:hover {
-  animation: pulse 2s infinite;
-}
-
 #contact-button-text {
   position: absolute;
   left: 50px;
@@ -250,21 +255,30 @@ canvas {
   transform: rotate(-13deg) skewX(-13deg);
 }
 
-.about-button {
+#about-button-shadow-container {
   position: absolute;
-  color: white;
-  background-color: #913253;
-  -webkit-clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
-  clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
   bottom: -100em;
-  padding: 45px 30px 45px 30px;
-  width: 195px;
-  text-align: center;
-  cursor: pointer;
+  /* filter: drop-shadow(0 0px 20px rgba(150, 30, 30, 0.5)); */
   -webkit-animation: slide-bottom 0.5s forwards;
   -webkit-animation-delay: 3s;
   animation: slide-bottom 1s forwards, fadein 2s;
   animation-delay: 3s;
+}
+
+.about-button {
+  color: white;
+  background-color: #913253;
+  -webkit-clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
+  clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
+  padding: 45px 30px 45px 30px;
+  width: 195px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#about-button-shadow-container:hover {
+  -webkit-animation: pulse 2s infinite, slide-bottom 0.5s forwards;
+  animation: pulse 2s infinite, slide-bottom 1s forwards, fadein 2s;
 }
 
 .projects-button:hover {
