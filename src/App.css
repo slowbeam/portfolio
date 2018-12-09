@@ -118,8 +118,17 @@ canvas {
   width: 100vw;
 }
 
-.overlay {
+#overlay-container {
   position: absolute;
+  left: 100em;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 1s forwards, fadein 2s;
+  animation-delay: 1s;
+  filter: drop-shadow(0 0px 20px rgba(100, 30, 100, 0.5));
+}
+
+.overlay {
   -webkit-clip-path: polygon(
     50% 0%,
     100% 25%,
@@ -134,11 +143,6 @@ canvas {
   border-radius: 2px;
   left: 100em;
   text-align: center;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
-  -webkit-animation: slide 0.5s forwards;
-  -webkit-animation-delay: 2s;
-  animation: slide 1s forwards, fadein 2s;
-  animation-delay: 1s;
 }
 
 .projects-button {
@@ -159,6 +163,7 @@ canvas {
   text-align: center;
   border-radius: 2px;
   top: -100em;
+  cursor: pointer;
   -webkit-animation: slide-top 1s forwards;
   -webkit-animation-delay: 2s;
   animation: slide-top 1s forwards, fadein 2s;
@@ -181,6 +186,7 @@ canvas {
   background-color: rgba(235, 129, 65, 0.5);
   height: 150px;
   width: 140px;
+  cursor: pointer;
   -webkit-clip-path: polygon(80% 100%, 0 80%, 0 42%, 31% 50%, 31% 62%, 80% 75%);
   clip-path: polygon(80% 100%, 0 80%, 0 42%, 31% 50%, 31% 62%, 80% 75%);
 }
@@ -216,6 +222,7 @@ canvas {
   width: 140px;
   top: -31px;
   left: 125px;
+  cursor: pointer;
 }
 
 .contact-button:hover {
@@ -250,6 +257,7 @@ canvas {
   padding: 45px 30px 45px 30px;
   width: 195px;
   text-align: center;
+  cursor: pointer;
   -webkit-animation: slide-bottom 0.5s forwards;
   -webkit-animation-delay: 3s;
   animation: slide-bottom 1s forwards, fadein 2s;
