@@ -29,6 +29,11 @@ class Scroller extends React.Component {
                   <div id="blog-button-text">blog</div>
                 </div>
               </div>
+              <div id="contact-button-shadow-container">
+                <div className="contact-button">
+                  <div id="contact-button-text">contact</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
