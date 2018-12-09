@@ -168,14 +168,30 @@ canvas {
 .blog-button {
   position: absolute;
   color: white;
-  top: 185px;
+  left: -265px;
+  top: -31px;
   background-color: red;
-  text-align: center;
-  padding-top: 30px;
-  height: 80px;
-  width: 130px;
-  -webkit-clip-path: polygon(50% 20%, 100% 0%, 66% 100%, 33% 100%, 0 0);
-  clip-path: polygon(50% 15%, 100% 0%, 66% 100%, 33% 100%, 0 0);
+  height: 150px;
+  width: 140px;
+  -webkit-clip-path: polygon(
+    100% 100%,
+    0 80%,
+    0 31%,
+    31% 31%,
+    31% 61%,
+    100% 75%
+  );
+  clip-path: polygon(80% 100%, 0 80%, 0 40%, 31% 40%, 31% 62%, 80% 75%);
+}
+
+.blog-button:hover {
+  transform: scale(1.05);
+}
+
+#blog-button-text {
+  position: absolute;
+  left: 20px;
+  top: 100px;
 }
 
 .about-button {
