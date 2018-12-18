@@ -31,12 +31,16 @@ class Scroller extends React.Component {
               </div>
               <div id="blog-button-shadow-container">
                 <div className="blog-button">
-                  <div id="blog-button-text">blog</div>
+                  <div id="blog-button-text">
+                    <a href="#blog-page">blog</a>
+                  </div>
                 </div>
               </div>
               <div id="contact-button-shadow-container">
                 <div className="contact-button">
-                  <div id="contact-button-text">contact</div>
+                  <div id="contact-button-text">
+                    <a href="#contact-page">contact</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -78,12 +82,12 @@ class Scroller extends React.Component {
             </div>
           </div>
         </div>
-        <div className="page three">
+        <div id="blog-page" className="page three">
           <div className="inside three">
             <h2>here are my blog posts</h2>
           </div>
         </div>
-        <div className="page four">
+        <div id="contact-page" className="page four">
           <div className="inside four">
             <h2>contact me here</h2>
           </div>

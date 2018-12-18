@@ -227,6 +227,11 @@ canvas {
   transform: rotate(13deg) skewX(13deg);
 }
 
+#blog-button-text a {
+  text-decoration: none;
+  color: white;
+}
+
 @keyframes blog-slide-left {
   100% {
     left: -265px;
@@ -283,6 +288,11 @@ canvas {
   -ms-transform: rotate(-13deg) skewX(-13deg); /* IE 9 */
   -webkit-transform: rotate(-13deg) skewX(-13deg); /* Safari */
   transform: rotate(-13deg) skewX(-13deg);
+}
+
+#contact-button-text a {
+  text-decoration: none;
+  color: white;
 }
 
 @keyframes content-slide-right {
@@ -369,8 +379,20 @@ canvas {
 }
 
 #projects-page {
-  height: 2000px;
+  height: 2500px;
   border: 1px solid red;
+}
+
+.inside.two {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 2500px;
+}
+
+.inside.two h1 {
+  color: black;
 }
 
 #projects-top-triangle-right {
@@ -480,7 +502,7 @@ canvas {
 .project-title-container-two {
   width: 100%;
   color: black;
-  margin-top:  200px;
+  margin-top:  500px;
   display: flex;
   justify-content: space-between;
   overflow: visible;
@@ -489,7 +511,7 @@ canvas {
 .project-title-container-three {
   width: 100%;
   color: black;
-  margin-top:  200px;
+  margin-top:  500px;
   display: flex;
   justify-content: space-between;
   overflow: visible;
@@ -579,22 +601,6 @@ canvas {
 
 .app-card p {
   font-size: 8px;
-}
-
-.page .two {
-  height: 100vh;
-}
-
-.inside.two {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 1500px;
-}
-
-.inside.two h1 {
-  color: black;
 }
 
 .page .three {
