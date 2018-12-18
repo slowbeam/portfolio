@@ -434,17 +434,17 @@ canvas {
 .project-title-container {
   width: 100%;
   color: black;
-  margin-top: 300px;
-  display: flex;
-  align-items: center;
+  /* margin-top:  0px; */
+  display: inline;
+  overflow: visible;
 }
 
 .project-title-left-polygon {
-  -webkit-clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+  -webkit-clip-path: polygon(100% 60%, 100% 100%, 0 40%, 0 0);
+  clip-path: polygon(100% 75%, 100% 100%, 0 25%, 0 0);
   background-color: #1b1a2e;
-  width: 80vw;
-  height: 10vh;
+  width: 40vw;
+  height: 70vh;
   left: 0;
 }
 
