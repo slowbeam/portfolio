@@ -1,6 +1,5 @@
 import React from "react";
 import Canvas from "./Canvas";
-import AppCardContainer from "../containers/AppCardContainer";
 import Footer from "./Footer";
 
 class Scroller extends React.Component {
