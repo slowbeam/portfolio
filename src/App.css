@@ -403,7 +403,7 @@ canvas {
 #projects-title {
   position: absolute;
   top: 100px;
-  background-color: rgba(206, 65, 86, 0.5);
+  background-color: rgba(150, 70, 70, 1);
   color: white;
   height: 150px;
   width: 200px;
