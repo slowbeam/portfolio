@@ -52,6 +52,9 @@ class Scroller extends React.Component {
                 <h2>projects</h2>
               </div>
             </div>
+            <div className="project-title-container">
+              vibelist
+            </div>
           </div>
         </div>
         <div className="page three">
