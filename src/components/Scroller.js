@@ -62,6 +62,20 @@ class Scroller extends React.Component {
               </div>
               <div className="project-title-right-polygon"></div>
             </div>
+            <div className="project-title-container-two">
+              <div className="project-title-left-polygon"></div>
+              <div className="project-title-text">
+                birthify
+              </div>
+              <div className="project-title-right-polygon"></div>
+            </div>
+            <div className="project-title-container-three">
+              <div className="project-title-left-polygon"></div>
+              <div className="project-title-text">
+                beat-machine
+              </div>
+              <div className="project-title-right-polygon"></div>
+            </div>
           </div>
         </div>
         <div className="page three">

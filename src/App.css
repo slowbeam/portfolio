@@ -368,6 +368,11 @@ canvas {
   flex-grow: 0;
 }
 
+#projects-page {
+  height: 2000px;
+  border: 1px solid red;
+}
+
 #projects-top-triangle-right {
   position: absolute;
   right: 0;
@@ -466,32 +471,44 @@ canvas {
 .project-title-container {
   width: 100%;
   color: black;
-  margin-top:  145px;
+  margin-top:  320px;
+  display: flex;
+  justify-content: space-between;
+  overflow: visible;
+}
+
+.project-title-container-two {
+  width: 100%;
+  color: black;
+  margin-top:  200px;
   display: flex;
   justify-content: space-between;
   overflow: visible;
 }
 
 .project-title-left-polygon {
-  -webkit-clip-path: polygon(100% 75%, 100% 100%, 0 25%, 0 0);
-  clip-path: polygon(100% 75%, 100% 100%, 0 25%, 0 0);
+
+  -webkit-clip-path: polygon(100% 0, 100% 30%, 0 100%, 0 70%);
+  clip-path: polygon(100% 0, 100% 30%, 0 100%, 0 70%);
   background-color: #1b1a2e;
-  width: 40vw;
-  height: 40vh;
+  width: 42vw;
+  height: 27vh;
   left: 0;
 }
 
 .project-title-text {
   height: 100%;
-  margin-top: 200px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 300px;
 }
 
 .project-title-right-polygon {
-  -webkit-clip-path: polygon(100% 0, 100% 25%, 0 100%, 0 75%);
-  clip-path: polygon(100% 0, 100% 25%, 0 100%, 0 75%);
+  -webkit-clip-path: polygon(100% 70%, 100% 100%, 0 30%, 0 0);
+  clip-path: polygon(100% 70%, 100% 100%, 0 30%, 0 0);
   background-color: #1b1a2e;
-  width: 40vw;
-  height: 40vh;
+  width: 42vw;
+  height: 27vh;
   left: 0;
 }
 
@@ -564,7 +581,7 @@ canvas {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 100vh;
+  height: 1500px;
 }
 
 .inside.two h1 {
