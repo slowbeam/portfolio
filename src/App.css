@@ -486,20 +486,29 @@ canvas {
   overflow: visible;
 }
 
+.project-title-container-three {
+  width: 100%;
+  color: black;
+  margin-top:  200px;
+  display: flex;
+  justify-content: space-between;
+  overflow: visible;
+}
+
 .project-title-left-polygon {
 
   -webkit-clip-path: polygon(100% 0, 100% 30%, 0 100%, 0 70%);
   clip-path: polygon(100% 0, 100% 30%, 0 100%, 0 70%);
   background-color: #1b1a2e;
-  width: 42vw;
-  height: 27vh;
+  width: 40vw;
+  height: 30vh;
   left: 0;
 }
 
 .project-title-text {
   height: 100%;
-  margin-top: 10px;
-  font-size: 18px;
+  margin-top: 13px;
+  font-size: 15px;
   font-weight: 300px;
 }
 
@@ -507,8 +516,8 @@ canvas {
   -webkit-clip-path: polygon(100% 70%, 100% 100%, 0 30%, 0 0);
   clip-path: polygon(100% 70%, 100% 100%, 0 30%, 0 0);
   background-color: #1b1a2e;
-  width: 42vw;
-  height: 27vh;
+  width: 40vw;
+  height: 30vh;
   left: 0;
 }
 
