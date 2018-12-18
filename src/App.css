@@ -379,7 +379,8 @@ canvas {
 }
 
 #projects-page {
-  height: 2500px;
+  display: flex;
+  flex-direction: column;
   border: 1px solid red;
 }
 
@@ -387,8 +388,7 @@ canvas {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  height: 2500px;
+  height: calc(100vh * 4)
 }
 
 .inside.two h1 {
@@ -479,8 +479,17 @@ canvas {
   }
 }
 
+.projects-selection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
 .projects-container {
-  width: 100%; 
+  position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
