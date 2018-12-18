@@ -423,7 +423,12 @@ canvas {
 #projects-title-text {
   position: relative;
   text-align: center;
-  top: 10px;
+  top: 20px;
+}
+
+#projects-title-text h2 {
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .box-1 {
