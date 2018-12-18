@@ -479,6 +479,13 @@ canvas {
   }
 }
 
+.projects-container {
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .project-container {
   position: relative;
   width: 100%;
