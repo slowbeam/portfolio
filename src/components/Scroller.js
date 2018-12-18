@@ -47,11 +47,14 @@ class Scroller extends React.Component {
           <div className="inside two">
             <div id="projects-top-triangle-right" />
             <div id="projects-top-triangle-left" />
-            <div id="projects-title">
-              <div id="projects-title-text">
-                <h2>projects</h2>
+            <div id="projects-title-shadow-container">
+              <div id="projects-title">
+                <div id="projects-title-text">
+                  <h2>projects</h2>
+                </div>
               </div>
             </div>
+
             <div className="project-title-container">
               <div className="project-title-left-polygon"></div>
               <div className="project-title-text">

@@ -400,6 +400,13 @@ canvas {
   opacity: 0.9;
 }
 
+#projects-title-shadow-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(0 0px 10px rgba(80, 30, 30, 0.7));
+}
+
 #projects-title {
   position: absolute;
   top: 150px;
@@ -423,13 +430,13 @@ canvas {
 
 @keyframes title-bounce {
   0% {
-    top: 140px;
+    top: 145px;
   }
   50% {
     top: 150px;
   }
   100% {
-    top: 140px;
+    top: 145px;
   }
 }
 
