@@ -53,6 +53,7 @@ class Scroller extends React.Component {
               </div>
             </div>
             <div className="project-title-container">
+              <div className="project-title-left-polygon"></div>
               vibelist
             </div>
           </div>

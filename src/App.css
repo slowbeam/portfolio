@@ -431,6 +431,23 @@ canvas {
   font-weight: 300;
 }
 
+.project-title-container {
+  width: 100%;
+  color: white;
+  background: red;
+  margin-top: 300px;
+  display: inline;
+}
+
+.project-title-left-polygon {
+  -webkit-clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+  background-color: black;
+  width: 80vw;
+  height: 10vh;
+  left: 0;
+}
+
 .box-1 {
   align-self: center;
   margin-left: 5px;
