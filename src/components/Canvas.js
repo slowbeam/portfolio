@@ -58,11 +58,11 @@ class Canvas extends React.Component {
         let x = Math.random() * canvas.width;
         let y = Math.random() * canvas.height;
         let dx = (Math.random() - 0.5) * 5;
-        let dy = (Math.random() - 0.5) * 5;
+        let dy = (Math.random() - 0.5) * 3;
         let h = Math.random() * 50;
 
         let colorNum = Math.floor(Math.random() * 8);
-        rectArr.push(new Rectangle(x, y, 0.5, h, dx, dy, colors[colorNum]));
+        rectArr.push(new Rectangle(x, y, 0.2, h, dx, dy, colors[colorNum]));
       }
       return rectArr;
     };
