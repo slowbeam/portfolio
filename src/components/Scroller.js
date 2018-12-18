@@ -58,27 +58,32 @@ class Scroller extends React.Component {
                 </div>
               </div>
             </div>
-
-            <div className="project-title-container">
-              <div className="project-title-left-polygon"></div>
-              <div className="project-title-text">
-                vibelist
+            <div className="project-container">
+              <div className="project-title-container">
+                <div className="project-title-left-polygon"></div>
+                <div className="project-title-text">
+                  vibelist
+                </div>
+                <div className="project-title-right-polygon"></div>
               </div>
-              <div className="project-title-right-polygon"></div>
             </div>
-            <div className="project-title-container-two">
-              <div className="project-title-left-polygon"></div>
-              <div className="project-title-text">
-                birthify
+            <div className="project-container">
+              <div className="project-title-container-two">
+                <div className="project-title-left-polygon"></div>
+                <div className="project-title-text">
+                  birthify
+                </div>
+                <div className="project-title-right-polygon"></div>
               </div>
-              <div className="project-title-right-polygon"></div>
             </div>
-            <div className="project-title-container-three">
-              <div className="project-title-left-polygon"></div>
-              <div className="project-title-text">
-                beat-machine
+            <div className="project-container">
+              <div className="project-title-container-three">
+                <div className="project-title-left-polygon"></div>
+                <div className="project-title-text">
+                  beat-machine
+                </div>
+                <div className="project-title-right-polygon"></div>
               </div>
-              <div className="project-title-right-polygon"></div>
             </div>
           </div>
         </div>

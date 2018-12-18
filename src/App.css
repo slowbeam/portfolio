@@ -479,6 +479,13 @@ canvas {
   }
 }
 
+.project-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  border: 1px solid green;
+}
+
 #projects-title-text {
   position: relative;
   text-align: center;
@@ -493,25 +500,20 @@ canvas {
 .project-title-container {
   width: 100%;
   color: black;
-  margin-top:  320px;
   display: flex;
   justify-content: space-between;
-  overflow: visible;
 }
 
 .project-title-container-two {
   width: 100%;
   color: black;
-  margin-top:  500px;
   display: flex;
   justify-content: space-between;
-  overflow: visible;
 }
 
 .project-title-container-three {
   width: 100%;
   color: black;
-  margin-top:  500px;
   display: flex;
   justify-content: space-between;
   overflow: visible;
