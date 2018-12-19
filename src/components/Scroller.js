@@ -60,7 +60,7 @@ class Scroller extends React.Component {
                   className="projects-button"
                   onClick={() => this.handleMenuClick(".page.two")}
                 >
-                  <a href="#">projects</a>
+                  projects
                 </div>
               </div>
               <div id="about-button-shadow-container">
@@ -68,15 +68,21 @@ class Scroller extends React.Component {
               </div>
               <div id="blog-button-shadow-container">
                 <div className="blog-button">
-                  <div id="blog-button-text">
-                    <a href="#blog-page">blog</a>
+                  <div
+                    id="blog-button-text"
+                    onClick={() => this.handleMenuClick("#blog-page")}
+                  >
+                    blog
                   </div>
                 </div>
               </div>
               <div id="contact-button-shadow-container">
                 <div className="contact-button">
-                  <div id="contact-button-text">
-                    <a href="#contact-page">contact</a>
+                  <div
+                    id="contact-button-text"
+                    onClick={() => this.handleMenuClick("#contact-page")}
+                  >
+                    contact
                   </div>
                 </div>
               </div>
@@ -96,11 +102,28 @@ class Scroller extends React.Component {
                   </div>
                 </div>
               </div>
-              <div
-                className="project-select-button"
-                onClick={() => this.handleMenuClick("#vibelist")}
-              >
-                vibelist
+              <div className="project-button-container">
+                <div
+                  id="vibelist-button"
+                  className="project-select-button"
+                  onClick={() => this.handleMenuClick("#vibelist")}
+                >
+                  vibelist
+                </div>
+                <div
+                  id="birthify-button"
+                  className="project-select-button"
+                  onClick={() => this.handleMenuClick("#birthify")}
+                >
+                  Birthify
+                </div>
+                <div
+                  id="beat-machine-button"
+                  className="project-select-button"
+                  onClick={() => this.handleMenuClick("#beat-machine")}
+                >
+                  Beat-Machine
+                </div>
               </div>
             </div>
 
@@ -112,14 +135,14 @@ class Scroller extends React.Component {
                   <div className="project-title-right-polygon" />
                 </div>
               </div>
-              <div className="project-container">
+              <div id="birthify" className="project-container">
                 <div className="project-title-container-two">
                   <div className="project-title-left-polygon" />
                   <div className="project-title-text">birthify</div>
                   <div className="project-title-right-polygon" />
                 </div>
               </div>
-              <div className="project-container">
+              <div id="beat-machine" className="project-container">
                 <div className="project-title-container-three">
                   <div className="project-title-left-polygon" />
                   <div className="project-title-text">beat-machine</div>

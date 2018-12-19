@@ -5,6 +5,10 @@
   src: url("./fonts/Minecraftia-Regular.ttf");
 }
 
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   font-family: "Minecraftia", monospace;
 }
@@ -388,7 +392,7 @@ canvas {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: calc(100vh * 4)
+  height: calc(100vh * 4);
 }
 
 .inside.two h1 {
@@ -487,6 +491,29 @@ canvas {
   height: 100vh;
 }
 
+.project-button-container {
+  display: flex;
+}
+
+.project-select-button {
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background-color: red;
+  height: 10vh;
+  width: 20vw;
+  margin-top: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .projects-container {
   position: relative;
   width: 100%;
@@ -536,7 +563,6 @@ canvas {
 }
 
 .project-title-left-polygon {
-
   -webkit-clip-path: polygon(100% 0, 100% 30%, 0 100%, 0 70%);
   clip-path: polygon(100% 0, 100% 30%, 0 100%, 0 70%);
   background-color: #1b1a2e;
