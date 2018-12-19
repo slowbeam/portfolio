@@ -96,10 +96,16 @@ class Scroller extends React.Component {
                   </div>
                 </div>
               </div>
+              <div
+                className="project-select-button"
+                onClick={() => this.handleMenuClick("#vibelist")}
+              >
+                vibelist
+              </div>
             </div>
 
             <div className="projects-container">
-              <div className="project-container">
+              <div id="vibelist" className="project-container">
                 <div className="project-title-container">
                   <div className="project-title-left-polygon" />
                   <div className="project-title-text">vibelist</div>
