@@ -36,6 +36,22 @@ class Scroller extends React.Component {
     this.smoothScroll(page);
   };
 
+  handleProjectButtonEnter = event => {
+    const buttonIdArr = event.target.id.split("-");
+    const projectImageIdArr = buttonIdArr.slice(0, buttonIdArr.length - 1);
+    const projectImageId = projectImageIdArr.join("-") + "-gif";
+    const projectImageDiv = document.getElementById(projectImageId);
+    projectImageDiv.style.visibility = "visible";
+  };
+
+  handleProjectButtonExit = event => {
+    const buttonIdArr = event.target.id.split("-");
+    const projectImageIdArr = buttonIdArr.slice(0, buttonIdArr.length - 1);
+    const projectImageId = projectImageIdArr.join("-") + "-gif";
+    const projectImageDiv = document.getElementById(projectImageId);
+    projectImageDiv.style.visibility = "hidden";
+  };
+
   render() {
     return (
       <div className="scroller">
@@ -126,6 +142,8 @@ class Scroller extends React.Component {
                   id="vibelist-button"
                   className="project-select-button"
                   onClick={() => this.handleMenuClick("#vibelist")}
+                  onMouseEnter={this.handleProjectButtonEnter}
+                  onMouseLeave={this.handleProjectButtonExit}
                 >
                   vibelist
                 </div>
@@ -133,6 +151,8 @@ class Scroller extends React.Component {
                   id="birthify-button"
                   className="project-select-button"
                   onClick={() => this.handleMenuClick("#birthify")}
+                  onMouseEnter={this.handleProjectButtonEnter}
+                  onMouseLeave={this.handleProjectButtonExit}
                 >
                   Birthify
                 </div>
@@ -140,6 +160,8 @@ class Scroller extends React.Component {
                   id="beat-machine-button"
                   className="project-select-button"
                   onClick={() => this.handleMenuClick("#beat-machine")}
+                  onMouseEnter={this.handleProjectButtonEnter}
+                  onMouseLeave={this.handleProjectButtonExit}
                 >
                   Beat-Machine
                 </div>

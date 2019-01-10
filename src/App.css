@@ -544,7 +544,7 @@ canvas {
   width: 25vw;
   height: 30vh;
   margin-top: 40vh;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 .project-gif {
