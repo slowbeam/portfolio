@@ -494,7 +494,7 @@ canvas {
   display: flex;
   justify-content: space-between;
   width: 80vw;
-  margin-top: 10vh;
+  margin-top: 20vh;
 }
 
 .project-select-button {
@@ -514,6 +514,12 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 16px;
+}
+
+.project-select-button:hover {
+  transform: scale(1.02);
+  font-size: 16px;
 }
 
 .projects-container {
