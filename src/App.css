@@ -510,7 +510,6 @@ canvas {
   background-color: red;
   height: 10vh;
   width: 250px;
-  margin-top: 45vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -523,6 +522,23 @@ canvas {
 .project-select-button:hover {
   transform: scale(1.02);
   font-size: 16px;
+}
+
+.project-image {
+  display: flex;
+  justify-content: center;
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  width: 300px;
+  height: 300px;
+  visibility: hidden;
 }
 
 .projects-container {
