@@ -499,7 +499,7 @@ canvas {
 .project-image-container {
   display: flex;
   justify-content: space-between;
-  width: 80vw;
+  width: 90vw;
 }
 
 .project-select-button {
@@ -514,7 +514,7 @@ canvas {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   background-color: red;
   height: 10vh;
-  width: 250px;
+  width: 15vw;
   display: flex;
   justify-content: center;
   align-items: center;
