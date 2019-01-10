@@ -494,7 +494,12 @@ canvas {
   display: flex;
   justify-content: space-between;
   width: 80vw;
-  margin-top: 20vh;
+}
+
+.project-image-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
 }
 
 .project-select-button {
@@ -536,11 +541,15 @@ canvas {
     0% 25%
   );
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  width: 300px;
-  height: 300px;
+  width: 25vw;
+  height: 30vh;
   margin-top: 40vh;
-  margin-bottom: -18vh;
   /* visibility: hidden; */
+}
+
+.project-gif {
+  height: 100%;
+  width: 100%;
 }
 
 .projects-container {
