@@ -492,6 +492,8 @@ canvas {
 
 .project-button-container {
   display: flex;
+  justify-content: space-between;
+  width: 80vw;
 }
 
 .project-select-button {
