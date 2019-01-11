@@ -543,7 +543,7 @@ canvas {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   width: 25vw;
   height: 30vh;
-  margin-top: 40vh;
+  margin-top: 35vh;
   visibility: hidden;
 }
 
@@ -602,7 +602,7 @@ canvas {
 .project-title-left-polygon {
   -webkit-clip-path: polygon(100% 0, 100% 30%, 0 100%, 0 70%);
   clip-path: polygon(100% 0, 100% 30%, 0 100%, 0 70%);
-  background-color: #1b1a2e;
+  background-color: #5d5973;
   width: 40vw;
   height: 30vh;
   left: 0;
@@ -618,7 +618,7 @@ canvas {
 .project-title-right-polygon {
   -webkit-clip-path: polygon(100% 70%, 100% 100%, 0 30%, 0 0);
   clip-path: polygon(100% 70%, 100% 100%, 0 30%, 0 0);
-  background-color: #1b1a2e;
+  background-color: #5d5973;
   width: 40vw;
   height: 30vh;
   left: 0;

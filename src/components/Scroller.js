@@ -122,18 +122,21 @@ class Scroller extends React.Component {
                   <img
                     className="project-gif"
                     src={require("../img/vibelist-gif-2.gif")}
+                    alt="demo of vibelist application"
                   />
                 </div>
                 <div className="project-image" id="birthify-gif">
                   <img
                     className="project-gif"
                     src={require("../img/bf-2.gif")}
+                    alt="demo of birthify application"
                   />
                 </div>
                 <div className="project-image" id="beat-machine-gif">
                   <img
                     className="project-gif"
                     src={require("../img/bm-1.gif")}
+                    alt="demo of beat machine application"
                   />
                 </div>
               </div>
