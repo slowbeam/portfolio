@@ -600,10 +600,10 @@ canvas {
 }
 
 .project-title-left-polygon {
-  -webkit-clip-path: polygon(100% 0, 100% 30%, 0 100%, 0 70%);
-  clip-path: polygon(100% 0, 100% 30%, 0 100%, 0 70%);
+  -webkit-clip-path: polygon(100% 0, 95% 30%, 0 30%, 0 0%);
+  clip-path: polygon(100% 0, 95% 30%, 0 30%, 0 0%);
   background-color: #5d5973;
-  width: 40vw;
+  width: 43vw;
   height: 30vh;
   left: 0;
 }
@@ -616,10 +616,10 @@ canvas {
 }
 
 .project-title-right-polygon {
-  -webkit-clip-path: polygon(100% 70%, 100% 100%, 0 30%, 0 0);
-  clip-path: polygon(100% 70%, 100% 100%, 0 30%, 0 0);
+  -webkit-clip-path: polygon(100% 0%, 100% 30%, 5% 30%, 0 0);
+  clip-path: polygon(100% 0%, 100% 30%, 5% 30%, 0 0);
   background-color: #5d5973;
-  width: 40vw;
+  width: 43vw;
   height: 30vh;
   left: 0;
 }
@@ -632,6 +632,7 @@ canvas {
 
 .project-page-image {
   width: 30vw;
+  border-radius: 5px;
 }
 
 .box-1 {
