@@ -625,14 +625,26 @@ canvas {
 }
 .project-page-image-container {
   display: flex;
-  height: 42vh;
+  height: 30%;
   width: 100%;
   justify-content: space-around;
 }
 
 .project-page-image {
-  width: 30vw;
+  width: 25%;
   border-radius: 5px;
+}
+
+.project-page-description {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.project-page-description-paragraph {
+  width: 80vw;
+  text-align: center;
+  white-space: normal;
 }
 
 .box-1 {

@@ -23,6 +23,14 @@ class ProjectPage extends React.Component {
             src={require("../img/vibelist-gif-4.gif")}
           />
         </div>
+        <div className="project-page-description">
+          <div className="project-page-description-paragraph">
+            Vibelist is a Spotify music discovery tool for creating custom
+            playlists in the mood and genre of the user's choice. Built with
+            React, Redux, Thunk on the Frontend and a Ruby on Rails backend that
+            interacts seamlessly with the Spotify API.
+          </div>
+        </div>
       </div>
     );
   }
