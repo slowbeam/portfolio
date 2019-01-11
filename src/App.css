@@ -627,11 +627,12 @@ canvas {
   display: flex;
   height: 30%;
   width: 100%;
+  margin-bottom: 10vh;
   justify-content: space-around;
 }
 
 .project-page-image {
-  width: 25%;
+  width: 30%;
   border-radius: 5px;
 }
 
@@ -639,12 +640,19 @@ canvas {
   display: flex;
   width: 100%;
   justify-content: center;
+  margin-bottom: 3vh;
 }
 
 .project-page-description-paragraph {
   width: 80vw;
   text-align: center;
   white-space: normal;
+}
+
+.project-links-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 .box-1 {

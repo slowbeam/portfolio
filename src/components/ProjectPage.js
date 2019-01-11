@@ -31,6 +31,11 @@ class ProjectPage extends React.Component {
             interacts seamlessly with the Spotify API.
           </div>
         </div>
+        <div className="project-links-container">
+          <a href="https://github.com/slowbeam/vibe-list-client">Github</a>
+          &nbsp; | &nbsp;
+          <a href="https://vibelist.herokuapp.com/">Live App</a>
+        </div>
       </div>
     );
   }
