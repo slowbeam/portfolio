@@ -1,40 +1,39 @@
 import React from "react";
 
 class ProjectPage extends React.Component {
+  renderProjectImages = () => {
+    const imagesDup = [...this.props.images];
+
+    return imagesDup.map(image => (
+      <img
+        className="project-page-image"
+        src={require(image)}
+        alt="demo of project"
+      />
+    ));
+  };
   render() {
     return (
       <div id="vibelist" className="project-container">
         <div className="project-title-container">
           <div className="project-title-left-polygon" />
-          <div className="project-title-text">vibelist</div>
+          <div className="project-title-text">{this.props.name}</div>
           <div className="project-title-right-polygon" />
         </div>
-        <div className="project-page-image-container">
-          <img
-            className="project-page-image"
-            src={require("../img/vibelist-gif-2.gif")}
-          />
-          <img
-            className="project-page-image"
-            src={require("../img/vibelist-gif-3.gif")}
-          />
-          <img
-            className="project-page-image"
-            src={require("../img/vibelist-gif-4.gif")}
-          />
-        </div>
+        <div className="project-page-image-container" />
         <div className="project-page-description">
           <div className="project-page-description-paragraph">
-            Vibelist is a Spotify music discovery tool for creating custom
-            playlists in the mood and genre of the user's choice. Built with
-            React, Redux, Thunk on the Frontend and a Ruby on Rails backend that
-            interacts seamlessly with the Spotify API.
+            {this.props.description}
           </div>
         </div>
         <div className="project-links-container">
-          <a href="https://github.com/slowbeam/vibe-list-client">Github</a>
+          <a href="https://github.com/slowbeam/vibe-list-client">
+            {Object.keys(this.props.links)[0]}
+          </a>
           &nbsp; | &nbsp;
-          <a href="https://vibelist.herokuapp.com/">Live App</a>
+          <a href="https://vibelist.herokuapp.com/">
+            {Object.keys(this.props.links)[1]}
+          </a>
         </div>
       </div>
     );

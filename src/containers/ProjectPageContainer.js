@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectPage from "../components/ProjectPage";
+import uuid from "uuid";
 
 class ProjectPageContainer extends React.Component {
   state = {
@@ -43,6 +44,7 @@ class ProjectPageContainer extends React.Component {
 
     return stateDup.projects.map(project => (
       <ProjectPage
+        key={uuid()}
         name={project.name}
         images={project.images}
         description={project.description}
