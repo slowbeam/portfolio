@@ -624,6 +624,10 @@ canvas {
   left: 0;
 }
 
+.project-page-image {
+  width: 30vw;
+}
+
 .box-1 {
   align-self: center;
   margin-left: 5px;

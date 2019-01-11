@@ -2,6 +2,8 @@ import React from "react";
 import Canvas from "./Canvas";
 import Footer from "./Footer";
 
+import ProjectPage from "./ProjectPage";
+
 class Scroller extends React.Component {
   smoothScroll = target => {
     let scrollContainer = target;
@@ -172,13 +174,7 @@ class Scroller extends React.Component {
             </div>
 
             <div className="projects-container">
-              <div id="vibelist" className="project-container">
-                <div className="project-title-container">
-                  <div className="project-title-left-polygon" />
-                  <div className="project-title-text">vibelist</div>
-                  <div className="project-title-right-polygon" />
-                </div>
-              </div>
+              <ProjectPage />
               <div id="birthify" className="project-container">
                 <div className="project-title-container-two">
                   <div className="project-title-left-polygon" />
