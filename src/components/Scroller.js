@@ -1,8 +1,8 @@
 import React from "react";
 import Canvas from "./Canvas";
 import Footer from "./Footer";
-
 import ProjectPage from "./ProjectPage";
+import ProjectPageContainer from "../containers/ProjectPageContainer";
 
 class Scroller extends React.Component {
   smoothScroll = target => {
@@ -173,23 +173,7 @@ class Scroller extends React.Component {
               </div>
             </div>
 
-            <div className="projects-container">
-              <ProjectPage />
-              <div id="birthify" className="project-container">
-                <div className="project-title-container-two">
-                  <div className="project-title-left-polygon" />
-                  <div className="project-title-text">birthify</div>
-                  <div className="project-title-right-polygon" />
-                </div>
-              </div>
-              <div id="beat-machine" className="project-container">
-                <div className="project-title-container-three">
-                  <div className="project-title-left-polygon" />
-                  <div className="project-title-text">beat-machine</div>
-                  <div className="project-title-right-polygon" />
-                </div>
-              </div>
-            </div>
+            <ProjectPageContainer />
           </div>
         </div>
         <div id="blog-page" className="page three">

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
 @font-face {
   font-family: "Minecraftia";
@@ -644,6 +644,7 @@ canvas {
 }
 
 .project-page-description-paragraph {
+  font-family: "Open Sans", sans-serif;
   width: 80vw;
   text-align: center;
   white-space: normal;
@@ -653,6 +654,14 @@ canvas {
   display: flex;
   width: 100%;
   justify-content: center;
+}
+
+.project-links-container a {
+  text-decoration: none;
+}
+
+.project-links-container a:hover {
+  color: #c8a2d1;
 }
 
 .box-1 {
