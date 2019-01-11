@@ -623,6 +623,12 @@ canvas {
   height: 30vh;
   left: 0;
 }
+.project-page-image-container {
+  display: flex;
+  height: 42vh;
+  width: 100%;
+  justify-content: space-around;
+}
 
 .project-page-image {
   width: 30vw;
