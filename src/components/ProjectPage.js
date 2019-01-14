@@ -1,4 +1,5 @@
 import React from "react";
+import uuid from "uuid";
 
 class ProjectPage extends React.Component {
   renderProjectImages = () => {
@@ -7,8 +8,9 @@ class ProjectPage extends React.Component {
     return imagesDup.map(image => (
       <img
         className="project-page-image"
-        src={require(`${image}`)}
+        src={image}
         alt="demo of project"
+        key={uuid()}
       />
     ));
   };
@@ -20,7 +22,9 @@ class ProjectPage extends React.Component {
           <div className="project-title-text">{this.props.name}</div>
           <div className="project-title-right-polygon" />
         </div>
-        <div className="project-page-image-container" />
+        <div className="project-page-image-container">
+          {this.renderProjectImages()}
+        </div>
         <div className="project-page-description">
           <div className="project-page-description-paragraph">
             {this.props.description}
