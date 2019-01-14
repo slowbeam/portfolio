@@ -570,8 +570,10 @@ canvas {
 }
 
 #projects-title-text h2 {
+  position: relative;
   font-size: 18px;
   font-weight: 300;
+  top: 20px;
 }
 
 .project-title-container {
