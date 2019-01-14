@@ -118,7 +118,7 @@ class Scroller extends React.Component {
                   </div>
                 </div>
               </div>
-              <div className="project-image-container">
+              <div className="project-select-grid">
                 <div className="project-image" id="vibelist-gif">
                   <img
                     className="project-gif"
@@ -140,8 +140,7 @@ class Scroller extends React.Component {
                     alt="demo of beat machine application"
                   />
                 </div>
-              </div>
-              <div className="project-button-container">
+
                 <div
                   id="vibelist-button"
                   className="project-select-button"
@@ -171,7 +170,6 @@ class Scroller extends React.Component {
                 </div>
               </div>
             </div>
-
             <ProjectPageContainer />
           </div>
         </div>
