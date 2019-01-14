@@ -490,24 +490,10 @@ canvas {
   height: 100vh;
 }
 
-.project-button-container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 2000px;
-  min-width: 900px;
-}
-
-.project-image-container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1400px;
-  min-width: 1028px;
-}
-
 .project-select-grid {
   display: grid;
   grid-template-columns: auto auto auto;
-  width: 80vw;
+  width: 100vw;
   align-items: center;
   justify-items: center;
 }
@@ -524,8 +510,10 @@ canvas {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   background-color: red;
 
-  width: 200px;
-  height: 100px;
+  width: 15vw;
+  height: 8vw;
+  min-height: 100px;
+  min-width: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -553,7 +541,7 @@ canvas {
     0% 25%
   );
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  width: 300px;
+  width: 25vw;
   margin-top: 35vh;
   visibility: hidden;
 }
