@@ -493,13 +493,15 @@ canvas {
 .project-button-container {
   display: flex;
   justify-content: space-between;
-  width: 80vw;
+  max-width: 1400px;
+  min-width: 900px;
 }
 
 .project-image-container {
   display: flex;
   justify-content: space-between;
-  width: 90vw;
+  max-width: 1400px;
+  min-width: 900px;
 }
 
 .project-select-button {
@@ -522,6 +524,7 @@ canvas {
   font-size: 16px;
   background-color: #3e427a;
   color: white;
+  cursor: pointer;
 }
 
 .project-select-button:hover {
@@ -541,8 +544,7 @@ canvas {
     0% 25%
   );
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  width: 335px;
-  height: 250px;
+  width: 15vw;
   margin-top: 35vh;
   visibility: hidden;
 }

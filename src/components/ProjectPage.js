@@ -7,7 +7,7 @@ class ProjectPage extends React.Component {
     return imagesDup.map(image => (
       <img
         className="project-page-image"
-        src={require(image)}
+        src={require(`${image}`)}
         alt="demo of project"
       />
     ));
