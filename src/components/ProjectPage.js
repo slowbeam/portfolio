@@ -16,7 +16,7 @@ class ProjectPage extends React.Component {
   };
   render() {
     return (
-      <div id="vibelist" className="project-container">
+      <div id={this.props.id} className="project-container">
         <div className="project-title-container">
           <div className="project-title-left-polygon" />
           <div className="project-title-text">{this.props.name}</div>

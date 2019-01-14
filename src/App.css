@@ -631,7 +631,8 @@ canvas {
 }
 
 .project-page-image {
-  width: 30%;
+  width: 360px;
+  height: 300px;
   border-radius: 5px;
 }
 

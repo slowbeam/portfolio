@@ -14,7 +14,8 @@ class ProjectPageContainer extends React.Component {
         links: {
           Github: "https://github.com/slowbeam/vibe-list-client",
           "Live App": "https://vibelist.herokuapp.com/"
-        }
+        },
+        id: "vibelist"
       },
       {
         name: "Birthify",
@@ -24,7 +25,8 @@ class ProjectPageContainer extends React.Component {
         links: {
           Github: "https://github.com/slowbeam/birthify-client",
           Demo: "https://www.youtube.com/watch?v=OsuEvbesbe4&feature=youtu.be"
-        }
+        },
+        id: "birthify"
       },
       {
         name: "Beat-Machine",
@@ -38,7 +40,8 @@ class ProjectPageContainer extends React.Component {
         links: {
           Github: "https://github.com/slowbeam/beat-machine-app",
           "Live App": "https://beat-machine.com/"
-        }
+        },
+        id: "beat-machine"
       }
     ]
   };
@@ -52,6 +55,7 @@ class ProjectPageContainer extends React.Component {
         name={project.name}
         images={project.images}
         description={project.description}
+        id={project.id}
         links={project.links}
       />
     ));
