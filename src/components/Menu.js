@@ -27,23 +27,19 @@ class Menu extends React.Component {
           <div className="about-button">about</div>
         </div>
         <div id="blog-button-shadow-container">
-          <div className="blog-button">
-            <div
-              id="blog-button-text"
-              onClick={() => this.props.handleMenuClick("#blog-page")}
-            >
-              blog
-            </div>
+          <div
+            className="blog-button"
+            onClick={() => this.props.handleMenuClick("#blog-page")}
+          >
+            <div id="blog-button-text">blog</div>
           </div>
         </div>
         <div id="contact-button-shadow-container">
-          <div className="contact-button">
-            <div
-              id="contact-button-text"
-              onClick={() => this.props.handleMenuClick("#contact-page")}
-            >
-              contact
-            </div>
+          <div
+            className="contact-button"
+            onClick={() => this.props.handleMenuClick("#contact-page")}
+          >
+            <div id="contact-button-text">contact</div>
           </div>
         </div>
       </React.Fragment>
