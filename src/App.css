@@ -621,7 +621,7 @@ canvas {
   max-width: 375px;
   max-height: 333.75px;
   border-radius: 5px;
-  margin-top: -5vh;
+  margin-top: -10vh;
   cursor: pointer;
 }
 
@@ -631,7 +631,7 @@ canvas {
   max-width: 500px;
   max-height: 445px;
   margin-bottom: -5vh;
-  margin-top: -10vh;
+  margin-top: -15vh;
 }
 
 .project-page-description {
@@ -662,6 +662,30 @@ canvas {
   color: #c8a2d1;
 }
 
+#projects-top-triangle-right-blog {
+  position: absolute;
+  right: 0;
+  width: 70vw;
+  height: 200px;
+  z-index: 2;
+  background-color: #3e3e4d;
+  -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  margin-top: -100px;
+}
+
+#projects-top-triangle-left-blog {
+  position: absolute;
+  left: 0;
+  width: 70vw;
+  height: 200px;
+  z-index: 3;
+  background-color: #3e3e4d;
+  -webkit-clip-path: polygon(100% 50%, 0 0, 0 100%);
+  clip-path: polygon(100% 50%, 0 0, 0 100%);
+  margin-top: -100px;
+}
+
 .box-1 {
   align-self: center;
   margin-left: 5px;
@@ -679,47 +703,6 @@ canvas {
 
 .spacer {
   visibility: hidden;
-}
-
-.app-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.app-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: calc(100vw / 3);
-  max-width: 250px;
-  min-width: 250px;
-  align-items: center;
-  background-color: #b3daff;
-  margin: 0 10px 10px 10px;
-  border-radius: 5px;
-}
-
-.app-card:hover {
-  transform: scale(1.01);
-}
-
-.app-card img {
-  width: calc(100vw / 3.1);
-  max-width: 220px;
-  min-width: 220px;
-  margin-top: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-radius: 5px;
-}
-
-.app-card h2 {
-  font-size: 10px;
-}
-
-.app-card p {
-  font-size: 8px;
 }
 
 .page .three {

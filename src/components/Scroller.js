@@ -58,6 +58,8 @@ class Scroller extends React.Component {
           </div>
         </div>
         <div id="blog-page" className="page three">
+          <div id="projects-top-triangle-right-blog" />
+          <div id="projects-top-triangle-left-blog" />
           <div className="inside three">
             <h2>here are my blog posts</h2>
           </div>
