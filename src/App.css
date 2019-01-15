@@ -583,21 +583,7 @@ canvas {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.project-title-container-two {
-  width: 100%;
-  color: black;
-  display: flex;
-  justify-content: space-between;
-}
-
-.project-title-container-three {
-  width: 100%;
-  color: black;
-  display: flex;
-  justify-content: space-between;
-  overflow: visible;
+  margin-bottom: 20vh;
 }
 
 .project-title-left-polygon {
@@ -624,16 +610,28 @@ canvas {
 }
 .project-page-image-container {
   display: flex;
-  height: 30%;
   width: 100%;
   margin-bottom: 10vh;
   justify-content: space-around;
 }
 
 .project-page-image {
-  width: 360px;
-  height: 300px;
+  width: 25vw;
+  height: 22.25vw;
+  max-width: 375px;
+  max-height: 333.75px;
   border-radius: 5px;
+  margin-top: -5vh;
+  cursor: pointer;
+}
+
+#birthify .project-page-image {
+  width: 40vw;
+  height: 35.6vw;
+  max-width: 500px;
+  max-height: 445px;
+  margin-bottom: -5vh;
+  margin-top: -10vh;
 }
 
 .project-page-description {

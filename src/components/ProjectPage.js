@@ -2,6 +2,13 @@ import React from "react";
 import uuid from "uuid";
 
 class ProjectPage extends React.Component {
+  handleImageClick = () => {
+    const firstLinkKey = Object.keys(this.props.links)[1];
+    const targetLink = this.props.links[firstLinkKey];
+    const newWindow = window.open(targetLink, "_blank");
+    newWindow.focus();
+  };
+
   renderProjectImages = () => {
     const imagesDup = [...this.props.images];
 
@@ -10,6 +17,7 @@ class ProjectPage extends React.Component {
         className="project-page-image"
         src={image}
         alt="demo of project"
+        onClick={this.handleImageClick}
         key={uuid()}
       />
     ));
