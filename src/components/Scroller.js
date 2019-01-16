@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import ProjectPageContainer from "../containers/ProjectPageContainer";
 import Menu from "./Menu";
 import ProjectSelectPage from "./ProjectSelectPage";
+import BlogPage from "./BlogPage";
 
 class Scroller extends React.Component {
   smoothScroll = target => {
@@ -61,23 +62,7 @@ class Scroller extends React.Component {
           <div id="projects-top-triangle-right-blog" />
           <div id="projects-top-triangle-left-blog" />
           <div className="inside three">
-            <h2 id="blog-title">blog</h2>
-            <div id="blog-card">
-              <blockquote className="embedly-card">
-                <h4>
-                  <a href="https://medium.com/@sedwardscode">
-                    Sandy Edwards - Medium
-                  </a>
-                </h4>
-                <p>
-                  Read writing from Sandy Edwards on Medium. Full stack
-                  developer//music fanatic//french bulldog lover//currently
-                  seeking employment in NYC. Every day, Sandy Edwards and
-                  thousands of other voices read, write, and share important
-                  stories on Medium.
-                </p>
-              </blockquote>
-            </div>
+            <BlogPage />
           </div>
         </div>
         <div id="contact-page" className="page four">
