@@ -1,4 +1,5 @@
 import React from "react";
+import BlogPostCard from "./BlogPostCard";
 
 class BlogPage extends React.Component {
   state = {
@@ -40,6 +41,20 @@ class BlogPage extends React.Component {
     });
   };
 
+  renderPosts = () => {
+    const stateDup = Object.assign({}, this.state);
+
+    return stateDup.posts.map(post => (
+      <BlogPostCard
+        title={post.title}
+        image={post.image}
+        url={post.url}
+        subtitle={post.subtitle}
+        date={post.date}
+      />
+    ));
+  };
+
   render() {
     console.log(this.state);
     return (
@@ -62,9 +77,7 @@ class BlogPage extends React.Component {
             </span>
           </a>
         </div>
-        <div className="blog-content">
-          <pre>{JSON.stringify(this.state.posts, null, 2)}</pre>
-        </div>
+        <div className="blog-content">{this.renderPosts()}</div>
       </div>
     );
   }
