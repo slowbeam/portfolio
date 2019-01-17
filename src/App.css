@@ -692,6 +692,7 @@ canvas {
 
 .blog-page {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   white-space: normal;
   width: 80vw;

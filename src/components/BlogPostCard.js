@@ -7,7 +7,11 @@ class BlogPostCard extends React.Component {
         <header>
           <h4 className="date">{this.props.date}</h4>
           <div className="blog-element">
-            <img className="img-responsive" src={this.props.image} />
+            <img
+              className="img-responsive"
+              src={this.props.image}
+              alt="blog cover"
+            />
           </div>
         </header>
         <div className="blog-content">

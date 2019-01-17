@@ -1,5 +1,6 @@
 import React from "react";
 import BlogPostCard from "./BlogPostCard";
+import uuid from "uuid";
 
 class BlogPage extends React.Component {
   state = {
@@ -8,13 +9,13 @@ class BlogPage extends React.Component {
   };
 
   componentDidMount() {
-    this.fetchPosts();
+    this.fetchPosts().then(this.setPosts);
   }
 
   fetchPosts = () => {
-    return fetch("https://oh4b8bbri6.execute-api.us-east-1.amazonaws.com/alpha")
-      .then(res => res.json())
-      .then(this.setPosts);
+    return fetch(
+      "https://oh4b8bbri6.execute-api.us-east-1.amazonaws.com/alpha"
+    ).then(res => res.json());
   };
 
   setPosts = response => {
@@ -51,12 +52,12 @@ class BlogPage extends React.Component {
         url={post.url}
         subtitle={post.subtitle}
         date={post.date}
+        key={uuid()}
       />
     ));
   };
 
   render() {
-    console.log(this.state);
     return (
       <div className="blog-page">
         <div className="blog-header">
@@ -77,7 +78,7 @@ class BlogPage extends React.Component {
             </span>
           </a>
         </div>
-        <div className="blog-content">{this.renderPosts()}</div>
+        <div>{this.renderPosts()}</div>
       </div>
     );
   }

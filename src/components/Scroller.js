@@ -37,6 +37,7 @@ class Scroller extends React.Component {
 
   handleMenuClick = targetClass => {
     const page = document.querySelector(targetClass);
+    console.log(page);
     this.smoothScroll(page);
   };
 

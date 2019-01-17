@@ -18,7 +18,7 @@ class Menu extends React.Component {
         <div id="projects-button-container">
           <div
             className="projects-button"
-            onClick={() => this.props.handleMenuClick(".page.two")}
+            onClick={() => this.props.handleMenuClick("#projects-page")}
           >
             projects
           </div>
