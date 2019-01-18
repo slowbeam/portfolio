@@ -590,8 +590,8 @@ canvas {
   -webkit-clip-path: polygon(0 0, 100% 35%, 100% 65%, 0% 100%);
   clip-path: polygon(0 0, 100% 35%, 100% 65%, 0% 100%);
   background-color: #3e3e4d;
-  width: 43vw;
-  height: 80px;
+  width: 38vw;
+  height: 60px;
   left: 0;
 }
 
@@ -604,8 +604,8 @@ canvas {
   -webkit-clip-path: polygon(0 35%, 100% 0, 100% 100%, 0 65%);
   clip-path: polygon(0 35%, 100% 0, 100% 100%, 0 65%);
   background-color: #3e3e4d;
-  width: 43vw;
-  height: 80px;
+  width: 38vw;
+  height: 60px;
   left: 0;
 }
 .project-page-image-container {
@@ -657,7 +657,7 @@ canvas {
   position: absolute;
   right: 0;
   width: 70vw;
-  height: 100px;
+  height: 60px;
   z-index: 2;
   background-color: #3e3e4d;
   -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
@@ -669,7 +669,7 @@ canvas {
   position: absolute;
   left: 0;
   width: 70vw;
-  height: 100px;
+  height: 60px;
   z-index: 3;
   background-color: #3e3e4d;
   -webkit-clip-path: polygon(100% 50%, 0 0, 0 100%);
