@@ -31,26 +31,24 @@ class ProjectPage extends React.Component {
           <div className="project-title-right-polygon" />
         </div>
         <div className="project-content">
-
-        <div className="project-page-description">
-          <div className="project-page-description-paragraph">
-            {this.props.description}
+          <div className="project-page-description">
+            <div className="project-page-description-paragraph">
+              {this.props.description}
+            </div>
+            <div className="project-links-container">
+              <a href="https://github.com/slowbeam/vibe-list-client">
+                {Object.keys(this.props.links)[0]}
+              </a>
+              &nbsp; | &nbsp;
+              <a href="https://vibelist.herokuapp.com/">
+                {Object.keys(this.props.links)[1]}
+              </a>
+            </div>
           </div>
-          <div className="project-links-container">
-            <a href="https://github.com/slowbeam/vibe-list-client">
-              {Object.keys(this.props.links)[0]}
-            </a>
-            &nbsp; | &nbsp;
-            <a href="https://vibelist.herokuapp.com/">
-              {Object.keys(this.props.links)[1]}
-            </a>
+          <div className="project-page-image-container">
+            {this.renderProjectImages()}
           </div>
         </div>
-        <div className="project-page-image-container">
-          {this.renderProjectImages()}
-        </div>
-
-      </div>
       </div>
     );
   }

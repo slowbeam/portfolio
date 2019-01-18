@@ -30,9 +30,7 @@ class ProjectPageContainer extends React.Component {
       },
       {
         name: "Beat-Machine",
-        images: [
-          images.beatMachineGif1
-        ],
+        images: [images.beatMachineGif1],
         description:
           "Beat-Machine is an online music making tool inspired by the famous 1980's drum machine the Roland TR-808. Users can create and save complex drum beats, select instrument packs for their beat and adjust the tempo and swing of the beat.",
         links: {

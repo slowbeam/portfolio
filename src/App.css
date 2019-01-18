@@ -611,6 +611,11 @@ canvas {
   height: 60px;
   left: 0;
 }
+
+.project-content {
+  display: flex;
+}
+
 .project-page-image-container {
   display: flex;
   width: 100%;
@@ -638,7 +643,7 @@ canvas {
 
 .project-page-description-paragraph {
   font-family: "Open Sans", sans-serif;
-  width: 40vw;
+  width: 35vw;
   text-align: center;
   white-space: normal;
   margin-bottom: 20px;
@@ -677,14 +682,6 @@ canvas {
   background-color: #3e3e4d;
   -webkit-clip-path: polygon(100% 50%, 0 0, 0 100%);
   clip-path: polygon(100% 50%, 0 0, 0 100%);
-}
-
-.project-content {
-  display: flex;
-}
-
-.project-page-description-paragraph {
-  width: 40vw;
 }
 
 .inside.three {
@@ -804,7 +801,6 @@ canvas {
   display: flex;
   flex-direction: column;
 }
-
 
 .contact-form {
   display: flex;
