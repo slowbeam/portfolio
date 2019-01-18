@@ -683,24 +683,30 @@ canvas {
 .blog-page {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   white-space: normal;
   width: 100vw;
+}
+
+.blog-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
 }
 
 #blog-posts-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100vw;
+  width: 90vw;
 }
 
 .blog-post {
-  margin: 20px;
-  background-color: black;
+  margin: 35px 2vw;
+  background-color: white;
   border-radius: 5px;
   width: 40vw;
-  float: left;
 }
 
 .img-responsive {
@@ -801,11 +807,17 @@ canvas {
 .contact-form input {
   width: 70vw;
   margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  padding: 5px;
 }
 
 .contact-form textarea {
   width: 70vw;
   margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  padding: 5px;
 }
 
 .box-1 {
