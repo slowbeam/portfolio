@@ -563,6 +563,9 @@ canvas {
   position: relative;
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #projects-title-text {
@@ -627,16 +630,18 @@ canvas {
 
 .project-page-description {
   display: flex;
-  width: 100%;
+  flex-direction: column;
+  margin: 5vw;
   justify-content: center;
   margin-bottom: 3vh;
 }
 
 .project-page-description-paragraph {
   font-family: "Open Sans", sans-serif;
-  width: 80vw;
+  width: 40vw;
   text-align: center;
   white-space: normal;
+  margin-bottom: 20px;
 }
 
 .project-links-container {
@@ -674,11 +679,17 @@ canvas {
   clip-path: polygon(100% 50%, 0 0, 0 100%);
 }
 
+.project-content {
+  display: flex;
+}
+
+.project-page-description-paragraph {
+  width: 40vw;
+}
+
 .inside.three {
   height: auto;
 }
-
-
 
 .blog-page {
   display: flex;
