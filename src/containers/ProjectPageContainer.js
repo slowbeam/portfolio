@@ -8,7 +8,7 @@ class ProjectPageContainer extends React.Component {
     projects: [
       {
         name: "vibelist",
-        images: [images.vibelistGif1, images.vibeListGif2, images.vibeListGif3],
+        images: [images.vibeListGif2],
         description:
           "Vibelist is a Spotify music discovery tool for creating custom playlists in the mood and genre of the user's choice. Built with React, Redux, React-Router and Thunk on the frontend and a Ruby on Rails backend that interacts seamlessly with the Spotify API.",
         links: {
@@ -31,9 +31,7 @@ class ProjectPageContainer extends React.Component {
       {
         name: "Beat-Machine",
         images: [
-          images.beatMachineGif1,
-          images.beatMachineGif2,
-          images.beatMachineGif3
+          images.beatMachineGif1
         ],
         description:
           "Beat-Machine is an online music making tool inspired by the famous 1980's drum machine the Roland TR-808. Users can create and save complex drum beats, select instrument packs for their beat and adjust the tempo and swing of the beat.",
