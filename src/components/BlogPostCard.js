@@ -1,11 +1,28 @@
 import React from "react";
 
 class BlogPostCard extends React.Component {
+
+  renderMonth = () => {
+    const monthArr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    let date = new Date(this.props.date);
+    return monthArr[date.getMonth()];
+  }
+
+  renderDay = () => {
+    let date = new Date(this.props.date);
+    return date.getDate();
+  }
+
   render() {
+    console.log(this.props.date)
     return (
       <div className="blog-post">
         <header>
-          <h4 className="date">{this.props.date}</h4>
+          <h4 className="date">
+            {this.renderDay()}
+            <br />
+            {this.renderMonth()}
+          </h4>
           <div className="blog-element">
             <img
               className="img-responsive"

@@ -45,13 +45,15 @@ class BlogPage extends React.Component {
   renderPosts = () => {
     const stateDup = Object.assign({}, this.state);
 
+    console.log(stateDup)
+
     return stateDup.posts.map(post => (
       <BlogPostCard
         title={post.title}
         image={post.image}
         url={post.url}
         subtitle={post.subtitle}
-        date={post.date}
+        date={post.createdAt}
         key={uuid()}
       />
     ));
@@ -77,7 +79,7 @@ class BlogPage extends React.Component {
             </span>
           </a>
         </div>
-        <div>{this.renderPosts()}</div>
+        <div id="blog-posts-container">{this.renderPosts()}</div>
       </div>
     );
   }
