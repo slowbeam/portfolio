@@ -614,18 +614,18 @@ canvas {
 
 .project-content {
   display: flex;
+  align-items: center;
 }
 
 .project-page-image-container {
   display: flex;
   width: 100%;
-  margin-bottom: 10vh;
   justify-content: space-around;
 }
 
 .project-page-image {
-  width: 53vw;
-  height: 40vw;
+  width: 36vw;
+  height: 30vw;
   max-width: 500px;
   max-height: 445px;
   margin-bottom: -5vh;
