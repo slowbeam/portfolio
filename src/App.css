@@ -541,7 +541,7 @@ canvas {
     0% 25%
   );
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  width: 25vw;
+  width: 30vw;
   margin-top: 35vh;
   visibility: hidden;
 }
@@ -662,11 +662,9 @@ canvas {
   background-color: #3e3e4d;
   -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
   clip-path: polygon(100% 0, 0 50%, 100% 100%);
-  margin-top: -100px;
 }
 
 #projects-top-triangle-left-blog {
-  position: absolute;
   left: 0;
   width: 70vw;
   height: 60px;
@@ -674,7 +672,6 @@ canvas {
   background-color: #3e3e4d;
   -webkit-clip-path: polygon(100% 50%, 0 0, 0 100%);
   clip-path: polygon(100% 50%, 0 0, 0 100%);
-  margin-top: -100px;
 }
 
 .inside.three {
@@ -831,7 +828,6 @@ canvas {
 }
 
 .page .three {
-  position: relative;
 }
 
 .top-triangle {
