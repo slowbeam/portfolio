@@ -26,9 +26,9 @@ class ProjectPage extends React.Component {
     return (
       <div id={this.props.id} className="project-container">
         <div className="project-title-container">
-          <div className="project-title-left-polygon" />
-          <div className="project-title-text">{this.props.name}</div>
-          <div className="project-title-right-polygon" />
+          <div className="project-title-text">
+            <h3>{this.props.name}</h3>
+          </div>
         </div>
         <div className="project-content">
           <div className="project-page-description">
