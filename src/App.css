@@ -703,14 +703,14 @@ canvas {
 }
 
 .blog-post {
-  margin: 35px 2vw;
+  margin: 3vw;
   background-color: white;
   border-radius: 5px;
-  width: 40vw;
+  width: 35vw;
 }
 
 .img-responsive {
-  width: 40vw;
+  width: 35vw;
   height: 200px;
   object-fit: cover;
   border-radius: 5px 5px 0 0;
@@ -737,7 +737,6 @@ canvas {
   border-top: 1px solid #f5f5f5;
   border-radius: 0 0 5px 5px;
   background-color: white;
-  height: 65%;
 }
 
 .blog-content h4 {
