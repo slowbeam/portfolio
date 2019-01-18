@@ -36,8 +36,6 @@ class Scroller extends React.Component {
     }, 20);
   };
 
-  debugger;
-
   startScroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 };
 
