@@ -787,6 +787,30 @@ canvas {
   text-align: left;
 }
 
+#contact-inside {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 70vw;
+}
+
+.contact-form input {
+  width: 70vw;
+  margin-bottom: 20px;
+}
+
+.contact-form textarea {
+  width: 70vw;
+  margin-bottom: 20px;
+}
+
 .box-1 {
   align-self: center;
   margin-left: 5px;

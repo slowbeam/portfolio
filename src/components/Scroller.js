@@ -5,6 +5,7 @@ import ProjectPageContainer from "../containers/ProjectPageContainer";
 import Menu from "./Menu";
 import ProjectSelectPage from "./ProjectSelectPage";
 import BlogPage from "./BlogPage";
+import ReactContactForm from 'react-mail-form';
 
 class Scroller extends React.Component {
   smoothScroll = page => {
@@ -69,8 +70,9 @@ class Scroller extends React.Component {
           </div>
         </div>
         <div id="contact-page" className="page four">
-          <div className="inside four">
-            <h2>contact me here</h2>
+          <div id="contact-inside" className="inside four">
+            <h4>Contact</h4>
+            <ReactContactForm className="contact-form" to="sedwardscode@gmail.com" />
           </div>
         </div>
         <Footer />
