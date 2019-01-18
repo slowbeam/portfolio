@@ -824,11 +824,22 @@ canvas {
   color: white;
 }
 
-.spacer {
-  visibility: hidden;
+.email-button {
+  background-color: #3e427a;
+  padding: 15px 20px 5px 20px;
+  border-radius: 5px;
 }
 
-.page .three {
+.email-button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.spacer {
+  visibility: hidden;
 }
 
 .top-triangle {
@@ -837,10 +848,6 @@ canvas {
   height: 280px;
   -webkit-clip-path: polygon(0 0, 0 32%, 100% 0);
   clip-path: polygon(0 0, 0 32%, 100% 0);
-}
-
-. {
-  color: black;
 }
 
 @-webkit-keyframes pulse {
