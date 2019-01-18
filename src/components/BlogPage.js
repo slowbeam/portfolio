@@ -45,7 +45,7 @@ class BlogPage extends React.Component {
   renderPosts = () => {
     const stateDup = Object.assign({}, this.state);
 
-    console.log(stateDup)
+    console.log(stateDup);
 
     return stateDup.posts.map(post => (
       <BlogPostCard
@@ -63,21 +63,13 @@ class BlogPage extends React.Component {
     return (
       <div className="blog-page">
         <div className="blog-header">
-          I write regular blogs on various software engineering related topics
-          on Medium. You'll find interesting stuff like how a MergeSort
-          algorithm works, a concise introduction to React Hooks, or even how
-          machine learning will revolutionize the music industry!
-          <br />
-          <br />
-          <a
-            className="button is-inverted is-outlined"
-            href="https://medium.com/@sedwardscode"
-          >
-            View My Medium
-            <span className="icon" style={{ marginLeft: 5 }}>
-              <i className="fab fa-lg fa-medium" />
-            </span>
-          </a>
+          <h3>Blog</h3>
+          <p>
+            I write regular blogs on various software engineering related topics
+            on Medium. You'll find interesting stuff like how a MergeSort
+            algorithm works, a concise introduction to React Hooks, or even how
+            machine learning will revolutionize the music industry!
+          </p>
         </div>
         <div id="blog-posts-container">{this.renderPosts()}</div>
       </div>

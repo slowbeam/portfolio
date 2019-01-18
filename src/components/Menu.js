@@ -1,6 +1,10 @@
 import React from "react";
 
 class Menu extends React.Component {
+  handleGithubClick = () => {
+    const tab = window.open("https://github.com/slowbeam", "_blank");
+    tab.focus();
+  };
   render() {
     return (
       <React.Fragment>
@@ -24,7 +28,12 @@ class Menu extends React.Component {
           </div>
         </div>
         <div id="about-button-shadow-container">
-          <div className="about-button">about</div>
+          <div
+            className="about-button"
+            onClick={() => this.props.handleMenuClick("#about-page")}
+          >
+            about
+          </div>
         </div>
         <div id="blog-button-shadow-container">
           <div
@@ -35,11 +44,8 @@ class Menu extends React.Component {
           </div>
         </div>
         <div id="contact-button-shadow-container">
-          <div
-            className="contact-button"
-            onClick={() => this.props.handleMenuClick("#contact-page")}
-          >
-            <div id="contact-button-text">contact</div>
+          <div className="github-button" onClick={this.handleGithubClick}>
+            <div id="github-button-text">github</div>
           </div>
         </div>
       </React.Fragment>

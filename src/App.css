@@ -256,7 +256,7 @@ canvas {
   animation: pulse 2s infinite;
 }
 
-.contact-button {
+.github-button {
   position: absolute;
   color: white;
   -webkit-clip-path: polygon(
@@ -280,21 +280,21 @@ canvas {
   animation-delay: 5s;
 }
 
-.contact-button:hover {
+.github-button:hover {
   transform: scale(1.02);
   background-color: rgba(235, 129, 65, 0.6);
 }
 
-#contact-button-text {
+#github-button-text {
   position: absolute;
-  left: 50px;
+  left: 60px;
   top: 100px;
   -ms-transform: rotate(-13deg) skewX(-13deg); /* IE 9 */
   -webkit-transform: rotate(-13deg) skewX(-13deg); /* Safari */
   transform: rotate(-13deg) skewX(-13deg);
 }
 
-#contact-button-text a {
+#github-button-text a {
   text-decoration: none;
   color: white;
 }
@@ -493,7 +493,7 @@ canvas {
 .project-select-grid {
   display: grid;
   grid-template-columns: auto auto auto;
-  width: 100vw;
+  width: 90vw;
   align-items: center;
   justify-items: center;
 }
@@ -522,6 +522,7 @@ canvas {
   background-color: #3e427a;
   color: white;
   cursor: pointer;
+  z-index: 11;
 }
 
 .project-select-button:hover {
@@ -542,8 +543,9 @@ canvas {
   );
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   width: 30vw;
-  margin-top: 35vh;
+  margin-top: 20vh;
   visibility: hidden;
+  z-index: 10;
 }
 
 .project-gif {
@@ -700,7 +702,12 @@ canvas {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80vw;
+  width: 40vw;
+  margin-top: 100px;
+}
+
+.blog-header p {
+  font-family: "Open Sans", sans-serif;
 }
 
 #blog-posts-container {
@@ -797,33 +804,9 @@ canvas {
   text-align: left;
 }
 
-#contact-inside {
+#about-inside {
   display: flex;
   flex-direction: column;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 70vw;
-}
-
-.contact-form input {
-  width: 70vw;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid lightgrey;
-  padding: 5px;
-}
-
-.contact-form textarea {
-  width: 70vw;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid lightgrey;
-  padding: 5px;
 }
 
 .box-1 {
