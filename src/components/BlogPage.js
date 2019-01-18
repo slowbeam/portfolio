@@ -70,7 +70,6 @@ class BlogPage extends React.Component {
           <a
             className="button is-inverted is-outlined"
             href="https://medium.com/@sedwardscode"
-            target="_blank"
           >
             View My Medium
             <span className="icon" style={{ marginLeft: 5 }}>

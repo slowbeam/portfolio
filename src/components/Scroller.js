@@ -7,39 +7,44 @@ import ProjectSelectPage from "./ProjectSelectPage";
 import BlogPage from "./BlogPage";
 
 class Scroller extends React.Component {
-  smoothScroll = target => {
-    let scrollContainer = target;
-    do {
-      scrollContainer = scrollContainer.parentNode;
-      if (!scrollContainer) {
-        return;
-      }
-      scrollContainer.scrollTop += 1;
-    } while (scrollContainer.scrollTop === 0);
+  smoothScroll = page => {
+  let scrollContainer = page;
 
-    let targetY = 0;
-    do {
-      if (target === scrollContainer) break;
-      targetY += target.offsetTop;
-    } while ((target = target.offsetParent));
+  do {
+    scrollContainer = scrollContainer.parentNode;
+    if (scrollContainer === document) {
+      return;
+    }
 
-    const startScroll = function(c, a, b, i) {
-      i++;
-      if (i > 30) return;
-      c.scrollTop = a + ((b - a) / 30) * i;
-      setTimeout(function() {
-        startScroll(c, a, b, i);
-      }, 20);
-    };
+    scrollContainer.scrollTop += 1;
+  } while (scrollContainer.scrollTop === 0);
 
-    startScroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+   let targetY = 0;
+
+  do {
+    if (page === scrollContainer) break;
+
+    targetY += page.offsetTop;
+  } while ((page = page.offsetParent));
+
+  const startScroll = function(c, a, b, i) {
+    i++;
+    if (i > 30) return;
+    c.scrollTop = a + ((b - a) / 30) * i;
+    setTimeout(function() {
+      startScroll(c, a, b, i);
+    }, 20);
   };
 
-  handleMenuClick = targetClass => {
-    const page = document.querySelector(targetClass);
-    console.log(page);
-    this.smoothScroll(page);
-  };
+  debugger;
+
+  startScroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+};
+
+ handleMenuClick = targetClass => {
+  const page = document.querySelector(targetClass);
+  this.smoothScroll(page);
+};
 
   render() {
     return (
@@ -52,7 +57,6 @@ class Scroller extends React.Component {
             </div>
           </div>
         </div>
-
         <div id="projects-page" className="page two">
           <div className="inside two">
             <ProjectSelectPage handleMenuClick={this.handleMenuClick} />

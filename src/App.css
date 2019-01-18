@@ -686,8 +686,7 @@ canvas {
 }
 
 .inside.three {
-  display: flex;
-  flex-direction: column;
+  height: auto;
 }
 
 .blog-page {
@@ -699,17 +698,7 @@ canvas {
   text-align: center;
 }
 
-#blog-title {
-  margin: 0;
-}
-
-#blog-card {
-  /* background-color: white; */
-  padding: 30px;
-  border-radius: 5px;
-}
-
-.blog-post {
+/* .blog-post {
   margin-bottom: 40px;
 }
 
@@ -780,7 +769,7 @@ canvas {
 .blog-content p {
   color: #67666a;
   line-height: 22px;
-}
+} */
 
 .box-1 {
   align-self: center;
