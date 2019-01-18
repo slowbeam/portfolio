@@ -698,8 +698,10 @@ canvas {
   text-align: center;
 }
 
-/* .blog-post {
+.blog-post {
   margin-bottom: 40px;
+  background-color: black;
+  border-radius: 5px;
 }
 
 .blog-post header {
@@ -718,7 +720,9 @@ canvas {
 
 .blog-content {
   padding: 15px 28px;
-  border: 1px solid #f5f5f5;
+  border-top: 1px solid #f5f5f5;
+  border-radius: 0 0 5px 5px;
+  background-color: grey;
 }
 
 .blog-content h4 {
@@ -769,7 +773,7 @@ canvas {
 .blog-content p {
   color: #67666a;
   line-height: 22px;
-} */
+}
 
 .box-1 {
   align-self: center;
