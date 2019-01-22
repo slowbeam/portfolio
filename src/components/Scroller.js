@@ -6,6 +6,7 @@ import Menu from "./Menu";
 import ProjectSelectPage from "./ProjectSelectPage";
 import BlogPage from "./BlogPage";
 import ContactButton from "./ContactButton";
+import AboutCard from "./AboutCard";
 
 class Scroller extends React.Component {
   smoothScroll = page => {
@@ -72,6 +73,7 @@ class Scroller extends React.Component {
         <div id="about-page" className="page four">
           <div id="about-inside" className="inside four">
             <h3>About</h3>
+            <AboutCard />
             <ContactButton />
           </div>
         </div>
