@@ -832,11 +832,23 @@ canvas {
   font-size: 20px;
 }
 
+.about-description {
+  text-align: center;
+}
+
 .about-image {
   width: 20vw;
   height: 20vw;
   border-radius: 50%;
   margin-bottom: 30px;
+}
+
+#about-headline {
+  font-weight: 600;
+}
+
+#technical-skills-title {
+  margin-bottom: -10px;
 }
 
 .box-1 {
