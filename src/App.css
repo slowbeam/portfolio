@@ -202,7 +202,8 @@ canvas {
 }
 
 #blog-button-shadow-container {
-  /* filter: drop-shadow(0 0px 20px rgba(150, 30, 30, 0.5)); */
+  display: flex;
+  justify-content: center;
 }
 
 #blog-button-shadow-container:hover {
@@ -322,6 +323,8 @@ canvas {
 
 #about-button-shadow-container {
   position: absolute;
+  display: flex;
+  justify-content: center;
   bottom: -100em;
   /* filter: drop-shadow(0 0px 20px rgba(150, 30, 30, 0.5)); */
   -webkit-animation: slide-bottom 0.5s forwards;
@@ -947,6 +950,12 @@ canvas {
 }
 
 @media only screen and (max-width: 414px) {
+  #overlay-container {
+    -webkit-animation: none;
+    animation: none;
+    left: auto;
+  }
+
   .overlay {
     width: 150px;
     display: flex;
@@ -954,23 +963,25 @@ canvas {
     align-items: center;
   }
 
+  #projects-button-container {
+    -webkit-animation: none;
+    animation: none;
+    top: -170px;
+  }
+
   .intro-text-container h1 {
     font-size: 14px;
   }
 
-  @-webkit-keyframes slide {
-    100% {
-      left: -125px;
-    }
-  }
-
-  @keyframes slide {
-    100% {
-      left: -125px;
-    }
-  }
   .projects-button {
     width: 120px;
+  }
+
+  #about-button-shadow-container {
+    -webkit-animation: none;
+    animation: none;
+    bottom: auto;
+    top: 75px;
   }
 
   .about-button {
@@ -978,11 +989,11 @@ canvas {
   }
 
   .blog-button {
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: -245px;
+    top: -235px;
+    left: auto;
     background-color: rgba(235, 129, 65, 0.5);
     width: 130px;
     height: 80px;
@@ -997,10 +1008,8 @@ canvas {
     );
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 50%, 0% 75%, 0% 25%);
     padding: 10px 10px 10px 10px;
-    -webkit-animation: blog-slide-left 1s forwards;
-    -webkit-animation-delay: 4s;
-    animation: blog-slide-left 1s forwards, fadein 2s;
-    animation-delay: 4s;
+    -webkit-animation: none;
+    animation: none;
   }
 
   #blog-button-text {
@@ -1012,17 +1021,5 @@ canvas {
     -ms-transform: none; /* IE 9 */
     -webkit-transform: none; /* Safari */
     transform: none;
-  }
-
-  @keyframes blog-slide-left {
-    100% {
-      left: -75px;
-    }
-  }
-
-  @-webkit-keyframes blog-slide-left {
-    100% {
-      left: -265px;
-    }
   }
 }
