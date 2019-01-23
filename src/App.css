@@ -335,7 +335,7 @@ canvas {
 
 .about-button {
   color: white;
-  background-color: rgb(145, 50, 83, 0.5);
+  background-color: rgba(145, 50, 83, 0.5);
   -webkit-clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
   clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
   padding: 45px 30px 45px 30px;
