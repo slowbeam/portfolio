@@ -267,7 +267,8 @@ canvas {
 }
 
 #contact-button-shadow-container {
-  /* filter: drop-shadow(0 0px 20px rgba(150, 30, 30, 0.5)); */
+  display: flex;
+  justify-content: center;
 }
 
 #contact-button-shadow-container:hover {
@@ -963,6 +964,7 @@ canvas {
   .project-content {
     flex-direction: column-reverse;
     height: 75vh;
+    max-height: 575px;
     justify-content: space-between;
   }
 
@@ -993,5 +995,225 @@ canvas {
   .project-page-description-paragraph {
     font-size: 18px;
     width: 70vw;
+  }
+
+  .about-card {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .project-content {
+    flex-direction: column-reverse;
+    height: 75vh;
+    max-height: 575px;
+    justify-content: space-between;
+  }
+
+  #about-headline {
+    font-size: 18px;
+  }
+
+  .about-description {
+    font-size: 18px;
+  }
+
+  .project-page-image-container {
+    height: 35vw;
+    min-height: 275px;
+    padding: 10px 0;
+    border-radius: 5px 5px 0 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-page-image {
+    width: 30vw;
+    height: 24.9vw;
+    min-width: 300px;
+    min-height: 249px;
+  }
+
+  .project-page-description-paragraph {
+    font-size: 18px;
+    width: 70vw;
+  }
+
+  .about-card {
+    margin-bottom: 0;
+  }
+
+  .blog-post {
+    width: 80vw;
+  }
+
+  .img-responsive {
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #overlay-container {
+    -webkit-animation: none;
+    animation: none;
+    left: auto;
+  }
+
+  .overlay {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #projects-button-container {
+    -webkit-animation: none;
+    animation: none;
+    top: -165px;
+  }
+
+  #projects-button-container:hover {
+    -webkit-animation: none;
+    animation: none;
+  }
+
+  .intro-text-container h1 {
+    font-size: 14px;
+  }
+
+  .projects-button {
+    width: 120px;
+  }
+
+  #about-button-shadow-container {
+    -webkit-animation: none;
+    animation: none;
+    bottom: auto;
+    top: 70px;
+  }
+
+  #about-button-shadow-container:hover {
+    -webkit-animation: none;
+    animation: none;
+  }
+
+  .about-button {
+    width: 120px;
+  }
+
+  .blog-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -225px;
+    left: auto;
+    background-color: rgba(235, 129, 65, 0.5);
+    width: 130px;
+    height: 80px;
+    cursor: pointer;
+    -webkit-clip-path: polygon(
+      50% 0%,
+      100% 25%,
+      100% 75%,
+      50% 50%,
+      0% 75%,
+      0% 25%
+    );
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 50%, 0% 75%, 0% 25%);
+    padding: 10px 10px 10px 10px;
+    -webkit-animation: none;
+    animation: none;
+  }
+
+  #blog-button-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: auto;
+    top: 20px;
+    -ms-transform: none; /* IE 9 */
+    -webkit-transform: none; /* Safari */
+    transform: none;
+  }
+
+  .github-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    -webkit-clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
+    clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
+    width: 130px;
+    height: 80px;
+    padding: 10px 10px 10px 10px;
+    left: auto;
+    top: 148px;
+    text-align: center;
+    -webkit-animation: none;
+    animation: none;
+  }
+
+  .github-button:hover {
+    transform: scale(1.02);
+    background-color: rgba(235, 129, 65, 0.6);
+  }
+
+  #github-button-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: auto;
+    top: 30px;
+    -ms-transform: none; /* IE 9 */
+    -webkit-transform: none; /* Safari */
+    transform: none;
+  }
+
+  .project-content {
+    flex-direction: column-reverse;
+    height: 75vh;
+    max-height: 575px;
+    justify-content: space-between;
+  }
+
+  #about-headline {
+    font-size: 18px;
+  }
+
+  .about-description {
+    font-size: 18px;
+  }
+
+  .project-page-image-container {
+    height: 35vw;
+    min-height: 275px;
+    padding: 10px 0;
+    border-radius: 5px 5px 0 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-page-image {
+    width: 30vw;
+    height: 24.9vw;
+    min-width: 300px;
+    min-height: 249px;
+  }
+
+  .project-page-description-paragraph {
+    font-size: 18px;
+    width: 70vw;
+  }
+
+  .about-card {
+    margin-bottom: 0;
+  }
+
+  .blog-post {
+    width: 80vw;
+  }
+
+  .img-responsive {
+    width: 80vw;
   }
 }
