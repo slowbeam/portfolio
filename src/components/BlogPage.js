@@ -64,12 +64,6 @@ class BlogPage extends React.Component {
       <div className="blog-page">
         <div className="blog-header">
           <h3>Blog</h3>
-          <p>
-            I write regular blogs on various software engineering related topics
-            on Medium. You'll find interesting stuff like how a MergeSort
-            algorithm works, a concise introduction to React Hooks, or even how
-            machine learning will revolutionize the music industry!
-          </p>
         </div>
         <div id="blog-posts-container">{this.renderPosts()}</div>
       </div>

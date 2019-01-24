@@ -595,6 +595,8 @@ canvas {
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 13px;
+  padding-top: 15px;
 }
 
 .project-title-container {
@@ -1052,7 +1054,7 @@ canvas {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   #overlay-container {
     -webkit-animation: none;
     animation: none;
@@ -1215,5 +1217,23 @@ canvas {
 
   .img-responsive {
     width: 80vw;
+  }
+
+  .project-select-grid {
+    margin-top: 300px;
+    grid-template-columns: auto;
+    grid-row-gap: 10px;
+  }
+
+  .project-image {
+    display: none;
+  }
+
+  .blog-header {
+    margin-top: 20px;
+  }
+
+  .blog-header p {
+    width: 70vw;
   }
 }
