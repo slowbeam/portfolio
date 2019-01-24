@@ -1241,8 +1241,8 @@ canvas {
   }
 
   .about-card {
-    margin-bottom: 10px;
-    height: 812px;
+    margin-bottom: 40px;
+    height: 900px;
   }
 
   .blog-post {
@@ -1272,10 +1272,14 @@ canvas {
   }
 
   #about-page {
-    height: 1000px;
+    height: 1100px;
   }
 
   #about-inside {
-    height: 1000px;
+    height: 1100px;
+  }
+
+  .email-button {
+    margin-bottom: 50px;
   }
 }
