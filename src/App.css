@@ -1209,6 +1209,7 @@ canvas {
 
   .about-card {
     margin-bottom: 0;
+    height: 120vh;
   }
 
   .blog-post {
@@ -1235,5 +1236,13 @@ canvas {
 
   .blog-header p {
     width: 70vw;
+  }
+
+  #about-page {
+    height: 140vh;
+  }
+
+  #about-inside {
+    height: 140vh;
   }
 }
