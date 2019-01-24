@@ -633,6 +633,7 @@ canvas {
 .project-content {
   display: flex;
   align-items: center;
+  width: 80vw;
 }
 
 .project-page-image-container {
@@ -662,6 +663,7 @@ canvas {
 .project-page-description-paragraph {
   font-family: "Open Sans", sans-serif;
   width: 35vw;
+  min-width: 300px;
   text-align: center;
   white-space: normal;
   margin-bottom: 20px;
@@ -835,14 +837,16 @@ canvas {
   align-items: center;
   white-space: normal;
   width: 70%;
+  max-width: 900px;
   margin: 30px;
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
 }
 
 #about-title {
+  font-family: "Minecraftia", monospace;
+  font-size: 22px;
   margin-top: -20px;
-  margin-bottom: -10px;
+  margin-bottom: 0;
 }
 
 .about-description {
@@ -961,6 +965,42 @@ canvas {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  #about-headline {
+    font-size: 20px;
+  }
+
+  .about-description {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 415px) and (max-width: 1200px) {
+  .project-content {
+    flex-direction: column-reverse;
+    height: 70vh;
+    justify-content: space-between;
+  }
+
+  #about-headline {
+    font-size: 18px;
+  }
+
+  .about-description {
+    font-size: 18px;
+  }
+
+  .project-page-image {
+    min-width: 450px;
+    min-height: 400.5px;
+  }
+
+  .project-page-description-paragraph {
+    font-size: 18px;
+    width: 70vw;
+  }
+}
+
 @media only screen and (max-width: 414px) {
   #overlay-container {
     -webkit-animation: none;
@@ -1033,5 +1073,16 @@ canvas {
     -ms-transform: none; /* IE 9 */
     -webkit-transform: none; /* Safari */
     transform: none;
+  }
+
+  .project-content {
+    flex-direction: column-reverse;
+    height: 70vh;
+    justify-content: space-around;
+  }
+
+  .project-page-image {
+    min-width: 300px;
+    min-height: 267px;
   }
 }

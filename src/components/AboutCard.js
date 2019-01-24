@@ -4,6 +4,7 @@ class AboutCard extends React.Component {
   render() {
     return (
       <div className="about-card">
+        <h3 id="about-title">About</h3>
         <div className="about-image-container">
           <img
             className="about-image"
