@@ -120,6 +120,10 @@ canvas {
   background-color: #100f23;
   vertical-align: top;
   position: absolute;
+}
+
+#my-canvas {
+  -webkit-animation: fadein 8s;
   animation: fadein 8s;
 }
 
