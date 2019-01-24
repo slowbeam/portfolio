@@ -1,15 +1,11 @@
-import React, { Component } from 'react';
-import './App.css';
-import Scroller from './components/Scroller';
-import AudioButton from './components/AudioButton';
+import React, { Component } from "react";
+import "./App.css";
+import Scroller from "./components/Scroller";
 
 class App extends Component {
-
-
   render() {
     return (
       <div className="App">
-        <AudioButton />
         <Scroller />
       </div>
     );

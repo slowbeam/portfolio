@@ -812,7 +812,7 @@ canvas {
 .about-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   white-space: normal;
   width: 70%;
@@ -836,6 +836,8 @@ canvas {
 .about-image {
   width: 15vw;
   height: 15vw;
+  min-width: 150px;
+  min-height: 150px;
   border-radius: 50%;
   margin-bottom: 0;
 }
@@ -1065,7 +1067,7 @@ canvas {
   #projects-button-container {
     -webkit-animation: none;
     animation: none;
-    top: -165px;
+    top: -157px;
   }
 
   #projects-button-container:hover {
@@ -1086,7 +1088,7 @@ canvas {
     -webkit-animation: none;
     animation: none;
     bottom: auto;
-    top: 70px;
+    top: 64px;
   }
 
   #about-button-shadow-container:hover {
@@ -1102,21 +1104,14 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: -225px;
+    top: -242px;
     left: auto;
     background-color: rgba(235, 129, 65, 0.5);
-    width: 130px;
+    width: 95px;
     height: 80px;
     cursor: pointer;
-    -webkit-clip-path: polygon(
-      50% 0%,
-      100% 25%,
-      100% 75%,
-      50% 50%,
-      0% 75%,
-      0% 25%
-    );
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 50%, 0% 75%, 0% 25%);
+    -webkit-clip-path: polygon(40% 0, 60% 0, 100% 100%, 50% 80%, 0 100%);
+    clip-path: polygon(40% 0, 60% 0, 100% 100%, 50% 80%, 0 100%);
     padding: 10px 10px 10px 10px;
     -webkit-animation: none;
     animation: none;
@@ -1127,7 +1122,7 @@ canvas {
     justify-content: center;
     align-items: center;
     left: auto;
-    top: 20px;
+    top: 50px;
     -ms-transform: none; /* IE 9 */
     -webkit-transform: none; /* Safari */
     transform: none;
@@ -1138,13 +1133,13 @@ canvas {
     justify-content: center;
     align-items: center;
     color: white;
-    -webkit-clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
-    clip-path: polygon(100% 0%, 100% 50%, 50% 75%, 0 50%, 0 0, 50% 25%);
-    width: 130px;
+    -webkit-clip-path: polygon(50% 20%, 100% 0, 60% 100%, 40% 100%, 0 0);
+    clip-path: polygon(50% 20%, 100% 0, 60% 100%, 40% 100%, 0 0);
+    width: 95px;
     height: 80px;
     padding: 10px 10px 10px 10px;
     left: auto;
-    top: 148px;
+    top: 142px;
     text-align: center;
     -webkit-animation: none;
     animation: none;
@@ -1160,7 +1155,7 @@ canvas {
     justify-content: center;
     align-items: center;
     left: auto;
-    top: 30px;
+    top: 25px;
     -ms-transform: none; /* IE 9 */
     -webkit-transform: none; /* Safari */
     transform: none;
@@ -1203,8 +1198,8 @@ canvas {
   }
 
   .about-card {
-    margin-bottom: 0;
-    height: 120vh;
+    margin-bottom: 10px;
+    height: 100vh;
   }
 
   .blog-post {
@@ -1216,9 +1211,9 @@ canvas {
   }
 
   .project-select-grid {
-    margin-top: 270px;
+    margin-top: 310px;
     grid-template-columns: auto;
-    grid-row-gap: 10px;
+    grid-row-gap: 20px;
   }
 
   .project-image {
