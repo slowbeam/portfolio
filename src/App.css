@@ -1173,7 +1173,7 @@ canvas {
 
   .project-content {
     flex-direction: column-reverse;
-    height: 75vh;
+    height: 80vh;
     max-height: 575px;
     justify-content: space-between;
   }
@@ -1203,7 +1203,7 @@ canvas {
   }
 
   .project-page-description-paragraph {
-    font-size: 18px;
+    font-size: 16px;
     width: 70vw;
   }
 
@@ -1220,7 +1220,7 @@ canvas {
   }
 
   .project-select-grid {
-    margin-top: 300px;
+    margin-top: 270px;
     grid-template-columns: auto;
     grid-row-gap: 10px;
   }
