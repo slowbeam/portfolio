@@ -45,8 +45,6 @@ class BlogPage extends React.Component {
   renderPosts = () => {
     const stateDup = Object.assign({}, this.state);
 
-    console.log(stateDup);
-
     return stateDup.posts.map(post => (
       <BlogPostCard
         title={post.title}
