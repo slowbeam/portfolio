@@ -10,7 +10,7 @@ class ProjectPageContainer extends React.Component {
         name: "vibelist",
         images: [images.vibeListGif2],
         description:
-          "Vibelist is a Spotify music discovery tool for creating custom playlists in the mood and genre of the user's choice. Built with React, Redux, React-Router and Thunk on the frontend and a Ruby on Rails backend that interacts seamlessly with the Spotify API.",
+          "Vibelist is a Spotify music discovery tool for creating custom playlists in the mood and genre of the user's choice. Built with a React, Redux, React-Router and Thunk frontend and Ruby on Rails backend that interacts seamlessly with the Spotify API.",
         links: {
           Github: "https://github.com/slowbeam/vibe-list-client",
           "Live App": "https://vibelist.herokuapp.com/"

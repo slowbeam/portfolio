@@ -1201,8 +1201,7 @@ canvas {
 
   .project-content {
     flex-direction: column-reverse;
-    height: 80vh;
-    max-height: 575px;
+    height: 600px;
     justify-content: space-between;
   }
 
@@ -1215,7 +1214,7 @@ canvas {
   }
 
   .project-page-image-container {
-    height: 35vw;
+    height: 275px;
     min-height: 275px;
     padding: 10px 0;
     border-radius: 5px 5px 0 0;
@@ -1224,10 +1223,8 @@ canvas {
   }
 
   .project-page-image {
-    width: 30vw;
-    height: 24.9vw;
-    min-width: 300px;
-    min-height: 249px;
+    width: 300px;
+    height: 249px;
   }
 
   .project-page-description-paragraph {
@@ -1237,7 +1234,7 @@ canvas {
 
   .about-card {
     margin-bottom: 10px;
-    height: 100vh;
+    height: 812px;
   }
 
   .blog-post {
@@ -1267,10 +1264,10 @@ canvas {
   }
 
   #about-page {
-    height: 140vh;
+    height: 1000px;
   }
 
   #about-inside {
-    height: 140vh;
+    height: 1000px;
   }
 }
