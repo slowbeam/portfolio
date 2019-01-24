@@ -56,17 +56,9 @@ h3 {
   width: 100vw;
   margin: 0;
   padding: 0;
-  white-space: nowrap;
-  overflow-y: hidden;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: mandatory;
-  scroll-snap-destination: 0% 100%;
-  scroll-snap-points-x: repeat(100%);
 }
 
 .page {
-  scroll-snap-align: start;
   width: 100%;
   height: 100%;
   display: block;
@@ -137,6 +129,8 @@ canvas {
 }
 
 #overlay-container {
+  display: flex;
+  justify-content: center;
   position: absolute;
   left: 100em;
   -webkit-animation: slide 0.5s forwards;
@@ -159,16 +153,14 @@ canvas {
     0% 25%
   );
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  width: 325px;
+  height: 115px;
   background-color: #3e427a;
-  padding: 50px;
+  padding: 40px 30px 40px 30px;
   border-radius: 2px;
   left: 100em;
+  margin-top: 3px;
   text-align: center;
-  cursor: pointer;
-}
-
-.overlay:hover {
-  transform: scale(1.02);
 }
 
 #projects-button-container {
@@ -942,13 +934,13 @@ canvas {
 
 @-webkit-keyframes slide {
   100% {
-    left: -193px;
+    left: auto;
   }
 }
 
 @keyframes slide {
   100% {
-    left: -193px;
+    left: auto;
   }
 }
 
@@ -1062,10 +1054,12 @@ canvas {
   }
 
   .overlay {
-    width: 150px;
+    width: 200px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 0;
   }
 
   #projects-button-container {
@@ -1080,6 +1074,7 @@ canvas {
   }
 
   .intro-text-container h1 {
+    padding-top: 20px;
     font-size: 14px;
   }
 
