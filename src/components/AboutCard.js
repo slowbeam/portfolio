@@ -24,11 +24,11 @@ class AboutCard extends React.Component {
             bulldog Jellybean would prefer it if I was a stay-at-home dad
             forever.
           </p>
-          <h5 id="technical-skills-title">Technical Skills:</h5>
+          <h4 id="technical-skills-title">Technical Skills:</h4>
           <p>
             JavaScript, React, Redux, Thunk, HTML5, CSS3, SASS, Ruby, Ruby on
-            Rails, Rspec, SQL, PostgreSQL, Adobe Illustrator, Photoshop and
-            Indesign.
+            Rails, Rspec, SQL, PostgreSQL, Adobe Illustrator, Photoshop,
+            Indesign and Ableton Live.
           </p>
         </div>
       </div>
