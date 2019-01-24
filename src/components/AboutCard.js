@@ -16,7 +16,7 @@ class AboutCard extends React.Component {
         <div className="about-description">
           <p id="about-headline">
             I'm an artist, musician and software engineer and I love combining
-            my three passions to create amazing products.
+            my passions to create amazing products.
           </p>
           <p>
             I'm a recent graduate of the full-stack software engineering
