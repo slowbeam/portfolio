@@ -67,12 +67,10 @@ h3 {
 }
 
 .inside {
-  opacity: 0.95;
   width: 100vw;
   height: 100vh;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease-out;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1050,9 +1048,12 @@ canvas {
 
 @media only screen and (max-width: 700px) {
   #overlay-container {
-    -webkit-animation: none;
-    animation: none;
     left: auto;
+    top: -100em;
+    -webkit-animation: overlayMobileSlide 1s forwards;
+    -webkit-animation-delay: 1s;
+    animation: overlayMobileSlide 1s forwards;
+    animation-delay: 1s;
   }
 
   .overlay {
@@ -1061,23 +1062,36 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0;
+  }
+
+  @keyframes overlayMobileSlide {
+    100% {
+      top: -93px;
+    }
   }
 
   #projects-button-container {
-    -webkit-animation: none;
-    animation: none;
-    top: -157px;
+    -webkit-animation: projectsMobileSlide 1s forwards;
+    -webkit-animation-delay: 2s;
+    animation: projectsMobileSlide 1s forwards;
+    animation-delay: 2s;
+    top: -100em;
   }
 
-  #projects-button-container:hover {
+  @keyframes projectsMobileSlide {
+    100% {
+      top: -157px;
+    }
+  }
+
+  @keyframes #projects-button-container:hover {
     -webkit-animation: none;
     animation: none;
   }
 
   .intro-text-container h1 {
-    padding-top: 20px;
-    font-size: 14px;
+    padding-top: 10px;
+    font-size: 16px;
   }
 
   .projects-button {
@@ -1085,10 +1099,18 @@ canvas {
   }
 
   #about-button-shadow-container {
-    -webkit-animation: none;
-    animation: none;
+    -webkit-animation: aboutMobileSlide 1s forwards;
+    -webkit-animation-delay: 3s;
+    animation: aboutMobileSlide 1s forwards;
+    animation-delay: 3s;
+    top: 100em;
     bottom: auto;
-    top: 64px;
+  }
+
+  @keyframes aboutMobileSlide {
+    100% {
+      top: 64px;
+    }
   }
 
   #about-button-shadow-container:hover {
@@ -1104,7 +1126,7 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: -242px;
+    top: -100em;
     left: auto;
     background-color: rgba(235, 129, 65, 0.5);
     width: 95px;
@@ -1113,8 +1135,16 @@ canvas {
     -webkit-clip-path: polygon(40% 0, 60% 0, 100% 100%, 50% 80%, 0 100%);
     clip-path: polygon(40% 0, 60% 0, 100% 100%, 50% 80%, 0 100%);
     padding: 10px 10px 10px 10px;
-    -webkit-animation: none;
-    animation: none;
+    -webkit-animation: blogMobileSlide 1s forwards;
+    -webkit-animation-delay: 4s;
+    animation: blogMobileSlide 1s forwards;
+    animation-delay: 4s;
+  }
+
+  @keyframes blogMobileSlide {
+    100% {
+      top: -242px;
+    }
   }
 
   #blog-button-text {
@@ -1139,10 +1169,18 @@ canvas {
     height: 80px;
     padding: 10px 10px 10px 10px;
     left: auto;
-    top: 142px;
+    top: 100em;
     text-align: center;
-    -webkit-animation: none;
-    animation: none;
+    -webkit-animation: githubMobileSlide 1s forwards;
+    -webkit-animation-delay: 4s;
+    animation: githubMobileSlide 1s forwards;
+    animation-delay: 5s;
+  }
+
+  @keyframes githubMobileSlide {
+    100% {
+      top: 142px;
+    }
   }
 
   .github-button:hover {
