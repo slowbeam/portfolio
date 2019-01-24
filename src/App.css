@@ -1084,11 +1084,6 @@ canvas {
     }
   }
 
-  @keyframes #projects-button-container:hover {
-    -webkit-animation: none;
-    animation: none;
-  }
-
   .intro-text-container h1 {
     padding-top: 10px;
     font-size: 16px;
@@ -1096,6 +1091,13 @@ canvas {
 
   .projects-button {
     width: 120px;
+  }
+
+  #projects-button-container:hover {
+    -webkit-animation: projectsMobileSlide 1s forwards;
+    -webkit-animation-delay: 2s;
+    animation: projectsMobileSlide 1s forwards;
+    animation-delay: 2s;
   }
 
   #about-button-shadow-container {
@@ -1107,6 +1109,13 @@ canvas {
     bottom: auto;
   }
 
+  #about-button-shadow-container:hover {
+    -webkit-animation: aboutMobileSlide 1s forwards;
+    -webkit-animation-delay: 3s;
+    animation: aboutMobileSlide 1s forwards;
+    animation-delay: 3s;
+  }
+
   @keyframes aboutMobileSlide {
     100% {
       top: 64px;
@@ -1114,8 +1123,7 @@ canvas {
   }
 
   #about-button-shadow-container:hover {
-    -webkit-animation: none;
-    animation: none;
+    transform: ;
   }
 
   .about-button {
