@@ -95,7 +95,19 @@ class BlogPage extends React.Component {
       <div className="blog-page">
         <div className="blog-header">
           <h3>Blog</h3>
-          {this.renderBlogDescription()}
+          <p>
+            I write regular blog posts on a variety of different software
+            engineering related topics.
+          </p>
+
+          <a
+            id="check-blog-button"
+            href="https://medium.com/@sedwardscode"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            check it out
+          </a>
         </div>
         <div id="blog-posts-container">{this.renderPosts()}</div>
       </div>
