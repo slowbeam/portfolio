@@ -36,11 +36,19 @@ class ProjectPage extends React.Component {
               {this.props.description}
             </div>
             <div className="project-links-container">
-              <a href="https://github.com/slowbeam/vibe-list-client">
+              <a
+                href={this.props.links[Object.keys(this.props.links)[0]]}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {Object.keys(this.props.links)[0]}
               </a>
               &nbsp; | &nbsp;
-              <a href="https://vibelist.herokuapp.com/">
+              <a
+                href={this.props.links[Object.keys(this.props.links)[1]]}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {Object.keys(this.props.links)[1]}
               </a>
             </div>
