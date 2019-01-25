@@ -964,6 +964,19 @@ canvas {
   }
 }
 
+#check-blog-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: #3e427a;
+  padding: 15px 20px 5px 20px;
+  border-radius: 5px;
+  color: white;
+  margin-bottom: 20px;
+  min-width: 130px;
+}
+
 @media only screen and (min-width: 1200px) {
   #about-headline {
     font-size: 20px;
