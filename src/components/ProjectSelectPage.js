@@ -1,4 +1,5 @@
 import React from "react";
+import images from "../img/index";
 
 class ProjectSelectPage extends React.Component {
   handleProjectButtonEnter = event => {
@@ -33,21 +34,21 @@ class ProjectSelectPage extends React.Component {
           <div className="project-image" id="vibelist-gif">
             <img
               className="project-gif"
-              src={require("../img/vibelist-gif-2.gif")}
+              src={images.vibelistGif1}
               alt="demo of vibelist application"
             />
           </div>
           <div className="project-image" id="birthify-gif">
             <img
               className="project-gif"
-              src={require("../img/bf-2.gif")}
+              src={images.birthifyGif1}
               alt="demo of birthify application"
             />
           </div>
           <div className="project-image" id="beat-machine-gif">
             <img
               className="project-gif"
-              src={require("../img/bm-1.gif")}
+              src={images.beatMachineGif1}
               alt="demo of beat machine application"
             />
           </div>

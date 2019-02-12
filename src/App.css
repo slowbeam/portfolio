@@ -574,6 +574,8 @@ canvas {
   );
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   width: 30vw;
+  max-width: 500px;
+  max-height: 381px;
   margin-top: 20vh;
   visibility: hidden;
   z-index: 10;
@@ -645,7 +647,7 @@ canvas {
   width: 36vw;
   height: 30vw;
   max-width: 500px;
-  max-height: 445px;
+  max-height: 381px;
   border-radius: 5px;
 }
 
@@ -1154,10 +1156,6 @@ canvas {
     100% {
       top: 64px;
     }
-  }
-
-  #about-button-shadow-container:hover {
-    transform: ;
   }
 
   .about-button {
