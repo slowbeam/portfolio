@@ -5,45 +5,46 @@ import ProjectPageContainer from "../containers/ProjectPageContainer";
 import Menu from "./Menu";
 import ProjectSelectPage from "./ProjectSelectPage";
 import BlogPage from "./BlogPage";
-import ReactContactForm from 'react-mail-form';
+import ContactButton from "./ContactButton";
+import AboutCard from "./AboutCard";
 
 class Scroller extends React.Component {
   smoothScroll = page => {
-  let scrollContainer = page;
+    let scrollContainer = page;
 
-  do {
-    scrollContainer = scrollContainer.parentNode;
-    if (scrollContainer === document) {
-      return;
-    }
+    do {
+      scrollContainer = scrollContainer.parentNode;
+      if (scrollContainer === document) {
+        return;
+      }
 
-    scrollContainer.scrollTop += 1;
-  } while (scrollContainer.scrollTop === 0);
+      scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop === 0);
 
-   let targetY = 0;
+    let targetY = 0;
 
-  do {
-    if (page === scrollContainer) break;
+    do {
+      if (page === scrollContainer) break;
 
-    targetY += page.offsetTop;
-  } while ((page = page.offsetParent));
+      targetY += page.offsetTop;
+    } while ((page = page.offsetParent));
 
-  const startScroll = function(c, a, b, i) {
-    i++;
-    if (i > 30) return;
-    c.scrollTop = a + ((b - a) / 30) * i;
-    setTimeout(function() {
-      startScroll(c, a, b, i);
-    }, 20);
+    const startScroll = function(c, a, b, i) {
+      i++;
+      if (i > 30) return;
+      c.scrollTop = a + ((b - a) / 30) * i;
+      setTimeout(function() {
+        startScroll(c, a, b, i);
+      }, 20);
+    };
+
+    startScroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
   };
 
-  startScroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
-};
-
- handleMenuClick = targetClass => {
-  const page = document.querySelector(targetClass);
-  this.smoothScroll(page);
-};
+  handleMenuClick = targetClass => {
+    const page = document.querySelector(targetClass);
+    this.smoothScroll(page);
+  };
 
   render() {
     return (
@@ -69,10 +70,10 @@ class Scroller extends React.Component {
             <BlogPage />
           </div>
         </div>
-        <div id="contact-page" className="page four">
-          <div id="contact-inside" className="inside four">
-            <h4>Contact</h4>
-            <ReactContactForm className="contact-form" to="sedwardscode@gmail.com" />
+        <div id="about-page" className="page four">
+          <div id="about-inside" className="inside four">
+            <AboutCard />
+            <ContactButton />
           </div>
         </div>
         <Footer />

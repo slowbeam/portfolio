@@ -13,8 +13,17 @@ class BlogPage extends React.Component {
   }
 
   fetchPosts = () => {
+    const header = {
+      "Access-Control-Allow-Origin": "*"
+    };
+
+    const data = {
+      mode: "cors",
+      header: header
+    };
     return fetch(
-      "https://oh4b8bbri6.execute-api.us-east-1.amazonaws.com/alpha"
+      "https://oh4b8bbri6.execute-api.us-east-1.amazonaws.com/alpha",
+      data
     ).then(res => res.json());
   };
 
@@ -45,8 +54,6 @@ class BlogPage extends React.Component {
   renderPosts = () => {
     const stateDup = Object.assign({}, this.state);
 
-    console.log(stateDup)
-
     return stateDup.posts.map(post => (
       <BlogPostCard
         title={post.title}
@@ -59,24 +66,47 @@ class BlogPage extends React.Component {
     ));
   };
 
+  renderBlogDescription = () => {
+    if (window.innerWidth <= 414) {
+      return (
+        <React.Fragment>
+          <p>
+            I write regular blog posts on a variety of different software
+            engineering related topics.
+          </p>
+
+          <a
+            id="check-blog-button"
+            href="https://medium.com/@sedwardscode"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            check it out
+          </a>
+        </React.Fragment>
+      );
+    } else {
+      return "";
+    }
+  };
+
   render() {
     return (
       <div className="blog-page">
         <div className="blog-header">
-          I write regular blogs on various software engineering related topics
-          on Medium. You'll find interesting stuff like how a MergeSort
-          algorithm works, a concise introduction to React Hooks, or even how
-          machine learning will revolutionize the music industry!
-          <br />
-          <br />
+          <h3>Blog</h3>
+          <p>
+            I write regular blog posts on a variety of different software
+            engineering related topics.
+          </p>
+
           <a
-            className="button is-inverted is-outlined"
+            id="check-blog-button"
             href="https://medium.com/@sedwardscode"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            View My Medium
-            <span className="icon" style={{ marginLeft: 5 }}>
-              <i className="fab fa-lg fa-medium" />
-            </span>
+            check it out
           </a>
         </div>
         <div id="blog-posts-container">{this.renderPosts()}</div>

@@ -86,6 +86,7 @@ class FooterCanvas extends React.Component {
     return (
       <div className="footer-canvas-container">
         <canvas id="footer-canvas" ref="footercanvas" />
+        <div id="footer-text">© Sandy Edwards 2019</div>
       </div>
     );
   }

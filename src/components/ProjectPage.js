@@ -26,26 +26,36 @@ class ProjectPage extends React.Component {
     return (
       <div id={this.props.id} className="project-container">
         <div className="project-title-container">
-          <div className="project-title-left-polygon" />
-          <div className="project-title-text">{this.props.name}</div>
-          <div className="project-title-right-polygon" />
-        </div>
-        <div className="project-page-image-container">
-          {this.renderProjectImages()}
-        </div>
-        <div className="project-page-description">
-          <div className="project-page-description-paragraph">
-            {this.props.description}
+          <div className="project-title-text">
+            <h3>{this.props.name}</h3>
           </div>
         </div>
-        <div className="project-links-container">
-          <a href="https://github.com/slowbeam/vibe-list-client">
-            {Object.keys(this.props.links)[0]}
-          </a>
-          &nbsp; | &nbsp;
-          <a href="https://vibelist.herokuapp.com/">
-            {Object.keys(this.props.links)[1]}
-          </a>
+        <div className="project-content">
+          <div className="project-page-description">
+            <div className="project-page-description-paragraph">
+              {this.props.description}
+            </div>
+            <div className="project-links-container">
+              <a
+                href={this.props.links[Object.keys(this.props.links)[0]]}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {Object.keys(this.props.links)[0]}
+              </a>
+              &nbsp; | &nbsp;
+              <a
+                href={this.props.links[Object.keys(this.props.links)[1]]}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {Object.keys(this.props.links)[1]}
+              </a>
+            </div>
+          </div>
+          <div className="project-page-image-container">
+            {this.renderProjectImages()}
+          </div>
         </div>
       </div>
     );
