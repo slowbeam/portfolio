@@ -15,6 +15,13 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
 p {
   text-align: center;
 }
