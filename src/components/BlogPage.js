@@ -12,18 +12,9 @@ class BlogPage extends React.Component {
     this.fetchPosts().then(this.setPosts);
   }
 
-  fetchPosts = () => {
-    const header = {
-      "Access-Control-Allow-Origin": "*"
-    };
-
-    const data = {
-      mode: "cors",
-      header: header
-    };
+  fetchPosts = () => { 
     return fetch(
-      "https://oh4b8bbri6.execute-api.us-east-1.amazonaws.com/alpha",
-      data
+      "https://oh4b8bbri6.execute-api.us-east-1.amazonaws.com/alpha"
     ).then(res => res.json());
   };
 
